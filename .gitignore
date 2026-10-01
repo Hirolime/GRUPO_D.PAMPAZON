@@ -1,0 +1,52 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build artifacts
+bin/
+obj/
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+packages/
+
+# Node
+node_modules/
+
+# Visual Studio Code
+.vscode/
+
+# DotNet temporary files
+project.lock.json
+project.fragment.lock.json
+
+# Rider
+*.sln.iml
+
+# Logs
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Publish
+publish/
+
+# Rider caches
+.idea/
+
+# JetBrains Rider
+*.sln.iml
+
+# Rider Workspace
+.idea/
+
+# Visual Studio Code workspace
+*.code-workspace
