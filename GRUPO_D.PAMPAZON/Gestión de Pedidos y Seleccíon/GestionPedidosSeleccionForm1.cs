@@ -14,5 +14,10 @@ namespace GRUPO_D.PAMPAZON.Gestión_de_Pedidos_y_Seleccíon
         {
             InitializeComponent();
         }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
