@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Gestión de Pedidos y Seleccíon\" />
     <Folder Include="Empaquetado y Preparación de Mercaderias\" />
     <Folder Include="Recepción y Despacho de Pedidos\" />
     <Folder Include="Seleccion y entrega de Mercaderias\" />
