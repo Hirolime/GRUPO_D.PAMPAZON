@@ -8,10 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Empaquetado y Preparación de Mercaderias\" />
-    <Folder Include="Recepción y Despacho de Pedidos\" />
-    <Folder Include="Seleccion y entrega de Mercaderias\" />
-  </ItemGroup>
-
 </Project>
