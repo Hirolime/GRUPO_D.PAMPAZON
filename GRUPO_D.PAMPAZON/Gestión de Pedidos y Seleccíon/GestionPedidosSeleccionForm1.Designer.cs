@@ -192,7 +192,7 @@
             label4.Size = new Size(47, 15);
             label4.TabIndex = 12;
             label4.Text = "Usuario";
-            label4.Click += this.label4_Click;
+           // label4.Click += this.label4_Click;
             // 
             // tabControl1
             // 
