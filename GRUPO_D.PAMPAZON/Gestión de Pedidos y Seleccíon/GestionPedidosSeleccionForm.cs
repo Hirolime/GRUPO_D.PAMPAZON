@@ -8,5 +8,10 @@ namespace Pampazon.Prototipos
         {
             InitializeComponent();
         }
+
+        private void txtEstado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

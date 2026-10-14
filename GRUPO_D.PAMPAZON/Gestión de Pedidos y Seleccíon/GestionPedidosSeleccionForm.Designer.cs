@@ -11,677 +11,919 @@
         #region Código generado para el diseñador
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            this.pnlEncabezado = new System.Windows.Forms.Panel();
-            this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
-            this.pnlEncabezado.Size = new System.Drawing.Size(1320, 76);
-            this.pnlEncabezado.TabIndex = 1;
-            this.pnlEncabezado.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
-            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(35, 80, 124);
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Location = new System.Drawing.Point(24, 13);
-            this.lblTitulo.Size = new System.Drawing.Size(890, 34);
-            this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "Gestión de Pedidos y Selección";
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 19F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblEmpresa = new System.Windows.Forms.Label();
-            this.lblEmpresa.Name = "lblEmpresa";
-            this.lblEmpresa.Location = new System.Drawing.Point(26, 48);
-            this.lblEmpresa.Size = new System.Drawing.Size(1050, 22);
-            this.lblEmpresa.TabIndex = 3;
-            this.lblEmpresa.Text = "PAMPAZON  |  Encargado de Preparación";
-            this.lblEmpresa.ForeColor = System.Drawing.Color.White;
-            this.grpContexto = new System.Windows.Forms.GroupBox();
-            this.grpContexto.Name = "grpContexto";
-            this.grpContexto.Location = new System.Drawing.Point(16, 84);
-            this.grpContexto.Size = new System.Drawing.Size(1288, 72);
-            this.grpContexto.TabIndex = 4;
-            this.grpContexto.Text = "Contexto de trabajo";
-            this.lblDeposito = new System.Windows.Forms.Label();
-            this.lblDeposito.Name = "lblDeposito";
-            this.lblDeposito.Location = new System.Drawing.Point(16, 30);
-            this.lblDeposito.Size = new System.Drawing.Size(68, 24);
-            this.lblDeposito.TabIndex = 5;
-            this.lblDeposito.Text = "Depósito";
-            this.cboDeposito = new System.Windows.Forms.ComboBox();
-            this.cboDeposito.Name = "cboDeposito";
-            this.cboDeposito.Location = new System.Drawing.Point(90, 26);
-            this.cboDeposito.Size = new System.Drawing.Size(200, 28);
-            this.cboDeposito.TabIndex = 6;
-            this.cboDeposito.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDeposito.Enabled = false;
-            this.cboDeposito.Items.AddRange(new object[] {"GBA"});
-            this.cboDeposito.SelectedIndex = 0;
-            this.lblRol = new System.Windows.Forms.Label();
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Location = new System.Drawing.Point(320, 30);
-            this.lblRol.Size = new System.Drawing.Size(290, 24);
-            this.lblRol.TabIndex = 7;
-            this.lblRol.Text = "Rol: Encargado de Preparación";
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Location = new System.Drawing.Point(680, 30);
-            this.lblFecha.Size = new System.Drawing.Size(72, 24);
-            this.lblFecha.TabIndex = 8;
-            this.lblFecha.Text = "Fecha";
-            this.dtpFechaTrabajo = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaTrabajo.Name = "dtpFechaTrabajo";
-            this.dtpFechaTrabajo.Location = new System.Drawing.Point(756, 26);
-            this.dtpFechaTrabajo.Size = new System.Drawing.Size(140, 28);
-            this.dtpFechaTrabajo.TabIndex = 9;
-            this.dtpFechaTrabajo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaTrabajo.Enabled = false;
-            this.dtpFechaTrabajo.Value = new System.DateTime(2026, 10, 12);
-            this.lblModo = new System.Windows.Forms.Label();
-            this.lblModo.Name = "lblModo";
-            this.lblModo.Location = new System.Drawing.Point(938, 30);
-            this.lblModo.Size = new System.Drawing.Size(320, 24);
-            this.lblModo.TabIndex = 10;
-            this.lblModo.Text = "Prototipo de diseño · Datos de ejemplo";
-            this.tabGestion = new System.Windows.Forms.TabControl();
-            this.tabGestion.Name = "tabGestion";
-            this.tabGestion.Location = new System.Drawing.Point(16, 170);
-            this.tabGestion.Size = new System.Drawing.Size(1288, 684);
-            this.tabGestion.TabIndex = 11;
-            this.tabGestion.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right | System.Windows.Forms.AnchorStyles.Bottom;
-            this.tabGestion.SelectedIndex = 0;
-            this.tabAsignadas = new System.Windows.Forms.TabPage();
-            this.tabAsignadas.Name = "tabAsignadas";
-            this.tabAsignadas.Location = new System.Drawing.Point(0, 0);
-            this.tabAsignadas.Size = new System.Drawing.Size(1280, 650);
-            this.tabAsignadas.TabIndex = 12;
-            this.tabAsignadas.Text = "Órdenes asignadas";
-            this.tabAsignadas.UseVisualStyleBackColor = true;
-            this.tabCortes = new System.Windows.Forms.TabPage();
-            this.tabCortes.Name = "tabCortes";
-            this.tabCortes.Location = new System.Drawing.Point(0, 0);
-            this.tabCortes.Size = new System.Drawing.Size(1280, 650);
-            this.tabCortes.TabIndex = 13;
-            this.tabCortes.Text = "Cortes de selección";
-            this.tabCortes.UseVisualStyleBackColor = true;
-            this.grpFiltros = new System.Windows.Forms.GroupBox();
-            this.grpFiltros.Name = "grpFiltros";
-            this.grpFiltros.Location = new System.Drawing.Point(12, 10);
-            this.grpFiltros.Size = new System.Drawing.Size(1250, 80);
-            this.grpFiltros.TabIndex = 14;
-            this.grpFiltros.Text = "Buscar órdenes";
-            this.lblBuscarOrden = new System.Windows.Forms.Label();
-            this.lblBuscarOrden.Name = "lblBuscarOrden";
-            this.lblBuscarOrden.Location = new System.Drawing.Point(14, 22);
-            this.lblBuscarOrden.Size = new System.Drawing.Size(135, 24);
-            this.lblBuscarOrden.TabIndex = 15;
-            this.lblBuscarOrden.Text = "N.º de orden";
-            this.txtBuscarOrden = new System.Windows.Forms.TextBox();
-            this.txtBuscarOrden.Name = "txtBuscarOrden";
-            this.txtBuscarOrden.Location = new System.Drawing.Point(14, 45);
-            this.txtBuscarOrden.Size = new System.Drawing.Size(150, 28);
-            this.txtBuscarOrden.TabIndex = 16;
-            this.txtBuscarOrden.ReadOnly = false;
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Location = new System.Drawing.Point(182, 22);
-            this.lblCliente.Size = new System.Drawing.Size(230, 24);
-            this.lblCliente.TabIndex = 17;
-            this.lblCliente.Text = "Cliente";
-            this.cboCliente = new System.Windows.Forms.ComboBox();
-            this.cboCliente.Name = "cboCliente";
-            this.cboCliente.Location = new System.Drawing.Point(182, 45);
-            this.cboCliente.Size = new System.Drawing.Size(265, 28);
-            this.cboCliente.TabIndex = 18;
-            this.cboCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCliente.Enabled = true;
-            this.cboCliente.Items.AddRange(new object[] {"Todos los clientes", "Cliente Demo A", "Cliente Demo B"});
-            this.cboCliente.SelectedIndex = 0;
-            this.lblOrigen = new System.Windows.Forms.Label();
-            this.lblOrigen.Name = "lblOrigen";
-            this.lblOrigen.Location = new System.Drawing.Point(464, 22);
-            this.lblOrigen.Size = new System.Drawing.Size(110, 24);
-            this.lblOrigen.TabIndex = 19;
-            this.lblOrigen.Text = "Origen";
-            this.cboOrigen = new System.Windows.Forms.ComboBox();
-            this.cboOrigen.Name = "cboOrigen";
-            this.cboOrigen.Location = new System.Drawing.Point(464, 45);
-            this.cboOrigen.Size = new System.Drawing.Size(175, 28);
-            this.cboOrigen.TabIndex = 20;
-            this.cboOrigen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboOrigen.Enabled = true;
-            this.cboOrigen.Items.AddRange(new object[] {"Todos", "Cliente", "Traslado interno"});
-            this.cboOrigen.SelectedIndex = 0;
-            this.lblDesde = new System.Windows.Forms.Label();
-            this.lblDesde.Name = "lblDesde";
-            this.lblDesde.Location = new System.Drawing.Point(657, 22);
-            this.lblDesde.Size = new System.Drawing.Size(140, 24);
-            this.lblDesde.TabIndex = 21;
-            this.lblDesde.Text = "Fecha de asignación";
-            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Location = new System.Drawing.Point(657, 45);
-            this.dtpDesde.Size = new System.Drawing.Size(145, 28);
-            this.dtpDesde.TabIndex = 22;
-            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.ShowCheckBox = true;
-            this.dtpDesde.Checked = false;
-            this.dtpDesde.Value = new System.DateTime(2026, 10, 12);
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Location = new System.Drawing.Point(828, 38);
-            this.btnBuscar.Size = new System.Drawing.Size(115, 34);
-            this.btnBuscar.TabIndex = 23;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.Enabled = true;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(35, 80, 124);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Location = new System.Drawing.Point(954, 38);
-            this.btnLimpiar.Size = new System.Drawing.Size(115, 34);
-            this.btnLimpiar.TabIndex = 24;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.Enabled = true;
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.lblListaAsignadas = new System.Windows.Forms.Label();
-            this.lblListaAsignadas.Name = "lblListaAsignadas";
-            this.lblListaAsignadas.Location = new System.Drawing.Point(14, 102);
-            this.lblListaAsignadas.Size = new System.Drawing.Size(950, 24);
-            this.lblListaAsignadas.TabIndex = 25;
-            this.lblListaAsignadas.Text = "Órdenes asignadas al depósito";
-            this.lblListaAsignadas.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lvAsignadas = new System.Windows.Forms.ListView();
-            this.lvAsignadas.Name = "lvAsignadas";
-            this.lvAsignadas.Location = new System.Drawing.Point(14, 132);
-            this.lvAsignadas.Size = new System.Drawing.Size(1248, 137);
-            this.lvAsignadas.TabIndex = 26;
-            this.lvAsignadas.View = System.Windows.Forms.View.Details;
-            this.lvAsignadas.FullRowSelect = true;
-            this.lvAsignadas.GridLines = true;
-            this.lvAsignadas.MultiSelect = false;
-            this.lvAsignadas.HideSelection = false;
-            this.lvAsignadas.CheckBoxes = false;
-            this.lvAsignadas.UseCompatibleStateImageBehavior = false;
-            this.lvAsignadasCol0 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol0.Text = "N.º de orden";
-            this.lvAsignadasCol0.Width = 115;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol0);
-            this.lvAsignadasCol1 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol1.Text = "Asignación";
-            this.lvAsignadasCol1.Width = 115;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol1);
-            this.lvAsignadasCol2 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol2.Text = "Cliente";
-            this.lvAsignadasCol2.Width = 225;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol2);
-            this.lvAsignadasCol3 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol3.Text = "Origen";
-            this.lvAsignadasCol3.Width = 165;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol3);
-            this.lvAsignadasCol4 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol4.Text = "Modalidad";
-            this.lvAsignadasCol4.Width = 150;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol4);
-            this.lvAsignadasCol5 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol5.Text = "Productos";
-            this.lvAsignadasCol5.Width = 100;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol5);
-            this.lvAsignadasCol6 = new System.Windows.Forms.ColumnHeader();
-            this.lvAsignadasCol6.Text = "Estado";
-            this.lvAsignadasCol6.Width = 155;
-            this.lvAsignadas.Columns.Add(this.lvAsignadasCol6);
-            this.lvAsignadas.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"OP-000184", "12/10/2026", "Cliente Demo A", "Cliente", "Fulfillment", "2", "ASIGNADA"}));
-            this.lvAsignadas.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"OP-000185", "12/10/2026", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "ASIGNADA"}));
-            this.lvAsignadas.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"TR-000026", "12/10/2026", "Cliente Demo A", "Traslado interno", "Palé cerrado", "1", "ASIGNADA"}));
-            this.grpDetalle = new System.Windows.Forms.GroupBox();
-            this.grpDetalle.Name = "grpDetalle";
-            this.grpDetalle.Location = new System.Drawing.Point(12, 282);
-            this.grpDetalle.Size = new System.Drawing.Size(1250, 253);
-            this.grpDetalle.TabIndex = 34;
-            this.grpDetalle.Text = "Detalle de la orden OP-000184";
-            this.lblDetalleCliente = new System.Windows.Forms.Label();
-            this.lblDetalleCliente.Name = "lblDetalleCliente";
-            this.lblDetalleCliente.Location = new System.Drawing.Point(14, 27);
-            this.lblDetalleCliente.Size = new System.Drawing.Size(80, 24);
-            this.lblDetalleCliente.TabIndex = 35;
-            this.lblDetalleCliente.Text = "Cliente";
-            this.txtDetalleCliente = new System.Windows.Forms.TextBox();
-            this.txtDetalleCliente.Name = "txtDetalleCliente";
-            this.txtDetalleCliente.Location = new System.Drawing.Point(95, 23);
-            this.txtDetalleCliente.Size = new System.Drawing.Size(220, 28);
-            this.txtDetalleCliente.TabIndex = 36;
-            this.txtDetalleCliente.Text = "Cliente Demo A";
-            this.txtDetalleCliente.ReadOnly = true;
-            this.lblContrato = new System.Windows.Forms.Label();
-            this.lblContrato.Name = "lblContrato";
-            this.lblContrato.Location = new System.Drawing.Point(335, 27);
-            this.lblContrato.Size = new System.Drawing.Size(78, 24);
-            this.lblContrato.TabIndex = 37;
-            this.lblContrato.Text = "Contrato";
-            this.txtContrato = new System.Windows.Forms.TextBox();
-            this.txtContrato.Name = "txtContrato";
-            this.txtContrato.Location = new System.Drawing.Point(415, 23);
-            this.txtContrato.Size = new System.Drawing.Size(150, 28);
-            this.txtContrato.TabIndex = 38;
-            this.txtContrato.Text = "CT-000028";
-            this.txtContrato.ReadOnly = true;
-            this.lblModalidad = new System.Windows.Forms.Label();
-            this.lblModalidad.Name = "lblModalidad";
-            this.lblModalidad.Location = new System.Drawing.Point(585, 27);
-            this.lblModalidad.Size = new System.Drawing.Size(90, 24);
-            this.lblModalidad.TabIndex = 39;
-            this.lblModalidad.Text = "Modalidad";
-            this.txtModalidad = new System.Windows.Forms.TextBox();
-            this.txtModalidad.Name = "txtModalidad";
-            this.txtModalidad.Location = new System.Drawing.Point(680, 23);
-            this.txtModalidad.Size = new System.Drawing.Size(150, 28);
-            this.txtModalidad.TabIndex = 40;
-            this.txtModalidad.Text = "Fulfillment";
-            this.txtModalidad.ReadOnly = true;
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Location = new System.Drawing.Point(850, 27);
-            this.lblEstado.Size = new System.Drawing.Size(65, 24);
-            this.lblEstado.TabIndex = 41;
-            this.lblEstado.Text = "Estado";
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Location = new System.Drawing.Point(920, 23);
-            this.txtEstado.Size = new System.Drawing.Size(175, 28);
-            this.txtEstado.TabIndex = 42;
-            this.txtEstado.Text = "ASIGNADA";
-            this.txtEstado.ReadOnly = true;
-            this.lvDisponibilidad = new System.Windows.Forms.ListView();
-            this.lvDisponibilidad.Name = "lvDisponibilidad";
-            this.lvDisponibilidad.Location = new System.Drawing.Point(14, 67);
-            this.lvDisponibilidad.Size = new System.Drawing.Size(1220, 118);
-            this.lvDisponibilidad.TabIndex = 43;
-            this.lvDisponibilidad.View = System.Windows.Forms.View.Details;
-            this.lvDisponibilidad.FullRowSelect = true;
-            this.lvDisponibilidad.GridLines = true;
-            this.lvDisponibilidad.MultiSelect = false;
-            this.lvDisponibilidad.HideSelection = false;
-            this.lvDisponibilidad.CheckBoxes = false;
-            this.lvDisponibilidad.UseCompatibleStateImageBehavior = false;
-            this.lvDisponibilidadCol0 = new System.Windows.Forms.ColumnHeader();
-            this.lvDisponibilidadCol0.Text = "SKU";
-            this.lvDisponibilidadCol0.Width = 120;
-            this.lvDisponibilidad.Columns.Add(this.lvDisponibilidadCol0);
-            this.lvDisponibilidadCol1 = new System.Windows.Forms.ColumnHeader();
-            this.lvDisponibilidadCol1.Text = "Producto";
-            this.lvDisponibilidadCol1.Width = 305;
-            this.lvDisponibilidad.Columns.Add(this.lvDisponibilidadCol1);
-            this.lvDisponibilidadCol2 = new System.Windows.Forms.ColumnHeader();
-            this.lvDisponibilidadCol2.Text = "Unidad";
-            this.lvDisponibilidadCol2.Width = 110;
-            this.lvDisponibilidad.Columns.Add(this.lvDisponibilidadCol2);
-            this.lvDisponibilidadCol3 = new System.Windows.Forms.ColumnHeader();
-            this.lvDisponibilidadCol3.Text = "Solicitado";
-            this.lvDisponibilidadCol3.Width = 120;
-            this.lvDisponibilidad.Columns.Add(this.lvDisponibilidadCol3);
-            this.lvDisponibilidadCol4 = new System.Windows.Forms.ColumnHeader();
-            this.lvDisponibilidadCol4.Text = "Disponible";
-            this.lvDisponibilidadCol4.Width = 120;
-            this.lvDisponibilidad.Columns.Add(this.lvDisponibilidadCol4);
-            this.lvDisponibilidadCol5 = new System.Windows.Forms.ColumnHeader();
-            this.lvDisponibilidadCol5.Text = "Validación";
-            this.lvDisponibilidadCol5.Width = 200;
-            this.lvDisponibilidad.Columns.Add(this.lvDisponibilidadCol5);
-            this.lvDisponibilidad.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"SKU-001", "Remera de algodón", "Unidad", "80", "148", "Pendiente de validar"}));
-            this.lvDisponibilidad.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"SKU-002", "Pantalón deportivo", "Unidad", "30", "65", "Pendiente de validar"}));
-            this.lblStockRegla = new System.Windows.Forms.Label();
-            this.lblStockRegla.Name = "lblStockRegla";
-            this.lblStockRegla.Location = new System.Drawing.Point(14, 192);
-            this.lblStockRegla.Size = new System.Drawing.Size(1190, 24);
-            this.lblStockRegla.TabIndex = 50;
-            this.lblStockRegla.Text = "Disponible: mercadería aceptada y no comprometida del cliente en este depósito.";
-            this.lblValidacion = new System.Windows.Forms.Label();
-            this.lblValidacion.Name = "lblValidacion";
-            this.lblValidacion.Location = new System.Drawing.Point(14, 220);
-            this.lblValidacion.Size = new System.Drawing.Size(1190, 24);
-            this.lblValidacion.TabIndex = 51;
-            this.lblValidacion.Text = "Validación pendiente. Al aceptar se compromete el stock, sin descontar las existencias físicas.";
-            this.lblValidacion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnValidar = new System.Windows.Forms.Button();
-            this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Location = new System.Drawing.Point(16, 548);
-            this.btnValidar.Size = new System.Drawing.Size(176, 34);
-            this.btnValidar.TabIndex = 52;
-            this.btnValidar.Text = "Validar disponibilidad";
-            this.btnValidar.Enabled = true;
-            this.btnValidar.UseVisualStyleBackColor = false;
-            this.btnValidar.BackColor = System.Drawing.Color.FromArgb(35, 80, 124);
-            this.btnValidar.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Location = new System.Drawing.Point(204, 548);
-            this.btnAceptar.Size = new System.Drawing.Size(205, 34);
-            this.btnAceptar.TabIndex = 53;
-            this.btnAceptar.Text = "Aceptar y comprometer";
-            this.btnAceptar.Enabled = false;
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnRechazar = new System.Windows.Forms.Button();
-            this.btnRechazar.Name = "btnRechazar";
-            this.btnRechazar.Location = new System.Drawing.Point(421, 548);
-            this.btnRechazar.Size = new System.Drawing.Size(213, 34);
-            this.btnRechazar.TabIndex = 54;
-            this.btnRechazar.Text = "Rechazar por falta de stock";
-            this.btnRechazar.Enabled = false;
-            this.btnRechazar.UseVisualStyleBackColor = true;
-            this.lblMotivo = new System.Windows.Forms.Label();
-            this.lblMotivo.Name = "lblMotivo";
-            this.lblMotivo.Location = new System.Drawing.Point(16, 593);
-            this.lblMotivo.Size = new System.Drawing.Size(150, 24);
-            this.lblMotivo.TabIndex = 55;
-            this.lblMotivo.Text = "Motivo del rechazo";
-            this.txtMotivo = new System.Windows.Forms.TextBox();
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Location = new System.Drawing.Point(174, 590);
-            this.txtMotivo.Size = new System.Drawing.Size(850, 28);
-            this.txtMotivo.TabIndex = 56;
-            this.txtMotivo.Text = "Se completará con los productos y cantidades faltantes.";
-            this.txtMotivo.ReadOnly = true;
-            this.grpCorte = new System.Windows.Forms.GroupBox();
-            this.grpCorte.Name = "grpCorte";
-            this.grpCorte.Location = new System.Drawing.Point(12, 10);
-            this.grpCorte.Size = new System.Drawing.Size(1250, 85);
-            this.grpCorte.TabIndex = 57;
-            this.grpCorte.Text = "Datos del corte";
-            this.lblFechaCorte = new System.Windows.Forms.Label();
-            this.lblFechaCorte.Name = "lblFechaCorte";
-            this.lblFechaCorte.Location = new System.Drawing.Point(14, 23);
-            this.lblFechaCorte.Size = new System.Drawing.Size(140, 24);
-            this.lblFechaCorte.TabIndex = 58;
-            this.lblFechaCorte.Text = "Fecha del corte";
-            this.dtpFechaCorte = new System.Windows.Forms.DateTimePicker();
-            this.dtpFechaCorte.Name = "dtpFechaCorte";
-            this.dtpFechaCorte.Location = new System.Drawing.Point(14, 46);
-            this.dtpFechaCorte.Size = new System.Drawing.Size(160, 28);
-            this.dtpFechaCorte.TabIndex = 59;
-            this.dtpFechaCorte.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaCorte.Value = new System.DateTime(2026, 10, 12);
-            this.lblNumeroCorte = new System.Windows.Forms.Label();
-            this.lblNumeroCorte.Name = "lblNumeroCorte";
-            this.lblNumeroCorte.Location = new System.Drawing.Point(197, 23);
-            this.lblNumeroCorte.Size = new System.Drawing.Size(180, 24);
-            this.lblNumeroCorte.TabIndex = 60;
-            this.lblNumeroCorte.Text = "Corte operativo";
-            this.rdoPrimerCorte = new System.Windows.Forms.RadioButton();
-            this.rdoPrimerCorte.Name = "rdoPrimerCorte";
-            this.rdoPrimerCorte.Location = new System.Drawing.Point(197, 47);
-            this.rdoPrimerCorte.Size = new System.Drawing.Size(138, 25);
-            this.rdoPrimerCorte.TabIndex = 61;
-            this.rdoPrimerCorte.Text = "Primer corte";
-            this.rdoPrimerCorte.Checked = true;
-            this.rdoPrimerCorte.AutoCheck = true;
-            this.rdoSegundoCorte = new System.Windows.Forms.RadioButton();
-            this.rdoSegundoCorte.Name = "rdoSegundoCorte";
-            this.rdoSegundoCorte.Location = new System.Drawing.Point(342, 47);
-            this.rdoSegundoCorte.Size = new System.Drawing.Size(156, 25);
-            this.rdoSegundoCorte.TabIndex = 62;
-            this.rdoSegundoCorte.Text = "Segundo corte";
-            this.rdoSegundoCorte.AutoCheck = true;
-            this.chkSoloPendientes = new System.Windows.Forms.CheckBox();
-            this.chkSoloPendientes.Name = "chkSoloPendientes";
-            this.chkSoloPendientes.Location = new System.Drawing.Point(555, 47);
-            this.chkSoloPendientes.Size = new System.Drawing.Size(280, 25);
-            this.chkSoloPendientes.TabIndex = 63;
-            this.chkSoloPendientes.Text = "Solo órdenes PENDIENTES";
-            this.chkSoloPendientes.Checked = true;
-            this.chkSoloPendientes.Enabled = false;
-            this.btnConsultarPendientes = new System.Windows.Forms.Button();
-            this.btnConsultarPendientes.Name = "btnConsultarPendientes";
-            this.btnConsultarPendientes.Location = new System.Drawing.Point(1015, 36);
-            this.btnConsultarPendientes.Size = new System.Drawing.Size(216, 34);
-            this.btnConsultarPendientes.TabIndex = 64;
-            this.btnConsultarPendientes.Text = "Consultar pendientes";
-            this.btnConsultarPendientes.Enabled = true;
-            this.btnConsultarPendientes.UseVisualStyleBackColor = false;
-            this.btnConsultarPendientes.BackColor = System.Drawing.Color.FromArgb(35, 80, 124);
-            this.btnConsultarPendientes.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarPendientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPendientes = new System.Windows.Forms.Label();
-            this.lblPendientes.Name = "lblPendientes";
-            this.lblPendientes.Location = new System.Drawing.Point(14, 107);
-            this.lblPendientes.Size = new System.Drawing.Size(1150, 24);
-            this.lblPendientes.TabIndex = 65;
-            this.lblPendientes.Text = "Órdenes pendientes · Marcar las que se incorporarán al corte";
-            this.lblPendientes.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lvPendientes = new System.Windows.Forms.ListView();
-            this.lvPendientes.Name = "lvPendientes";
-            this.lvPendientes.Location = new System.Drawing.Point(14, 136);
-            this.lvPendientes.Size = new System.Drawing.Size(1248, 142);
-            this.lvPendientes.TabIndex = 66;
-            this.lvPendientes.View = System.Windows.Forms.View.Details;
-            this.lvPendientes.FullRowSelect = true;
-            this.lvPendientes.GridLines = true;
-            this.lvPendientes.MultiSelect = false;
-            this.lvPendientes.HideSelection = false;
-            this.lvPendientes.CheckBoxes = true;
-            this.lvPendientes.UseCompatibleStateImageBehavior = false;
-            this.lvPendientesCol0 = new System.Windows.Forms.ColumnHeader();
-            this.lvPendientesCol0.Text = "Incluir / Orden";
-            this.lvPendientesCol0.Width = 160;
-            this.lvPendientes.Columns.Add(this.lvPendientesCol0);
-            this.lvPendientesCol1 = new System.Windows.Forms.ColumnHeader();
-            this.lvPendientesCol1.Text = "Cliente";
-            this.lvPendientesCol1.Width = 250;
-            this.lvPendientes.Columns.Add(this.lvPendientesCol1);
-            this.lvPendientesCol2 = new System.Windows.Forms.ColumnHeader();
-            this.lvPendientesCol2.Text = "Origen";
-            this.lvPendientesCol2.Width = 175;
-            this.lvPendientes.Columns.Add(this.lvPendientesCol2);
-            this.lvPendientesCol3 = new System.Windows.Forms.ColumnHeader();
-            this.lvPendientesCol3.Text = "Modalidad";
-            this.lvPendientesCol3.Width = 160;
-            this.lvPendientes.Columns.Add(this.lvPendientesCol3);
-            this.lvPendientesCol4 = new System.Windows.Forms.ColumnHeader();
-            this.lvPendientesCol4.Text = "Productos";
-            this.lvPendientesCol4.Width = 100;
-            this.lvPendientes.Columns.Add(this.lvPendientesCol4);
-            this.lvPendientesCol5 = new System.Windows.Forms.ColumnHeader();
-            this.lvPendientesCol5.Text = "Estado";
-            this.lvPendientesCol5.Width = 180;
-            this.lvPendientes.Columns.Add(this.lvPendientesCol5);
-            this.lvPendientes.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"OP-000181", "Cliente Demo A", "Cliente", "Fulfillment", "2", "PENDIENTE"}));
-            this.lvPendientes.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"OP-000182", "Cliente Demo A", "Cliente", "Fulfillment", "1", "PENDIENTE"}));
-            this.lvPendientes.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"OP-000183", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "PENDIENTE"}));
-            this.lvPendientes.Items[0].Checked = true;
-            this.lvPendientes.Items[1].Checked = true;
-            this.btnPrepararCorte = new System.Windows.Forms.Button();
-            this.btnPrepararCorte.Name = "btnPrepararCorte";
-            this.btnPrepararCorte.Location = new System.Drawing.Point(14, 290);
-            this.btnPrepararCorte.Size = new System.Drawing.Size(180, 34);
-            this.btnPrepararCorte.TabIndex = 73;
-            this.btnPrepararCorte.Text = "Preparar corte";
-            this.btnPrepararCorte.Enabled = true;
-            this.btnPrepararCorte.UseVisualStyleBackColor = false;
-            this.btnPrepararCorte.BackColor = System.Drawing.Color.FromArgb(35, 80, 124);
-            this.btnPrepararCorte.ForeColor = System.Drawing.Color.White;
-            this.btnPrepararCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblResumenCorte = new System.Windows.Forms.Label();
-            this.lblResumenCorte.Name = "lblResumenCorte";
-            this.lblResumenCorte.Location = new System.Drawing.Point(220, 295);
-            this.lblResumenCorte.Size = new System.Drawing.Size(900, 24);
-            this.lblResumenCorte.TabIndex = 74;
-            this.lblResumenCorte.Text = "Ejemplo de propuesta: 2 pedidos · 3 renglones · Agrupación por producto y ubicación";
-            this.grpPropuesta = new System.Windows.Forms.GroupBox();
-            this.grpPropuesta.Name = "grpPropuesta";
-            this.grpPropuesta.Location = new System.Drawing.Point(12, 338);
-            this.grpPropuesta.Size = new System.Drawing.Size(1250, 212);
-            this.grpPropuesta.TabIndex = 75;
-            this.grpPropuesta.Text = "Vista previa de la selección";
-            this.lvPropuesta = new System.Windows.Forms.ListView();
-            this.lvPropuesta.Name = "lvPropuesta";
-            this.lvPropuesta.Location = new System.Drawing.Point(14, 26);
-            this.lvPropuesta.Size = new System.Drawing.Size(1220, 124);
-            this.lvPropuesta.TabIndex = 76;
-            this.lvPropuesta.View = System.Windows.Forms.View.Details;
-            this.lvPropuesta.FullRowSelect = true;
-            this.lvPropuesta.GridLines = true;
-            this.lvPropuesta.MultiSelect = false;
-            this.lvPropuesta.HideSelection = false;
-            this.lvPropuesta.CheckBoxes = false;
-            this.lvPropuesta.UseCompatibleStateImageBehavior = false;
-            this.lvPropuestaCol0 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol0.Text = "Cliente";
-            this.lvPropuestaCol0.Width = 180;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol0);
-            this.lvPropuestaCol1 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol1.Text = "SKU";
-            this.lvPropuestaCol1.Width = 100;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol1);
-            this.lvPropuestaCol2 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol2.Text = "Producto";
-            this.lvPropuestaCol2.Width = 220;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol2);
-            this.lvPropuestaCol3 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol3.Text = "Ubicación";
-            this.lvPropuestaCol3.Width = 115;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol3);
-            this.lvPropuestaCol4 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol4.Text = "Cantidad";
-            this.lvPropuestaCol4.Width = 100;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol4);
-            this.lvPropuestaCol5 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol5.Text = "Unidad";
-            this.lvPropuestaCol5.Width = 100;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol5);
-            this.lvPropuestaCol6 = new System.Windows.Forms.ColumnHeader();
-            this.lvPropuestaCol6.Text = "Pedidos de origen";
-            this.lvPropuestaCol6.Width = 250;
-            this.lvPropuesta.Columns.Add(this.lvPropuestaCol6);
-            this.lvPropuesta.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"Cliente Demo A", "SKU-001", "Remera de algodón", "A-01-02", "120", "Unidad", "OP-000181 (80); OP-000182 (40)"}));
-            this.lvPropuesta.Items.Add(new System.Windows.Forms.ListViewItem(new string[] {"Cliente Demo A", "SKU-002", "Pantalón deportivo", "A-02-01", "30", "Unidad", "OP-000181 (30)"}));
-            this.lblReglaCorte = new System.Windows.Forms.Label();
-            this.lblReglaCorte.Name = "lblReglaCorte";
-            this.lblReglaCorte.Location = new System.Drawing.Point(14, 161);
-            this.lblReglaCorte.Size = new System.Drawing.Size(1200, 24);
-            this.lblReglaCorte.TabIndex = 84;
-            this.lblReglaCorte.Text = "La agrupación conserva el cliente y la asignación de cantidades a cada pedido.";
-            this.lblReglaSeleccion = new System.Windows.Forms.Label();
-            this.lblReglaSeleccion.Name = "lblReglaSeleccion";
-            this.lblReglaSeleccion.Location = new System.Drawing.Point(14, 185);
-            this.lblReglaSeleccion.Size = new System.Drawing.Size(1200, 24);
-            this.lblReglaSeleccion.TabIndex = 85;
-            this.lblReglaSeleccion.Text = "Confirmar genera las órdenes de selección y cambia los pedidos a SELECCIONADA, sin volver a comprometer stock.";
-            this.btnConfirmarCorte = new System.Windows.Forms.Button();
-            this.btnConfirmarCorte.Name = "btnConfirmarCorte";
-            this.btnConfirmarCorte.Location = new System.Drawing.Point(16, 567);
-            this.btnConfirmarCorte.Size = new System.Drawing.Size(267, 34);
-            this.btnConfirmarCorte.TabIndex = 86;
-            this.btnConfirmarCorte.Text = "Confirmar y generar selección";
-            this.btnConfirmarCorte.Enabled = true;
-            this.btnConfirmarCorte.UseVisualStyleBackColor = false;
-            this.btnConfirmarCorte.BackColor = System.Drawing.Color.FromArgb(35, 80, 124);
-            this.btnConfirmarCorte.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerOrdenes = new System.Windows.Forms.Button();
-            this.btnVerOrdenes.Name = "btnVerOrdenes";
-            this.btnVerOrdenes.Location = new System.Drawing.Point(295, 567);
-            this.btnVerOrdenes.Size = new System.Drawing.Size(232, 34);
-            this.btnVerOrdenes.TabIndex = 87;
-            this.btnVerOrdenes.Text = "Ver órdenes generadas";
-            this.btnVerOrdenes.Enabled = false;
-            this.btnVerOrdenes.UseVisualStyleBackColor = true;
-            this.btnDescartar = new System.Windows.Forms.Button();
-            this.btnDescartar.Name = "btnDescartar";
-            this.btnDescartar.Location = new System.Drawing.Point(539, 567);
-            this.btnDescartar.Size = new System.Drawing.Size(183, 34);
-            this.btnDescartar.TabIndex = 88;
-            this.btnDescartar.Text = "Descartar propuesta";
-            this.btnDescartar.Enabled = true;
-            this.btnDescartar.UseVisualStyleBackColor = true;
-            this.lblResultadoCorte = new System.Windows.Forms.Label();
-            this.lblResultadoCorte.Name = "lblResultadoCorte";
-            this.lblResultadoCorte.Location = new System.Drawing.Point(16, 610);
-            this.lblResultadoCorte.Size = new System.Drawing.Size(1180, 24);
-            this.lblResultadoCorte.TabIndex = 89;
-            this.lblResultadoCorte.Text = "Propuesta de ejemplo sin confirmar. Las órdenes generadas quedarán disponibles para Almacén.";
-            this.lblPie = new System.Windows.Forms.Label();
-            this.lblPie.Name = "lblPie";
-            this.lblPie.Location = new System.Drawing.Point(20, 865);
-            this.lblPie.Size = new System.Drawing.Size(1280, 23);
-            this.lblPie.TabIndex = 90;
-            this.lblPie.Text = "Diseño de interfaz · P01 Validación de órdenes / P02 Rechazo / P03 Generación de selección";
-            this.lblPie.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
-            this.lblPie.ForeColor = System.Drawing.Color.DimGray;
-            this.Controls.Add(this.pnlEncabezado);
-            this.pnlEncabezado.Controls.Add(this.lblTitulo);
-            this.pnlEncabezado.Controls.Add(this.lblEmpresa);
-            this.Controls.Add(this.grpContexto);
-            this.grpContexto.Controls.Add(this.lblDeposito);
-            this.grpContexto.Controls.Add(this.cboDeposito);
-            this.grpContexto.Controls.Add(this.lblRol);
-            this.grpContexto.Controls.Add(this.lblFecha);
-            this.grpContexto.Controls.Add(this.dtpFechaTrabajo);
-            this.grpContexto.Controls.Add(this.lblModo);
-            this.Controls.Add(this.tabGestion);
-            this.tabGestion.Controls.Add(this.tabAsignadas);
-            this.tabGestion.Controls.Add(this.tabCortes);
-            this.tabAsignadas.Controls.Add(this.grpFiltros);
-            this.grpFiltros.Controls.Add(this.lblBuscarOrden);
-            this.grpFiltros.Controls.Add(this.txtBuscarOrden);
-            this.grpFiltros.Controls.Add(this.lblCliente);
-            this.grpFiltros.Controls.Add(this.cboCliente);
-            this.grpFiltros.Controls.Add(this.lblOrigen);
-            this.grpFiltros.Controls.Add(this.cboOrigen);
-            this.grpFiltros.Controls.Add(this.lblDesde);
-            this.grpFiltros.Controls.Add(this.dtpDesde);
-            this.grpFiltros.Controls.Add(this.btnBuscar);
-            this.grpFiltros.Controls.Add(this.btnLimpiar);
-            this.tabAsignadas.Controls.Add(this.lblListaAsignadas);
-            this.tabAsignadas.Controls.Add(this.lvAsignadas);
-            this.tabAsignadas.Controls.Add(this.grpDetalle);
-            this.grpDetalle.Controls.Add(this.lblDetalleCliente);
-            this.grpDetalle.Controls.Add(this.txtDetalleCliente);
-            this.grpDetalle.Controls.Add(this.lblContrato);
-            this.grpDetalle.Controls.Add(this.txtContrato);
-            this.grpDetalle.Controls.Add(this.lblModalidad);
-            this.grpDetalle.Controls.Add(this.txtModalidad);
-            this.grpDetalle.Controls.Add(this.lblEstado);
-            this.grpDetalle.Controls.Add(this.txtEstado);
-            this.grpDetalle.Controls.Add(this.lvDisponibilidad);
-            this.grpDetalle.Controls.Add(this.lblStockRegla);
-            this.grpDetalle.Controls.Add(this.lblValidacion);
-            this.tabAsignadas.Controls.Add(this.btnValidar);
-            this.tabAsignadas.Controls.Add(this.btnAceptar);
-            this.tabAsignadas.Controls.Add(this.btnRechazar);
-            this.tabAsignadas.Controls.Add(this.lblMotivo);
-            this.tabAsignadas.Controls.Add(this.txtMotivo);
-            this.tabCortes.Controls.Add(this.grpCorte);
-            this.grpCorte.Controls.Add(this.lblFechaCorte);
-            this.grpCorte.Controls.Add(this.dtpFechaCorte);
-            this.grpCorte.Controls.Add(this.lblNumeroCorte);
-            this.grpCorte.Controls.Add(this.rdoPrimerCorte);
-            this.grpCorte.Controls.Add(this.rdoSegundoCorte);
-            this.grpCorte.Controls.Add(this.chkSoloPendientes);
-            this.grpCorte.Controls.Add(this.btnConsultarPendientes);
-            this.tabCortes.Controls.Add(this.lblPendientes);
-            this.tabCortes.Controls.Add(this.lvPendientes);
-            this.tabCortes.Controls.Add(this.btnPrepararCorte);
-            this.tabCortes.Controls.Add(this.lblResumenCorte);
-            this.tabCortes.Controls.Add(this.grpPropuesta);
-            this.grpPropuesta.Controls.Add(this.lvPropuesta);
-            this.grpPropuesta.Controls.Add(this.lblReglaCorte);
-            this.grpPropuesta.Controls.Add(this.lblReglaSeleccion);
-            this.tabCortes.Controls.Add(this.btnConfirmarCorte);
-            this.tabCortes.Controls.Add(this.btnVerOrdenes);
-            this.tabCortes.Controls.Add(this.btnDescartar);
-            this.tabCortes.Controls.Add(this.lblResultadoCorte);
-            this.Controls.Add(this.lblPie);
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1320, 900);
-            this.MinimumSize = new System.Drawing.Size(1350, 940);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BackColor = System.Drawing.Color.FromArgb(245, 247, 250);
-            this.Name = "FrmGestionPedidosSeleccion";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pampazon - Gestión de Pedidos y Selección";
-            this.ResumeLayout(false);
+            ListViewItem listViewItem11 = new ListViewItem(new string[] { "OP-000184", "12/10/2026", "Cliente Demo A", "Cliente", "Fulfillment", "2", "ASIGNADA" }, -1);
+            ListViewItem listViewItem12 = new ListViewItem(new string[] { "OP-000185", "12/10/2026", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "ASIGNADA" }, -1);
+            ListViewItem listViewItem13 = new ListViewItem(new string[] { "TR-000026", "12/10/2026", "Cliente Demo A", "Traslado interno", "Palé cerrado", "1", "ASIGNADA" }, -1);
+            ListViewItem listViewItem14 = new ListViewItem(new string[] { "SKU-001", "Remera de algodón", "Unidad", "80", "148", "Pendiente de validar" }, -1);
+            ListViewItem listViewItem15 = new ListViewItem(new string[] { "SKU-002", "Pantalón deportivo", "Unidad", "30", "65", "Pendiente de validar" }, -1);
+            ListViewItem listViewItem16 = new ListViewItem(new string[] { "OP-000181", "Cliente Demo A", "Cliente", "Fulfillment", "2", "PENDIENTE" }, -1);
+            ListViewItem listViewItem17 = new ListViewItem(new string[] { "OP-000182", "Cliente Demo A", "Cliente", "Fulfillment", "1", "PENDIENTE" }, -1);
+            ListViewItem listViewItem18 = new ListViewItem(new string[] { "OP-000183", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "PENDIENTE" }, -1);
+            ListViewItem listViewItem19 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-001", "Remera de algodón", "A-01-02", "120", "Unidad", "OP-000181 (80); OP-000182 (40)" }, -1);
+            ListViewItem listViewItem20 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-002", "Pantalón deportivo", "A-02-01", "30", "Unidad", "OP-000181 (30)" }, -1);
+            pnlEncabezado = new Panel();
+            lblTitulo = new Label();
+            lblEmpresa = new Label();
+            grpContexto = new GroupBox();
+            lblDeposito = new Label();
+            cboDeposito = new ComboBox();
+            lblRol = new Label();
+            lblFecha = new Label();
+            dtpFechaTrabajo = new DateTimePicker();
+            tabGestion = new TabControl();
+            tabAsignadas = new TabPage();
+            grpFiltros = new GroupBox();
+            lblBuscarOrden = new Label();
+            txtBuscarOrden = new TextBox();
+            lblCliente = new Label();
+            cboCliente = new ComboBox();
+            lblOrigen = new Label();
+            cboOrigen = new ComboBox();
+            lblDesde = new Label();
+            dtpDesde = new DateTimePicker();
+            btnBuscar = new Button();
+            btnLimpiar = new Button();
+            lblListaAsignadas = new Label();
+            lvAsignadas = new ListView();
+            lvAsignadasCol0 = new ColumnHeader();
+            lvAsignadasCol1 = new ColumnHeader();
+            lvAsignadasCol2 = new ColumnHeader();
+            lvAsignadasCol3 = new ColumnHeader();
+            lvAsignadasCol4 = new ColumnHeader();
+            lvAsignadasCol5 = new ColumnHeader();
+            lvAsignadasCol6 = new ColumnHeader();
+            grpDetalle = new GroupBox();
+            lblDetalleCliente = new Label();
+            txtDetalleCliente = new TextBox();
+            lblContrato = new Label();
+            txtContrato = new TextBox();
+            lblModalidad = new Label();
+            txtModalidad = new TextBox();
+            lblEstado = new Label();
+            txtEstado = new TextBox();
+            lvDisponibilidad = new ListView();
+            lvDisponibilidadCol0 = new ColumnHeader();
+            lvDisponibilidadCol1 = new ColumnHeader();
+            lvDisponibilidadCol2 = new ColumnHeader();
+            lvDisponibilidadCol3 = new ColumnHeader();
+            lvDisponibilidadCol4 = new ColumnHeader();
+            lvDisponibilidadCol5 = new ColumnHeader();
+            lblStockRegla = new Label();
+            lblValidacion = new Label();
+            btnValidar = new Button();
+            btnAceptar = new Button();
+            btnRechazar = new Button();
+            lblMotivo = new Label();
+            txtMotivo = new TextBox();
+            tabCortes = new TabPage();
+            grpCorte = new GroupBox();
+            lblFechaCorte = new Label();
+            dtpFechaCorte = new DateTimePicker();
+            lblNumeroCorte = new Label();
+            rdoPrimerCorte = new RadioButton();
+            rdoSegundoCorte = new RadioButton();
+            chkSoloPendientes = new CheckBox();
+            btnConsultarPendientes = new Button();
+            lblPendientes = new Label();
+            lvPendientes = new ListView();
+            lvPendientesCol0 = new ColumnHeader();
+            lvPendientesCol1 = new ColumnHeader();
+            lvPendientesCol2 = new ColumnHeader();
+            lvPendientesCol3 = new ColumnHeader();
+            lvPendientesCol4 = new ColumnHeader();
+            lvPendientesCol5 = new ColumnHeader();
+            btnPrepararCorte = new Button();
+            lblResumenCorte = new Label();
+            grpPropuesta = new GroupBox();
+            lvPropuesta = new ListView();
+            lvPropuestaCol0 = new ColumnHeader();
+            lvPropuestaCol1 = new ColumnHeader();
+            lvPropuestaCol2 = new ColumnHeader();
+            lvPropuestaCol3 = new ColumnHeader();
+            lvPropuestaCol4 = new ColumnHeader();
+            lvPropuestaCol5 = new ColumnHeader();
+            lvPropuestaCol6 = new ColumnHeader();
+            lblReglaCorte = new Label();
+            lblReglaSeleccion = new Label();
+            btnConfirmarCorte = new Button();
+            btnVerOrdenes = new Button();
+            btnDescartar = new Button();
+            lblResultadoCorte = new Label();
+            pnlEncabezado.SuspendLayout();
+            grpContexto.SuspendLayout();
+            tabGestion.SuspendLayout();
+            tabAsignadas.SuspendLayout();
+            grpFiltros.SuspendLayout();
+            grpDetalle.SuspendLayout();
+            tabCortes.SuspendLayout();
+            grpCorte.SuspendLayout();
+            grpPropuesta.SuspendLayout();
+            SuspendLayout();
+            // 
+            // pnlEncabezado
+            // 
+            pnlEncabezado.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pnlEncabezado.BackColor = Color.FromArgb(35, 80, 124);
+            pnlEncabezado.Controls.Add(lblTitulo);
+            pnlEncabezado.Controls.Add(lblEmpresa);
+            pnlEncabezado.Location = new Point(0, 0);
+            pnlEncabezado.Name = "pnlEncabezado";
+            pnlEncabezado.Size = new Size(1320, 76);
+            pnlEncabezado.TabIndex = 1;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.White;
+            lblTitulo.Location = new Point(24, 13);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(890, 34);
+            lblTitulo.TabIndex = 2;
+            lblTitulo.Text = "Gestión de Pedidos y Selección";
+            // 
+            // lblEmpresa
+            // 
+            lblEmpresa.ForeColor = Color.White;
+            lblEmpresa.Location = new Point(26, 48);
+            lblEmpresa.Name = "lblEmpresa";
+            lblEmpresa.Size = new Size(1050, 22);
+            lblEmpresa.TabIndex = 3;
+            lblEmpresa.Text = "PAMPAZON  |  Encargado de Preparación";
+            // 
+            // grpContexto
+            // 
+            grpContexto.Controls.Add(lblDeposito);
+            grpContexto.Controls.Add(cboDeposito);
+            grpContexto.Controls.Add(lblRol);
+            grpContexto.Controls.Add(lblFecha);
+            grpContexto.Controls.Add(dtpFechaTrabajo);
+            grpContexto.Location = new Point(16, 84);
+            grpContexto.Name = "grpContexto";
+            grpContexto.Size = new Size(1288, 72);
+            grpContexto.TabIndex = 4;
+            grpContexto.TabStop = false;
+            grpContexto.Text = "Contexto de trabajo";
+            // 
+            // lblDeposito
+            // 
+            lblDeposito.Location = new Point(16, 30);
+            lblDeposito.Name = "lblDeposito";
+            lblDeposito.Size = new Size(68, 24);
+            lblDeposito.TabIndex = 5;
+            lblDeposito.Text = "Depósito";
+            // 
+            // cboDeposito
+            // 
+            cboDeposito.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboDeposito.Enabled = false;
+            cboDeposito.Items.AddRange(new object[] { "GBA" });
+            cboDeposito.Location = new Point(90, 26);
+            cboDeposito.Name = "cboDeposito";
+            cboDeposito.Size = new Size(373, 23);
+            cboDeposito.TabIndex = 6;
+            // 
+            // lblRol
+            // 
+            lblRol.Location = new Point(480, 29);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(189, 24);
+            lblRol.TabIndex = 7;
+            lblRol.Text = "Rol: Encargado de Preparación";
+            // 
+            // lblFecha
+            // 
+            lblFecha.Location = new Point(680, 30);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(72, 24);
+            lblFecha.TabIndex = 8;
+            lblFecha.Text = "Fecha";
+            // 
+            // dtpFechaTrabajo
+            // 
+            dtpFechaTrabajo.Enabled = false;
+            dtpFechaTrabajo.Format = DateTimePickerFormat.Short;
+            dtpFechaTrabajo.Location = new Point(756, 26);
+            dtpFechaTrabajo.Name = "dtpFechaTrabajo";
+            dtpFechaTrabajo.Size = new Size(510, 23);
+            dtpFechaTrabajo.TabIndex = 9;
+            dtpFechaTrabajo.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
+            // 
+            // tabGestion
+            // 
+            tabGestion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tabGestion.Controls.Add(tabAsignadas);
+            tabGestion.Controls.Add(tabCortes);
+            tabGestion.Location = new Point(16, 170);
+            tabGestion.Name = "tabGestion";
+            tabGestion.SelectedIndex = 0;
+            tabGestion.Size = new Size(1288, 684);
+            tabGestion.TabIndex = 11;
+            //tabGestion.SelectedIndexChanged += this.tabGestion_SelectedIndexChanged;
+            // 
+            // tabAsignadas
+            // 
+            tabAsignadas.Controls.Add(grpFiltros);
+            tabAsignadas.Controls.Add(lblListaAsignadas);
+            tabAsignadas.Controls.Add(lvAsignadas);
+            tabAsignadas.Controls.Add(grpDetalle);
+            tabAsignadas.Controls.Add(btnValidar);
+            tabAsignadas.Controls.Add(btnAceptar);
+            tabAsignadas.Controls.Add(btnRechazar);
+            tabAsignadas.Controls.Add(lblMotivo);
+            tabAsignadas.Controls.Add(txtMotivo);
+            tabAsignadas.Location = new Point(4, 24);
+            tabAsignadas.Name = "tabAsignadas";
+            tabAsignadas.Size = new Size(1280, 656);
+            tabAsignadas.TabIndex = 12;
+            tabAsignadas.Text = "Órdenes asignadas";
+            tabAsignadas.UseVisualStyleBackColor = true;
+            // 
+            // grpFiltros
+            // 
+            grpFiltros.Controls.Add(lblBuscarOrden);
+            grpFiltros.Controls.Add(txtBuscarOrden);
+            grpFiltros.Controls.Add(lblCliente);
+            grpFiltros.Controls.Add(cboCliente);
+            grpFiltros.Controls.Add(lblOrigen);
+            grpFiltros.Controls.Add(cboOrigen);
+            grpFiltros.Controls.Add(lblDesde);
+            grpFiltros.Controls.Add(dtpDesde);
+            grpFiltros.Controls.Add(btnBuscar);
+            grpFiltros.Controls.Add(btnLimpiar);
+            grpFiltros.Location = new Point(12, 10);
+            grpFiltros.Name = "grpFiltros";
+            grpFiltros.Size = new Size(1250, 80);
+            grpFiltros.TabIndex = 14;
+            grpFiltros.TabStop = false;
+            grpFiltros.Text = "Buscar órdenes";
+            // 
+            // lblBuscarOrden
+            // 
+            lblBuscarOrden.Location = new Point(14, 22);
+            lblBuscarOrden.Name = "lblBuscarOrden";
+            lblBuscarOrden.Size = new Size(135, 24);
+            lblBuscarOrden.TabIndex = 15;
+            lblBuscarOrden.Text = "N.º de orden";
+            // 
+            // txtBuscarOrden
+            // 
+            txtBuscarOrden.Location = new Point(14, 45);
+            txtBuscarOrden.Name = "txtBuscarOrden";
+            txtBuscarOrden.Size = new Size(150, 23);
+            txtBuscarOrden.TabIndex = 16;
+            // 
+            // lblCliente
+            // 
+            lblCliente.Location = new Point(182, 22);
+            lblCliente.Name = "lblCliente";
+            lblCliente.Size = new Size(230, 24);
+            lblCliente.TabIndex = 17;
+            lblCliente.Text = "Cliente";
+            // 
+            // cboCliente
+            // 
+            cboCliente.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboCliente.Items.AddRange(new object[] { "Todos los clientes", "Cliente Demo A", "Cliente Demo B" });
+            cboCliente.Location = new Point(182, 45);
+            cboCliente.Name = "cboCliente";
+            cboCliente.Size = new Size(265, 23);
+            cboCliente.TabIndex = 18;
+            // 
+            // lblOrigen
+            // 
+            lblOrigen.Location = new Point(464, 22);
+            lblOrigen.Name = "lblOrigen";
+            lblOrigen.Size = new Size(110, 24);
+            lblOrigen.TabIndex = 19;
+            lblOrigen.Text = "Origen";
+            // 
+            // cboOrigen
+            // 
+            cboOrigen.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboOrigen.Items.AddRange(new object[] { "Todos", "Cliente", "Traslado interno" });
+            cboOrigen.Location = new Point(464, 45);
+            cboOrigen.Name = "cboOrigen";
+            cboOrigen.Size = new Size(175, 23);
+            cboOrigen.TabIndex = 20;
+            // 
+            // lblDesde
+            // 
+            lblDesde.Location = new Point(657, 22);
+            lblDesde.Name = "lblDesde";
+            lblDesde.Size = new Size(140, 24);
+            lblDesde.TabIndex = 21;
+            lblDesde.Text = "Fecha de asignación";
+            // 
+            // dtpDesde
+            // 
+            dtpDesde.Checked = false;
+            dtpDesde.Format = DateTimePickerFormat.Short;
+            dtpDesde.Location = new Point(657, 45);
+            dtpDesde.Name = "dtpDesde";
+            dtpDesde.ShowCheckBox = true;
+            dtpDesde.Size = new Size(145, 23);
+            dtpDesde.TabIndex = 22;
+            dtpDesde.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = Color.FromArgb(35, 80, 124);
+            btnBuscar.FlatStyle = FlatStyle.Flat;
+            btnBuscar.ForeColor = Color.White;
+            btnBuscar.Location = new Point(828, 38);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(216, 34);
+            btnBuscar.TabIndex = 23;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(1050, 38);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(200, 34);
+            btnLimpiar.TabIndex = 24;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // lblListaAsignadas
+            // 
+            lblListaAsignadas.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblListaAsignadas.Location = new Point(14, 102);
+            lblListaAsignadas.Name = "lblListaAsignadas";
+            lblListaAsignadas.Size = new Size(950, 24);
+            lblListaAsignadas.TabIndex = 25;
+            lblListaAsignadas.Text = "Órdenes asignadas al depósito";
+            // 
+            // lvAsignadas
+            // 
+            lvAsignadas.Columns.AddRange(new ColumnHeader[] { lvAsignadasCol0, lvAsignadasCol1, lvAsignadasCol2, lvAsignadasCol3, lvAsignadasCol4, lvAsignadasCol5, lvAsignadasCol6 });
+            lvAsignadas.FullRowSelect = true;
+            lvAsignadas.GridLines = true;
+            lvAsignadas.Items.AddRange(new ListViewItem[] { listViewItem11, listViewItem12, listViewItem13 });
+            lvAsignadas.Location = new Point(14, 132);
+            lvAsignadas.MultiSelect = false;
+            lvAsignadas.Name = "lvAsignadas";
+            lvAsignadas.Size = new Size(1248, 137);
+            lvAsignadas.TabIndex = 26;
+            lvAsignadas.UseCompatibleStateImageBehavior = false;
+            lvAsignadas.View = View.Details;
+            // 
+            // lvAsignadasCol0
+            // 
+            lvAsignadasCol0.Text = "N.º de orden";
+            lvAsignadasCol0.Width = 115;
+            // 
+            // lvAsignadasCol1
+            // 
+            lvAsignadasCol1.Text = "Asignación";
+            lvAsignadasCol1.Width = 115;
+            // 
+            // lvAsignadasCol2
+            // 
+            lvAsignadasCol2.Text = "Cliente";
+            lvAsignadasCol2.Width = 225;
+            // 
+            // lvAsignadasCol3
+            // 
+            lvAsignadasCol3.Text = "Origen";
+            lvAsignadasCol3.Width = 165;
+            // 
+            // lvAsignadasCol4
+            // 
+            lvAsignadasCol4.Text = "Modalidad";
+            lvAsignadasCol4.Width = 150;
+            // 
+            // lvAsignadasCol5
+            // 
+            lvAsignadasCol5.Text = "Productos";
+            lvAsignadasCol5.Width = 100;
+            // 
+            // lvAsignadasCol6
+            // 
+            lvAsignadasCol6.Text = "Estado";
+            lvAsignadasCol6.Width = 155;
+            // 
+            // grpDetalle
+            // 
+            grpDetalle.Controls.Add(lblDetalleCliente);
+            grpDetalle.Controls.Add(txtDetalleCliente);
+            grpDetalle.Controls.Add(lblContrato);
+            grpDetalle.Controls.Add(txtContrato);
+            grpDetalle.Controls.Add(lblModalidad);
+            grpDetalle.Controls.Add(txtModalidad);
+            grpDetalle.Controls.Add(lblEstado);
+            grpDetalle.Controls.Add(txtEstado);
+            grpDetalle.Controls.Add(lvDisponibilidad);
+            grpDetalle.Controls.Add(lblStockRegla);
+            grpDetalle.Controls.Add(lblValidacion);
+            grpDetalle.Location = new Point(12, 282);
+            grpDetalle.Name = "grpDetalle";
+            grpDetalle.Size = new Size(1250, 253);
+            grpDetalle.TabIndex = 34;
+            grpDetalle.TabStop = false;
+            grpDetalle.Text = "Detalle de la orden OP-000184";
+            // 
+            // lblDetalleCliente
+            // 
+            lblDetalleCliente.Location = new Point(14, 27);
+            lblDetalleCliente.Name = "lblDetalleCliente";
+            lblDetalleCliente.Size = new Size(80, 24);
+            lblDetalleCliente.TabIndex = 35;
+            lblDetalleCliente.Text = "Cliente";
+            // 
+            // txtDetalleCliente
+            // 
+            txtDetalleCliente.Location = new Point(95, 23);
+            txtDetalleCliente.Name = "txtDetalleCliente";
+            txtDetalleCliente.ReadOnly = true;
+            txtDetalleCliente.Size = new Size(220, 23);
+            txtDetalleCliente.TabIndex = 36;
+            txtDetalleCliente.Text = "Cliente Demo A";
+            // 
+            // lblContrato
+            // 
+            lblContrato.Location = new Point(335, 27);
+            lblContrato.Name = "lblContrato";
+            lblContrato.Size = new Size(78, 24);
+            lblContrato.TabIndex = 37;
+            lblContrato.Text = "Contrato";
+            // 
+            // txtContrato
+            // 
+            txtContrato.Location = new Point(415, 23);
+            txtContrato.Name = "txtContrato";
+            txtContrato.ReadOnly = true;
+            txtContrato.Size = new Size(150, 23);
+            txtContrato.TabIndex = 38;
+            txtContrato.Text = "CT-000028";
+            // 
+            // lblModalidad
+            // 
+            lblModalidad.Location = new Point(585, 27);
+            lblModalidad.Name = "lblModalidad";
+            lblModalidad.Size = new Size(90, 24);
+            lblModalidad.TabIndex = 39;
+            lblModalidad.Text = "Modalidad";
+            // 
+            // txtModalidad
+            // 
+            txtModalidad.Location = new Point(680, 23);
+            txtModalidad.Name = "txtModalidad";
+            txtModalidad.ReadOnly = true;
+            txtModalidad.Size = new Size(150, 23);
+            txtModalidad.TabIndex = 40;
+            txtModalidad.Text = "Fulfillment";
+            // 
+            // lblEstado
+            // 
+            lblEstado.Location = new Point(850, 27);
+            lblEstado.Name = "lblEstado";
+            lblEstado.Size = new Size(65, 24);
+            lblEstado.TabIndex = 41;
+            lblEstado.Text = "Estado";
+            // 
+            // txtEstado
+            // 
+            txtEstado.Location = new Point(920, 23);
+            txtEstado.Name = "txtEstado";
+            txtEstado.ReadOnly = true;
+            txtEstado.Size = new Size(314, 23);
+            txtEstado.TabIndex = 42;
+            txtEstado.Text = "ASIGNADA";
+            txtEstado.TextChanged += txtEstado_TextChanged;
+            // 
+            // lvDisponibilidad
+            // 
+            lvDisponibilidad.Columns.AddRange(new ColumnHeader[] { lvDisponibilidadCol0, lvDisponibilidadCol1, lvDisponibilidadCol2, lvDisponibilidadCol3, lvDisponibilidadCol4, lvDisponibilidadCol5 });
+            lvDisponibilidad.FullRowSelect = true;
+            lvDisponibilidad.GridLines = true;
+            lvDisponibilidad.Items.AddRange(new ListViewItem[] { listViewItem14, listViewItem15 });
+            lvDisponibilidad.Location = new Point(14, 67);
+            lvDisponibilidad.MultiSelect = false;
+            lvDisponibilidad.Name = "lvDisponibilidad";
+            lvDisponibilidad.Size = new Size(1220, 118);
+            lvDisponibilidad.TabIndex = 43;
+            lvDisponibilidad.UseCompatibleStateImageBehavior = false;
+            lvDisponibilidad.View = View.Details;
+            // 
+            // lvDisponibilidadCol0
+            // 
+            lvDisponibilidadCol0.Text = "SKU";
+            lvDisponibilidadCol0.Width = 120;
+            // 
+            // lvDisponibilidadCol1
+            // 
+            lvDisponibilidadCol1.Text = "Producto";
+            lvDisponibilidadCol1.Width = 305;
+            // 
+            // lvDisponibilidadCol2
+            // 
+            lvDisponibilidadCol2.Text = "Unidad";
+            lvDisponibilidadCol2.Width = 110;
+            // 
+            // lvDisponibilidadCol3
+            // 
+            lvDisponibilidadCol3.Text = "Solicitado";
+            lvDisponibilidadCol3.Width = 120;
+            // 
+            // lvDisponibilidadCol4
+            // 
+            lvDisponibilidadCol4.Text = "Disponible";
+            lvDisponibilidadCol4.Width = 120;
+            // 
+            // lvDisponibilidadCol5
+            // 
+            lvDisponibilidadCol5.Text = "Validación";
+            lvDisponibilidadCol5.Width = 200;
+            // 
+            // lblStockRegla
+            // 
+            lblStockRegla.Location = new Point(14, 192);
+            lblStockRegla.Name = "lblStockRegla";
+            lblStockRegla.Size = new Size(1190, 24);
+            lblStockRegla.TabIndex = 50;
+            lblStockRegla.Text = "Disponible: mercadería aceptada y no comprometida del cliente en este depósito.";
+            // 
+            // lblValidacion
+            // 
+            lblValidacion.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblValidacion.Location = new Point(14, 220);
+            lblValidacion.Name = "lblValidacion";
+            lblValidacion.Size = new Size(1190, 24);
+            lblValidacion.TabIndex = 51;
+            lblValidacion.Text = "Validación pendiente. Al aceptar se compromete el stock, sin descontar las existencias físicas.";
+            // 
+            // btnValidar
+            // 
+            btnValidar.BackColor = Color.FromArgb(35, 80, 124);
+            btnValidar.FlatStyle = FlatStyle.Flat;
+            btnValidar.ForeColor = Color.White;
+            btnValidar.Location = new Point(16, 541);
+            btnValidar.Name = "btnValidar";
+            btnValidar.Size = new Size(417, 34);
+            btnValidar.TabIndex = 52;
+            btnValidar.Text = "Validar disponibilidad";
+            btnValidar.UseVisualStyleBackColor = false;
+            // 
+            // btnAceptar
+            // 
+            btnAceptar.Enabled = false;
+            btnAceptar.Location = new Point(449, 541);
+            btnAceptar.Name = "btnAceptar";
+            btnAceptar.Size = new Size(445, 34);
+            btnAceptar.TabIndex = 53;
+            btnAceptar.Text = "Aceptar y comprometer";
+            btnAceptar.UseVisualStyleBackColor = true;
+            // 
+            // btnRechazar
+            // 
+            btnRechazar.Enabled = false;
+            btnRechazar.Location = new Point(900, 541);
+            btnRechazar.Name = "btnRechazar";
+            btnRechazar.Size = new Size(362, 34);
+            btnRechazar.TabIndex = 54;
+            btnRechazar.Text = "Rechazar por falta de stock";
+            btnRechazar.UseVisualStyleBackColor = true;
+            // 
+            // lblMotivo
+            // 
+            lblMotivo.Location = new Point(16, 593);
+            lblMotivo.Name = "lblMotivo";
+            lblMotivo.Size = new Size(150, 24);
+            lblMotivo.TabIndex = 55;
+            lblMotivo.Text = "Motivo del rechazo";
+            // 
+            // txtMotivo
+            // 
+            txtMotivo.Location = new Point(174, 590);
+            txtMotivo.Name = "txtMotivo";
+            txtMotivo.ReadOnly = true;
+            txtMotivo.Size = new Size(1088, 23);
+            txtMotivo.TabIndex = 56;
+            txtMotivo.Text = "Se completará con los productos y cantidades faltantes.";
+            // 
+            // tabCortes
+            // 
+            tabCortes.Controls.Add(grpCorte);
+            tabCortes.Controls.Add(lblPendientes);
+            tabCortes.Controls.Add(lvPendientes);
+            tabCortes.Controls.Add(btnPrepararCorte);
+            tabCortes.Controls.Add(lblResumenCorte);
+            tabCortes.Controls.Add(grpPropuesta);
+            tabCortes.Controls.Add(btnConfirmarCorte);
+            tabCortes.Controls.Add(btnVerOrdenes);
+            tabCortes.Controls.Add(btnDescartar);
+            tabCortes.Controls.Add(lblResultadoCorte);
+            tabCortes.Location = new Point(4, 24);
+            tabCortes.Name = "tabCortes";
+            tabCortes.Size = new Size(1280, 656);
+            tabCortes.TabIndex = 13;
+            tabCortes.Text = "Cortes de selección";
+            tabCortes.UseVisualStyleBackColor = true;
+            // 
+            // grpCorte
+            // 
+            grpCorte.Controls.Add(lblFechaCorte);
+            grpCorte.Controls.Add(dtpFechaCorte);
+            grpCorte.Controls.Add(lblNumeroCorte);
+            grpCorte.Controls.Add(rdoPrimerCorte);
+            grpCorte.Controls.Add(rdoSegundoCorte);
+            grpCorte.Controls.Add(chkSoloPendientes);
+            grpCorte.Controls.Add(btnConsultarPendientes);
+            grpCorte.Location = new Point(12, 10);
+            grpCorte.Name = "grpCorte";
+            grpCorte.Size = new Size(1250, 85);
+            grpCorte.TabIndex = 57;
+            grpCorte.TabStop = false;
+            grpCorte.Text = "Datos del corte";
+            // 
+            // lblFechaCorte
+            // 
+            lblFechaCorte.Location = new Point(14, 23);
+            lblFechaCorte.Name = "lblFechaCorte";
+            lblFechaCorte.Size = new Size(140, 24);
+            lblFechaCorte.TabIndex = 58;
+            lblFechaCorte.Text = "Fecha del corte";
+            // 
+            // dtpFechaCorte
+            // 
+            dtpFechaCorte.Format = DateTimePickerFormat.Short;
+            dtpFechaCorte.Location = new Point(14, 46);
+            dtpFechaCorte.Name = "dtpFechaCorte";
+            dtpFechaCorte.Size = new Size(160, 23);
+            dtpFechaCorte.TabIndex = 59;
+            dtpFechaCorte.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
+            // 
+            // lblNumeroCorte
+            // 
+            lblNumeroCorte.Location = new Point(197, 23);
+            lblNumeroCorte.Name = "lblNumeroCorte";
+            lblNumeroCorte.Size = new Size(180, 24);
+            lblNumeroCorte.TabIndex = 60;
+            lblNumeroCorte.Text = "Corte operativo";
+            // 
+            // rdoPrimerCorte
+            // 
+            rdoPrimerCorte.Checked = true;
+            rdoPrimerCorte.Location = new Point(197, 47);
+            rdoPrimerCorte.Name = "rdoPrimerCorte";
+            rdoPrimerCorte.Size = new Size(138, 25);
+            rdoPrimerCorte.TabIndex = 61;
+            rdoPrimerCorte.TabStop = true;
+            rdoPrimerCorte.Text = "Primer corte";
+            // 
+            // rdoSegundoCorte
+            // 
+            rdoSegundoCorte.Location = new Point(342, 47);
+            rdoSegundoCorte.Name = "rdoSegundoCorte";
+            rdoSegundoCorte.Size = new Size(156, 25);
+            rdoSegundoCorte.TabIndex = 62;
+            rdoSegundoCorte.Text = "Segundo corte";
+            // 
+            // chkSoloPendientes
+            // 
+            chkSoloPendientes.Checked = true;
+            chkSoloPendientes.CheckState = CheckState.Checked;
+            chkSoloPendientes.Enabled = false;
+            chkSoloPendientes.Location = new Point(555, 47);
+            chkSoloPendientes.Name = "chkSoloPendientes";
+            chkSoloPendientes.Size = new Size(280, 25);
+            chkSoloPendientes.TabIndex = 63;
+            chkSoloPendientes.Text = "Solo órdenes PENDIENTES";
+            // 
+            // btnConsultarPendientes
+            // 
+            btnConsultarPendientes.BackColor = Color.FromArgb(35, 80, 124);
+            btnConsultarPendientes.FlatStyle = FlatStyle.Flat;
+            btnConsultarPendientes.ForeColor = Color.White;
+            btnConsultarPendientes.Location = new Point(1015, 36);
+            btnConsultarPendientes.Name = "btnConsultarPendientes";
+            btnConsultarPendientes.Size = new Size(216, 34);
+            btnConsultarPendientes.TabIndex = 64;
+            btnConsultarPendientes.Text = "Consultar pendientes";
+            btnConsultarPendientes.UseVisualStyleBackColor = false;
+            // 
+            // lblPendientes
+            // 
+            lblPendientes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblPendientes.Location = new Point(14, 107);
+            lblPendientes.Name = "lblPendientes";
+            lblPendientes.Size = new Size(1150, 24);
+            lblPendientes.TabIndex = 65;
+            lblPendientes.Text = "Órdenes pendientes · Marcar las que se incorporarán al corte";
+            // 
+            // lvPendientes
+            // 
+            lvPendientes.CheckBoxes = true;
+            lvPendientes.Columns.AddRange(new ColumnHeader[] { lvPendientesCol0, lvPendientesCol1, lvPendientesCol2, lvPendientesCol3, lvPendientesCol4, lvPendientesCol5 });
+            lvPendientes.FullRowSelect = true;
+            lvPendientes.GridLines = true;
+            listViewItem16.StateImageIndex = 0;
+            listViewItem17.StateImageIndex = 0;
+            listViewItem18.StateImageIndex = 0;
+            lvPendientes.Items.AddRange(new ListViewItem[] { listViewItem16, listViewItem17, listViewItem18 });
+            lvPendientes.Location = new Point(14, 136);
+            lvPendientes.MultiSelect = false;
+            lvPendientes.Name = "lvPendientes";
+            lvPendientes.Size = new Size(1248, 142);
+            lvPendientes.TabIndex = 66;
+            lvPendientes.UseCompatibleStateImageBehavior = false;
+            lvPendientes.View = View.Details;
+            // 
+            // lvPendientesCol0
+            // 
+            lvPendientesCol0.Text = "Incluir / Orden";
+            lvPendientesCol0.Width = 160;
+            // 
+            // lvPendientesCol1
+            // 
+            lvPendientesCol1.Text = "Cliente";
+            lvPendientesCol1.Width = 250;
+            // 
+            // lvPendientesCol2
+            // 
+            lvPendientesCol2.Text = "Origen";
+            lvPendientesCol2.Width = 175;
+            // 
+            // lvPendientesCol3
+            // 
+            lvPendientesCol3.Text = "Modalidad";
+            lvPendientesCol3.Width = 160;
+            // 
+            // lvPendientesCol4
+            // 
+            lvPendientesCol4.Text = "Productos";
+            lvPendientesCol4.Width = 100;
+            // 
+            // lvPendientesCol5
+            // 
+            lvPendientesCol5.Text = "Estado";
+            lvPendientesCol5.Width = 180;
+            // 
+            // btnPrepararCorte
+            // 
+            btnPrepararCorte.BackColor = Color.FromArgb(35, 80, 124);
+            btnPrepararCorte.FlatStyle = FlatStyle.Flat;
+            btnPrepararCorte.ForeColor = Color.White;
+            btnPrepararCorte.Location = new Point(14, 290);
+            btnPrepararCorte.Name = "btnPrepararCorte";
+            btnPrepararCorte.Size = new Size(180, 34);
+            btnPrepararCorte.TabIndex = 73;
+            btnPrepararCorte.Text = "Preparar corte";
+            btnPrepararCorte.UseVisualStyleBackColor = false;
+            // 
+            // lblResumenCorte
+            // 
+            lblResumenCorte.Location = new Point(220, 295);
+            lblResumenCorte.Name = "lblResumenCorte";
+            lblResumenCorte.Size = new Size(900, 24);
+            lblResumenCorte.TabIndex = 74;
+            lblResumenCorte.Text = "Ejemplo de propuesta: 2 pedidos · 3 renglones · Agrupación por producto y ubicación";
+            // 
+            // grpPropuesta
+            // 
+            grpPropuesta.Controls.Add(lvPropuesta);
+            grpPropuesta.Controls.Add(lblReglaCorte);
+            grpPropuesta.Controls.Add(lblReglaSeleccion);
+            grpPropuesta.Location = new Point(12, 338);
+            grpPropuesta.Name = "grpPropuesta";
+            grpPropuesta.Size = new Size(1250, 212);
+            grpPropuesta.TabIndex = 75;
+            grpPropuesta.TabStop = false;
+            grpPropuesta.Text = "Vista previa de la selección";
+            // 
+            // lvPropuesta
+            // 
+            lvPropuesta.Columns.AddRange(new ColumnHeader[] { lvPropuestaCol0, lvPropuestaCol1, lvPropuestaCol2, lvPropuestaCol3, lvPropuestaCol4, lvPropuestaCol5, lvPropuestaCol6 });
+            lvPropuesta.FullRowSelect = true;
+            lvPropuesta.GridLines = true;
+            lvPropuesta.Items.AddRange(new ListViewItem[] { listViewItem19, listViewItem20 });
+            lvPropuesta.Location = new Point(14, 26);
+            lvPropuesta.MultiSelect = false;
+            lvPropuesta.Name = "lvPropuesta";
+            lvPropuesta.Size = new Size(1220, 124);
+            lvPropuesta.TabIndex = 76;
+            lvPropuesta.UseCompatibleStateImageBehavior = false;
+            lvPropuesta.View = View.Details;
+            // 
+            // lvPropuestaCol0
+            // 
+            lvPropuestaCol0.Text = "Cliente";
+            lvPropuestaCol0.Width = 180;
+            // 
+            // lvPropuestaCol1
+            // 
+            lvPropuestaCol1.Text = "SKU";
+            lvPropuestaCol1.Width = 100;
+            // 
+            // lvPropuestaCol2
+            // 
+            lvPropuestaCol2.Text = "Producto";
+            lvPropuestaCol2.Width = 220;
+            // 
+            // lvPropuestaCol3
+            // 
+            lvPropuestaCol3.Text = "Ubicación";
+            lvPropuestaCol3.Width = 115;
+            // 
+            // lvPropuestaCol4
+            // 
+            lvPropuestaCol4.Text = "Cantidad";
+            lvPropuestaCol4.Width = 100;
+            // 
+            // lvPropuestaCol5
+            // 
+            lvPropuestaCol5.Text = "Unidad";
+            lvPropuestaCol5.Width = 100;
+            // 
+            // lvPropuestaCol6
+            // 
+            lvPropuestaCol6.Text = "Pedidos de origen";
+            lvPropuestaCol6.Width = 250;
+            // 
+            // lblReglaCorte
+            // 
+            lblReglaCorte.Location = new Point(14, 161);
+            lblReglaCorte.Name = "lblReglaCorte";
+            lblReglaCorte.Size = new Size(1200, 24);
+            lblReglaCorte.TabIndex = 84;
+            lblReglaCorte.Text = "La agrupación conserva el cliente y la asignación de cantidades a cada pedido.";
+            // 
+            // lblReglaSeleccion
+            // 
+            lblReglaSeleccion.Location = new Point(14, 185);
+            lblReglaSeleccion.Name = "lblReglaSeleccion";
+            lblReglaSeleccion.Size = new Size(1200, 24);
+            lblReglaSeleccion.TabIndex = 85;
+            lblReglaSeleccion.Text = "Confirmar genera las órdenes de selección y cambia los pedidos a SELECCIONADA, sin volver a comprometer stock.";
+            // 
+            // btnConfirmarCorte
+            // 
+            btnConfirmarCorte.BackColor = Color.FromArgb(35, 80, 124);
+            btnConfirmarCorte.FlatStyle = FlatStyle.Flat;
+            btnConfirmarCorte.ForeColor = Color.White;
+            btnConfirmarCorte.Location = new Point(16, 567);
+            btnConfirmarCorte.Name = "btnConfirmarCorte";
+            btnConfirmarCorte.Size = new Size(267, 34);
+            btnConfirmarCorte.TabIndex = 86;
+            btnConfirmarCorte.Text = "Confirmar y generar selección";
+            btnConfirmarCorte.UseVisualStyleBackColor = false;
+            // 
+            // btnVerOrdenes
+            // 
+            btnVerOrdenes.Enabled = false;
+            btnVerOrdenes.Location = new Point(295, 567);
+            btnVerOrdenes.Name = "btnVerOrdenes";
+            btnVerOrdenes.Size = new Size(232, 34);
+            btnVerOrdenes.TabIndex = 87;
+            btnVerOrdenes.Text = "Ver órdenes generadas";
+            btnVerOrdenes.UseVisualStyleBackColor = true;
+            // 
+            // btnDescartar
+            // 
+            btnDescartar.Location = new Point(539, 567);
+            btnDescartar.Name = "btnDescartar";
+            btnDescartar.Size = new Size(183, 34);
+            btnDescartar.TabIndex = 88;
+            btnDescartar.Text = "Descartar propuesta";
+            btnDescartar.UseVisualStyleBackColor = true;
+            // 
+            // lblResultadoCorte
+            // 
+            lblResultadoCorte.Location = new Point(16, 610);
+            lblResultadoCorte.Name = "lblResultadoCorte";
+            lblResultadoCorte.Size = new Size(1180, 24);
+            lblResultadoCorte.TabIndex = 89;
+            lblResultadoCorte.Text = "Propuesta de ejemplo sin confirmar. Las órdenes generadas quedarán disponibles para Almacén.";
+            // 
+            // GestionPedidosSeleccionForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(245, 247, 250);
+            ClientSize = new Size(1334, 901);
+            Controls.Add(pnlEncabezado);
+            Controls.Add(grpContexto);
+            Controls.Add(tabGestion);
+            Font = new Font("Segoe UI", 9F);
+            MinimumSize = new Size(1350, 940);
+            Name = "GestionPedidosSeleccionForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Pampazon - Gestión de Pedidos y Selección";
+            pnlEncabezado.ResumeLayout(false);
+            grpContexto.ResumeLayout(false);
+            tabGestion.ResumeLayout(false);
+            tabAsignadas.ResumeLayout(false);
+            tabAsignadas.PerformLayout();
+            grpFiltros.ResumeLayout(false);
+            grpFiltros.PerformLayout();
+            grpDetalle.ResumeLayout(false);
+            grpDetalle.PerformLayout();
+            tabCortes.ResumeLayout(false);
+            grpCorte.ResumeLayout(false);
+            grpPropuesta.ResumeLayout(false);
+            ResumeLayout(false);
         }
         #endregion
         private System.Windows.Forms.Panel pnlEncabezado;
@@ -693,7 +935,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DateTimePicker dtpFechaTrabajo;
-        private System.Windows.Forms.Label lblModo;
         private System.Windows.Forms.TabControl tabGestion;
         private System.Windows.Forms.TabPage tabAsignadas;
         private System.Windows.Forms.TabPage tabCortes;
@@ -773,6 +1014,5 @@
         private System.Windows.Forms.Button btnVerOrdenes;
         private System.Windows.Forms.Button btnDescartar;
         private System.Windows.Forms.Label lblResultadoCorte;
-        private System.Windows.Forms.Label lblPie;
     }
 }
