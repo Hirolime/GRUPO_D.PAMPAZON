@@ -11,14 +11,14 @@
         #region Código generado para el diseñador
         private void InitializeComponent()
         {
-            ListViewItem listViewItem11 = new ListViewItem(new string[] { "OP-000184", "12/10/2026", "Cliente Demo A", "Cliente", "Fulfillment", "2", "ASIGNADA" }, -1);
-            ListViewItem listViewItem12 = new ListViewItem(new string[] { "OP-000185", "12/10/2026", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "ASIGNADA" }, -1);
-            ListViewItem listViewItem13 = new ListViewItem(new string[] { "TR-000026", "12/10/2026", "Cliente Demo A", "Traslado interno", "Palé cerrado", "1", "ASIGNADA" }, -1);
-            ListViewItem listViewItem14 = new ListViewItem(new string[] { "SKU-001", "Remera de algodón", "Unidad", "80", "148", "Pendiente de validar" }, -1);
-            ListViewItem listViewItem15 = new ListViewItem(new string[] { "SKU-002", "Pantalón deportivo", "Unidad", "30", "65", "Pendiente de validar" }, -1);
-            ListViewItem listViewItem16 = new ListViewItem(new string[] { "OP-000181", "Cliente Demo A", "Cliente", "Fulfillment", "2", "PENDIENTE" }, -1);
-            ListViewItem listViewItem17 = new ListViewItem(new string[] { "OP-000182", "Cliente Demo A", "Cliente", "Fulfillment", "1", "PENDIENTE" }, -1);
-            ListViewItem listViewItem18 = new ListViewItem(new string[] { "OP-000183", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "PENDIENTE" }, -1);
+            ListViewItem listViewItem14 = new ListViewItem(new string[] { "OP-000184", "12/10/2026", "Cliente Demo A", "Cliente", "Fulfillment", "2", "ASIGNADA" }, -1);
+            ListViewItem listViewItem15 = new ListViewItem(new string[] { "OP-000185", "12/10/2026", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "ASIGNADA" }, -1);
+            ListViewItem listViewItem16 = new ListViewItem(new string[] { "TR-000026", "12/10/2026", "Cliente Demo A", "Traslado interno", "Palé cerrado", "1", "ASIGNADA" }, -1);
+            ListViewItem listViewItem17 = new ListViewItem(new string[] { "SKU-001", "Remera de algodón", "Unidad", "80", "148", "Pendiente de validar" }, -1);
+            ListViewItem listViewItem18 = new ListViewItem(new string[] { "SKU-002", "Pantalón deportivo", "Unidad", "30", "65", "Pendiente de validar" }, -1);
+            ListViewItem listViewItem11 = new ListViewItem(new string[] { "OP-000181", "Cliente Demo A", "Cliente", "Fulfillment", "2", "PENDIENTE" }, -1);
+            ListViewItem listViewItem12 = new ListViewItem(new string[] { "OP-000182", "Cliente Demo A", "Cliente", "Fulfillment", "1", "PENDIENTE" }, -1);
+            ListViewItem listViewItem13 = new ListViewItem(new string[] { "OP-000183", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "PENDIENTE" }, -1);
             ListViewItem listViewItem19 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-001", "Remera de algodón", "A-01-02", "120", "Unidad", "OP-000181 (80); OP-000182 (40)" }, -1);
             ListViewItem listViewItem20 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-002", "Pantalón deportivo", "A-02-01", "30", "Unidad", "OP-000181 (30)" }, -1);
             pnlEncabezado = new Panel();
@@ -79,9 +79,6 @@
             grpCorte = new GroupBox();
             lblFechaCorte = new Label();
             dtpFechaCorte = new DateTimePicker();
-            lblNumeroCorte = new Label();
-            rdoPrimerCorte = new RadioButton();
-            rdoSegundoCorte = new RadioButton();
             chkSoloPendientes = new CheckBox();
             btnConsultarPendientes = new Button();
             lblPendientes = new Label();
@@ -93,7 +90,6 @@
             lvPendientesCol4 = new ColumnHeader();
             lvPendientesCol5 = new ColumnHeader();
             btnPrepararCorte = new Button();
-            lblResumenCorte = new Label();
             grpPropuesta = new GroupBox();
             lvPropuesta = new ListView();
             lvPropuestaCol0 = new ColumnHeader();
@@ -103,12 +99,12 @@
             lvPropuestaCol4 = new ColumnHeader();
             lvPropuestaCol5 = new ColumnHeader();
             lvPropuestaCol6 = new ColumnHeader();
-            lblReglaCorte = new Label();
-            lblReglaSeleccion = new Label();
             btnConfirmarCorte = new Button();
             btnVerOrdenes = new Button();
             btnDescartar = new Button();
-            lblResultadoCorte = new Label();
+            groupBox1 = new GroupBox();
+            rdoPrimerCorte = new RadioButton();
+            rdoSegundoCorte = new RadioButton();
             pnlEncabezado.SuspendLayout();
             grpContexto.SuspendLayout();
             tabGestion.SuspendLayout();
@@ -118,6 +114,7 @@
             tabCortes.SuspendLayout();
             grpCorte.SuspendLayout();
             grpPropuesta.SuspendLayout();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // pnlEncabezado
@@ -218,7 +215,6 @@
             tabGestion.SelectedIndex = 0;
             tabGestion.Size = new Size(1288, 684);
             tabGestion.TabIndex = 11;
-            //tabGestion.SelectedIndexChanged += this.tabGestion_SelectedIndexChanged;
             // 
             // tabAsignadas
             // 
@@ -360,7 +356,7 @@
             lvAsignadas.Columns.AddRange(new ColumnHeader[] { lvAsignadasCol0, lvAsignadasCol1, lvAsignadasCol2, lvAsignadasCol3, lvAsignadasCol4, lvAsignadasCol5, lvAsignadasCol6 });
             lvAsignadas.FullRowSelect = true;
             lvAsignadas.GridLines = true;
-            lvAsignadas.Items.AddRange(new ListViewItem[] { listViewItem11, listViewItem12, listViewItem13 });
+            lvAsignadas.Items.AddRange(new ListViewItem[] { listViewItem14, listViewItem15, listViewItem16 });
             lvAsignadas.Location = new Point(14, 132);
             lvAsignadas.MultiSelect = false;
             lvAsignadas.Name = "lvAsignadas";
@@ -498,7 +494,7 @@
             lvDisponibilidad.Columns.AddRange(new ColumnHeader[] { lvDisponibilidadCol0, lvDisponibilidadCol1, lvDisponibilidadCol2, lvDisponibilidadCol3, lvDisponibilidadCol4, lvDisponibilidadCol5 });
             lvDisponibilidad.FullRowSelect = true;
             lvDisponibilidad.GridLines = true;
-            lvDisponibilidad.Items.AddRange(new ListViewItem[] { listViewItem14, listViewItem15 });
+            lvDisponibilidad.Items.AddRange(new ListViewItem[] { listViewItem17, listViewItem18 });
             lvDisponibilidad.Location = new Point(14, 67);
             lvDisponibilidad.MultiSelect = false;
             lvDisponibilidad.Name = "lvDisponibilidad";
@@ -609,12 +605,10 @@
             tabCortes.Controls.Add(lblPendientes);
             tabCortes.Controls.Add(lvPendientes);
             tabCortes.Controls.Add(btnPrepararCorte);
-            tabCortes.Controls.Add(lblResumenCorte);
             tabCortes.Controls.Add(grpPropuesta);
             tabCortes.Controls.Add(btnConfirmarCorte);
             tabCortes.Controls.Add(btnVerOrdenes);
             tabCortes.Controls.Add(btnDescartar);
-            tabCortes.Controls.Add(lblResultadoCorte);
             tabCortes.Location = new Point(4, 24);
             tabCortes.Name = "tabCortes";
             tabCortes.Size = new Size(1280, 656);
@@ -624,11 +618,9 @@
             // 
             // grpCorte
             // 
+            grpCorte.Controls.Add(groupBox1);
             grpCorte.Controls.Add(lblFechaCorte);
             grpCorte.Controls.Add(dtpFechaCorte);
-            grpCorte.Controls.Add(lblNumeroCorte);
-            grpCorte.Controls.Add(rdoPrimerCorte);
-            grpCorte.Controls.Add(rdoSegundoCorte);
             grpCorte.Controls.Add(chkSoloPendientes);
             grpCorte.Controls.Add(btnConsultarPendientes);
             grpCorte.Location = new Point(12, 10);
@@ -651,44 +643,18 @@
             dtpFechaCorte.Format = DateTimePickerFormat.Short;
             dtpFechaCorte.Location = new Point(14, 46);
             dtpFechaCorte.Name = "dtpFechaCorte";
-            dtpFechaCorte.Size = new Size(160, 23);
+            dtpFechaCorte.Size = new Size(324, 23);
             dtpFechaCorte.TabIndex = 59;
             dtpFechaCorte.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
-            // 
-            // lblNumeroCorte
-            // 
-            lblNumeroCorte.Location = new Point(197, 23);
-            lblNumeroCorte.Name = "lblNumeroCorte";
-            lblNumeroCorte.Size = new Size(180, 24);
-            lblNumeroCorte.TabIndex = 60;
-            lblNumeroCorte.Text = "Corte operativo";
-            // 
-            // rdoPrimerCorte
-            // 
-            rdoPrimerCorte.Checked = true;
-            rdoPrimerCorte.Location = new Point(197, 47);
-            rdoPrimerCorte.Name = "rdoPrimerCorte";
-            rdoPrimerCorte.Size = new Size(138, 25);
-            rdoPrimerCorte.TabIndex = 61;
-            rdoPrimerCorte.TabStop = true;
-            rdoPrimerCorte.Text = "Primer corte";
-            // 
-            // rdoSegundoCorte
-            // 
-            rdoSegundoCorte.Location = new Point(342, 47);
-            rdoSegundoCorte.Name = "rdoSegundoCorte";
-            rdoSegundoCorte.Size = new Size(156, 25);
-            rdoSegundoCorte.TabIndex = 62;
-            rdoSegundoCorte.Text = "Segundo corte";
             // 
             // chkSoloPendientes
             // 
             chkSoloPendientes.Checked = true;
             chkSoloPendientes.CheckState = CheckState.Checked;
             chkSoloPendientes.Enabled = false;
-            chkSoloPendientes.Location = new Point(555, 47);
+            chkSoloPendientes.Location = new Point(793, 46);
             chkSoloPendientes.Name = "chkSoloPendientes";
-            chkSoloPendientes.Size = new Size(280, 25);
+            chkSoloPendientes.Size = new Size(192, 25);
             chkSoloPendientes.TabIndex = 63;
             chkSoloPendientes.Text = "Solo órdenes PENDIENTES";
             // 
@@ -719,10 +685,10 @@
             lvPendientes.Columns.AddRange(new ColumnHeader[] { lvPendientesCol0, lvPendientesCol1, lvPendientesCol2, lvPendientesCol3, lvPendientesCol4, lvPendientesCol5 });
             lvPendientes.FullRowSelect = true;
             lvPendientes.GridLines = true;
-            listViewItem16.StateImageIndex = 0;
-            listViewItem17.StateImageIndex = 0;
-            listViewItem18.StateImageIndex = 0;
-            lvPendientes.Items.AddRange(new ListViewItem[] { listViewItem16, listViewItem17, listViewItem18 });
+            listViewItem11.StateImageIndex = 0;
+            listViewItem12.StateImageIndex = 0;
+            listViewItem13.StateImageIndex = 0;
+            lvPendientes.Items.AddRange(new ListViewItem[] { listViewItem11, listViewItem12, listViewItem13 });
             lvPendientes.Location = new Point(14, 136);
             lvPendientes.MultiSelect = false;
             lvPendientes.Name = "lvPendientes";
@@ -766,26 +732,16 @@
             btnPrepararCorte.BackColor = Color.FromArgb(35, 80, 124);
             btnPrepararCorte.FlatStyle = FlatStyle.Flat;
             btnPrepararCorte.ForeColor = Color.White;
-            btnPrepararCorte.Location = new Point(14, 290);
+            btnPrepararCorte.Location = new Point(16, 298);
             btnPrepararCorte.Name = "btnPrepararCorte";
-            btnPrepararCorte.Size = new Size(180, 34);
+            btnPrepararCorte.Size = new Size(1246, 34);
             btnPrepararCorte.TabIndex = 73;
             btnPrepararCorte.Text = "Preparar corte";
             btnPrepararCorte.UseVisualStyleBackColor = false;
             // 
-            // lblResumenCorte
-            // 
-            lblResumenCorte.Location = new Point(220, 295);
-            lblResumenCorte.Name = "lblResumenCorte";
-            lblResumenCorte.Size = new Size(900, 24);
-            lblResumenCorte.TabIndex = 74;
-            lblResumenCorte.Text = "Ejemplo de propuesta: 2 pedidos · 3 renglones · Agrupación por producto y ubicación";
-            // 
             // grpPropuesta
             // 
             grpPropuesta.Controls.Add(lvPropuesta);
-            grpPropuesta.Controls.Add(lblReglaCorte);
-            grpPropuesta.Controls.Add(lblReglaSeleccion);
             grpPropuesta.Location = new Point(12, 338);
             grpPropuesta.Name = "grpPropuesta";
             grpPropuesta.Size = new Size(1250, 212);
@@ -802,7 +758,7 @@
             lvPropuesta.Location = new Point(14, 26);
             lvPropuesta.MultiSelect = false;
             lvPropuesta.Name = "lvPropuesta";
-            lvPropuesta.Size = new Size(1220, 124);
+            lvPropuesta.Size = new Size(1220, 180);
             lvPropuesta.TabIndex = 76;
             lvPropuesta.UseCompatibleStateImageBehavior = false;
             lvPropuesta.View = View.Details;
@@ -842,30 +798,14 @@
             lvPropuestaCol6.Text = "Pedidos de origen";
             lvPropuestaCol6.Width = 250;
             // 
-            // lblReglaCorte
-            // 
-            lblReglaCorte.Location = new Point(14, 161);
-            lblReglaCorte.Name = "lblReglaCorte";
-            lblReglaCorte.Size = new Size(1200, 24);
-            lblReglaCorte.TabIndex = 84;
-            lblReglaCorte.Text = "La agrupación conserva el cliente y la asignación de cantidades a cada pedido.";
-            // 
-            // lblReglaSeleccion
-            // 
-            lblReglaSeleccion.Location = new Point(14, 185);
-            lblReglaSeleccion.Name = "lblReglaSeleccion";
-            lblReglaSeleccion.Size = new Size(1200, 24);
-            lblReglaSeleccion.TabIndex = 85;
-            lblReglaSeleccion.Text = "Confirmar genera las órdenes de selección y cambia los pedidos a SELECCIONADA, sin volver a comprometer stock.";
-            // 
             // btnConfirmarCorte
             // 
             btnConfirmarCorte.BackColor = Color.FromArgb(35, 80, 124);
             btnConfirmarCorte.FlatStyle = FlatStyle.Flat;
             btnConfirmarCorte.ForeColor = Color.White;
-            btnConfirmarCorte.Location = new Point(16, 567);
+            btnConfirmarCorte.Location = new Point(16, 573);
             btnConfirmarCorte.Name = "btnConfirmarCorte";
-            btnConfirmarCorte.Size = new Size(267, 34);
+            btnConfirmarCorte.Size = new Size(417, 34);
             btnConfirmarCorte.TabIndex = 86;
             btnConfirmarCorte.Text = "Confirmar y generar selección";
             btnConfirmarCorte.UseVisualStyleBackColor = false;
@@ -873,29 +813,50 @@
             // btnVerOrdenes
             // 
             btnVerOrdenes.Enabled = false;
-            btnVerOrdenes.Location = new Point(295, 567);
+            btnVerOrdenes.Location = new Point(439, 573);
             btnVerOrdenes.Name = "btnVerOrdenes";
-            btnVerOrdenes.Size = new Size(232, 34);
+            btnVerOrdenes.Size = new Size(403, 34);
             btnVerOrdenes.TabIndex = 87;
             btnVerOrdenes.Text = "Ver órdenes generadas";
             btnVerOrdenes.UseVisualStyleBackColor = true;
             // 
             // btnDescartar
             // 
-            btnDescartar.Location = new Point(539, 567);
+            btnDescartar.Location = new Point(848, 573);
             btnDescartar.Name = "btnDescartar";
-            btnDescartar.Size = new Size(183, 34);
+            btnDescartar.Size = new Size(414, 34);
             btnDescartar.TabIndex = 88;
             btnDescartar.Text = "Descartar propuesta";
             btnDescartar.UseVisualStyleBackColor = true;
             // 
-            // lblResultadoCorte
+            // groupBox1
             // 
-            lblResultadoCorte.Location = new Point(16, 610);
-            lblResultadoCorte.Name = "lblResultadoCorte";
-            lblResultadoCorte.Size = new Size(1180, 24);
-            lblResultadoCorte.TabIndex = 89;
-            lblResultadoCorte.Text = "Propuesta de ejemplo sin confirmar. Las órdenes generadas quedarán disponibles para Almacén.";
+            groupBox1.Controls.Add(rdoPrimerCorte);
+            groupBox1.Controls.Add(rdoSegundoCorte);
+            groupBox1.Location = new Point(375, 23);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(396, 56);
+            groupBox1.TabIndex = 89;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Corte Operativo";
+            // 
+            // rdoPrimerCorte
+            // 
+            rdoPrimerCorte.Checked = true;
+            rdoPrimerCorte.Location = new Point(34, 22);
+            rdoPrimerCorte.Name = "rdoPrimerCorte";
+            rdoPrimerCorte.Size = new Size(138, 25);
+            rdoPrimerCorte.TabIndex = 63;
+            rdoPrimerCorte.TabStop = true;
+            rdoPrimerCorte.Text = "Primer corte";
+            // 
+            // rdoSegundoCorte
+            // 
+            rdoSegundoCorte.Location = new Point(216, 22);
+            rdoSegundoCorte.Name = "rdoSegundoCorte";
+            rdoSegundoCorte.Size = new Size(156, 25);
+            rdoSegundoCorte.TabIndex = 64;
+            rdoSegundoCorte.Text = "Segundo corte";
             // 
             // GestionPedidosSeleccionForm
             // 
@@ -923,6 +884,7 @@
             tabCortes.ResumeLayout(false);
             grpCorte.ResumeLayout(false);
             grpPropuesta.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
         #endregion
@@ -984,9 +946,6 @@
         private System.Windows.Forms.GroupBox grpCorte;
         private System.Windows.Forms.Label lblFechaCorte;
         private System.Windows.Forms.DateTimePicker dtpFechaCorte;
-        private System.Windows.Forms.Label lblNumeroCorte;
-        private System.Windows.Forms.RadioButton rdoPrimerCorte;
-        private System.Windows.Forms.RadioButton rdoSegundoCorte;
         private System.Windows.Forms.CheckBox chkSoloPendientes;
         private System.Windows.Forms.Button btnConsultarPendientes;
         private System.Windows.Forms.Label lblPendientes;
@@ -998,7 +957,6 @@
         private System.Windows.Forms.ColumnHeader lvPendientesCol4;
         private System.Windows.Forms.ColumnHeader lvPendientesCol5;
         private System.Windows.Forms.Button btnPrepararCorte;
-        private System.Windows.Forms.Label lblResumenCorte;
         private System.Windows.Forms.GroupBox grpPropuesta;
         private System.Windows.Forms.ListView lvPropuesta;
         private System.Windows.Forms.ColumnHeader lvPropuestaCol0;
@@ -1008,11 +966,11 @@
         private System.Windows.Forms.ColumnHeader lvPropuestaCol4;
         private System.Windows.Forms.ColumnHeader lvPropuestaCol5;
         private System.Windows.Forms.ColumnHeader lvPropuestaCol6;
-        private System.Windows.Forms.Label lblReglaCorte;
-        private System.Windows.Forms.Label lblReglaSeleccion;
         private System.Windows.Forms.Button btnConfirmarCorte;
         private System.Windows.Forms.Button btnVerOrdenes;
         private System.Windows.Forms.Button btnDescartar;
-        private System.Windows.Forms.Label lblResultadoCorte;
+        private GroupBox groupBox1;
+        private RadioButton rdoPrimerCorte;
+        private RadioButton rdoSegundoCorte;
     }
 }
