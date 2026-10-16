@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+using GRUPO_D.PAMPAZON;
 using System.Windows.Forms;
 
 namespace GRUPO_D.PAMPAZON.Recepción_y_Despacho_de_Pedidos
@@ -13,6 +9,9 @@ namespace GRUPO_D.PAMPAZON.Recepción_y_Despacho_de_Pedidos
         public RecepcionDespachoPedidosForm1()
         {
             InitializeComponent();
+            AjustePantalla.Aplicar(this);
+
+            cboDeposito.SelectedItem = "GBA";
         }
     }
 }
