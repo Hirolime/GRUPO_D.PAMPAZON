@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
+using GRUPO_D.PAMPAZON;
 using System.Windows.Forms;
 
 namespace GRUPO_D.PAMPAZON.Seleccion_y_entrega_de_Mercaderias
@@ -13,6 +9,7 @@ namespace GRUPO_D.PAMPAZON.Seleccion_y_entrega_de_Mercaderias
         public SeleccionEntregaMercaderiasForm1()
         {
             InitializeComponent();
+            AjustePantalla.Aplicar(this);
         }
     }
 }

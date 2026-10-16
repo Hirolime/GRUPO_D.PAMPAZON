@@ -1,4 +1,5 @@
 ﻿using System;
+using GRUPO_D.PAMPAZON;
 using System.Windows.Forms;
 
 namespace Pampazon.Prototipos
@@ -8,6 +9,7 @@ namespace Pampazon.Prototipos
         public GestionPedidosSeleccionForm()
         {
             InitializeComponent();
+            AjustePantalla.Aplicar(this);
         }
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
