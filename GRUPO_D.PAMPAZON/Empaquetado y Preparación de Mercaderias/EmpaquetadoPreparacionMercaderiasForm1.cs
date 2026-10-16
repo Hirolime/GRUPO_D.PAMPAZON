@@ -1,5 +1,4 @@
 ﻿using System;
-using GRUPO_D.PAMPAZON;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -33,7 +32,6 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
         public EmpaquetadoPreparacionMercaderiasForm1()
         {
             InitializeComponent();
-            AjustePantalla.Aplicar(this);
 
             cboDeposito.SelectedItem = "GBA";
             cboSkuBulto.SelectedItem = "SKU-001";
@@ -50,7 +48,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
 
         // ---------- Mensajes ----------
 
-        private void MostrarError(string mensaje, Control foco = null)
+        private void MostrarError(string mensaje, Control? foco = null)
         {
             MessageBox.Show(mensaje, "Datos incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             if (foco != null) foco.Focus();
@@ -63,7 +61,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
 
         // ---------- Selección de pedido (D.1 / D.2) ----------
 
-        private ListViewItem PedidoSeleccionado()
+        private ListViewItem? PedidoSeleccionado()
         {
             return lvPedidosEnPreparacion.SelectedItems.Count == 0 ? null : lvPedidosEnPreparacion.SelectedItems[0];
         }
@@ -75,9 +73,9 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
             return false;
         }
 
-        private void lvPedidosEnPreparacion_SelectedIndexChanged(object sender, EventArgs e)
+        private void lvPedidosEnPreparacion_SelectedIndexChanged(object? sender, EventArgs e)
         {
-            ListViewItem pedido = PedidoSeleccionado();
+            ListViewItem pedido = PedidoSeleccionado()!;
             if (pedido == null) return;
 
             txtCliente.Text = pedido.SubItems[1].Text;
@@ -105,7 +103,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
         }
 
         // La modalidad define qué secciones se usan: bultos (fulfillment) o revisión de palé (palé cerrado).
-        private void HabilitarSeccionesPorModalidad(string modalidad)
+        private void HabilitarSeccionesPorModalidad(string? modalidad)
         {
             bool fulfillment = modalidad == ModalidadFulfillment;
             bool pale = modalidad == ModalidadPale;
@@ -129,7 +127,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
             return int.TryParse(t, out valor) && valor >= minimo;
         }
 
-        private void btnRegistrarControl_Click(object sender, EventArgs e)
+        private void btnRegistrarControl_Click(object? sender, EventArgs e)
         {
             if (!ExigirPedido()) return;
 
@@ -161,7 +159,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
 
         // ---------- Bultos (D.4 / D.5) ----------
 
-        private ListViewItem BuscarRenglon(string sku)
+        private ListViewItem? BuscarRenglon(string sku)
         {
             foreach (ListViewItem renglon in lvControl.Items)
                 if (renglon.SubItems[ColSku].Text == sku) return renglon;
@@ -177,7 +175,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
             return total;
         }
 
-        private void btnAgregarBulto_Click(object sender, EventArgs e)
+        private void btnAgregarBulto_Click(object? sender, EventArgs e)
         {
             if (!ExigirPedido()) return;
 
@@ -188,7 +186,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
                 return;
             }
 
-            string sku = cboSkuBulto.SelectedItem == null ? "" : cboSkuBulto.SelectedItem.ToString();
+            string sku = cboSkuBulto.SelectedItem == null ? "" : (cboSkuBulto.SelectedItem.ToString() ?? "");
             if (sku.Length == 0)
             {
                 MostrarError("Seleccione el SKU que contiene el bulto.", cboSkuBulto);
@@ -202,7 +200,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
                 return;
             }
 
-            ListViewItem renglon = BuscarRenglon(sku);
+            ListViewItem? renglon = BuscarRenglon(sku);
             if (renglon == null)
             {
                 MostrarError("El SKU " + sku + " no pertenece al pedido seleccionado.", cboSkuBulto);
@@ -233,11 +231,11 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
 
         // ---------- Confirmación (D.6 a D.9) ----------
 
-        private void btnConfirmarPreparacion_Click(object sender, EventArgs e)
+        private void btnConfirmarPreparacion_Click(object? sender, EventArgs e)
         {
             if (!ExigirPedido()) return;
 
-            ListViewItem pedido = PedidoSeleccionado();
+            ListViewItem pedido = PedidoSeleccionado()!;
             string numero = pedido.SubItems[0].Text;
 
             // La orden de entrega se emite una sola vez: si ya existe, solo se informa.
@@ -322,11 +320,11 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
             MostrarInfo("Pedido " + numero + " preparado.\nOrden de entrega emitida: " + orden + ".", "Preparación confirmada");
         }
 
-        private void btnReimprimir_Click(object sender, EventArgs e)
+        private void btnReimprimir_Click(object? sender, EventArgs e)
         {
             if (!ExigirPedido()) return;
 
-            string numero = PedidoSeleccionado().SubItems[0].Text;
+            string numero = PedidoSeleccionado()!.SubItems[0].Text;
             if (!ordenesEmitidas.ContainsKey(numero))
             {
                 MostrarError("El pedido todavía no tiene una orden de entrega emitida.");
@@ -336,11 +334,11 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
             MostrarInfo("Orden de entrega: " + ordenesEmitidas[numero] + ".\nSe reimprime el documento existente.", "Reimpresión");
         }
 
-        private void btnReportarIncidente_Click(object sender, EventArgs e)
+        private void btnReportarIncidente_Click(object? sender, EventArgs e)
         {
             if (!ExigirPedido()) return;
 
-            string numero = PedidoSeleccionado().SubItems[0].Text;
+            string numero = PedidoSeleccionado()!.SubItems[0].Text;
             MostrarInfo("Incidente informado para el pedido " + numero + ".", "Incidente");
         }
     }

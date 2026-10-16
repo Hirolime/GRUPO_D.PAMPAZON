@@ -75,17 +75,17 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Location = new Point(19, 13);
+            lblTitulo.Location = new Point(24, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(712, 34);
+            lblTitulo.Size = new Size(890, 34);
             lblTitulo.TabIndex = 2;
             lblTitulo.Text = "Gestión de Pedidos y Selección";
             // 
             // lblEmpresa
             // 
-            lblEmpresa.Location = new Point(21, 48);
+            lblEmpresa.Location = new Point(26, 48);
             lblEmpresa.Name = "lblEmpresa";
-            lblEmpresa.Size = new Size(840, 22);
+            lblEmpresa.Size = new Size(1050, 22);
             lblEmpresa.TabIndex = 3;
             lblEmpresa.Text = "PAMPAZON  |  Encargado de Preparación";
             // 
@@ -96,18 +96,18 @@
             grpContexto.Controls.Add(lblRol);
             grpContexto.Controls.Add(lblFecha);
             grpContexto.Controls.Add(dtpFechaTrabajo);
-            grpContexto.Location = new Point(13, 84);
+            grpContexto.Location = new Point(16, 84);
             grpContexto.Name = "grpContexto";
-            grpContexto.Size = new Size(1030, 72);
+            grpContexto.Size = new Size(1288, 72);
             grpContexto.TabIndex = 4;
             grpContexto.TabStop = false;
             grpContexto.Text = "Contexto de trabajo";
             // 
             // lblDeposito
             // 
-            lblDeposito.Location = new Point(13, 30);
+            lblDeposito.Location = new Point(16, 30);
             lblDeposito.Name = "lblDeposito";
-            lblDeposito.Size = new Size(54, 24);
+            lblDeposito.Size = new Size(68, 24);
             lblDeposito.TabIndex = 5;
             lblDeposito.Text = "Depósito";
             // 
@@ -115,24 +115,24 @@
             // 
             cboDeposito.Enabled = false;
             cboDeposito.Items.AddRange(new object[] { "GBA" });
-            cboDeposito.Location = new Point(72, 26);
+            cboDeposito.Location = new Point(90, 26);
             cboDeposito.Name = "cboDeposito";
-            cboDeposito.Size = new Size(298, 23);
+            cboDeposito.Size = new Size(372, 23);
             cboDeposito.TabIndex = 6;
             // 
             // lblRol
             // 
-            lblRol.Location = new Point(384, 29);
+            lblRol.Location = new Point(480, 29);
             lblRol.Name = "lblRol";
-            lblRol.Size = new Size(168, 24);
+            lblRol.Size = new Size(210, 24);
             lblRol.TabIndex = 7;
             lblRol.Text = "Rol: Encargado de Preparación";
             // 
             // lblFecha
             // 
-            lblFecha.Location = new Point(560, 30);
+            lblFecha.Location = new Point(700, 30);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(58, 24);
+            lblFecha.Size = new Size(72, 24);
             lblFecha.TabIndex = 8;
             lblFecha.Text = "Fecha";
             // 
@@ -140,9 +140,9 @@
             // 
             dtpFechaTrabajo.Enabled = false;
             dtpFechaTrabajo.Format = DateTimePickerFormat.Short;
-            dtpFechaTrabajo.Location = new Point(623, 26);
+            dtpFechaTrabajo.Location = new Point(779, 26);
             dtpFechaTrabajo.Name = "dtpFechaTrabajo";
-            dtpFechaTrabajo.Size = new Size(390, 23);
+            dtpFechaTrabajo.Size = new Size(488, 23);
             dtpFechaTrabajo.TabIndex = 9;
             dtpFechaTrabajo.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
             // 
@@ -158,98 +158,98 @@
             grpFiltros.Controls.Add(dtpDesde);
             grpFiltros.Controls.Add(btnBuscar);
             grpFiltros.Controls.Add(btnLimpiar);
-            grpFiltros.Location = new Point(13, 190);
+            grpFiltros.Location = new Point(16, 190);
             grpFiltros.Name = "grpFiltros";
-            grpFiltros.Size = new Size(1000, 80);
+            grpFiltros.Size = new Size(1250, 80);
             grpFiltros.TabIndex = 14;
             grpFiltros.TabStop = false;
             grpFiltros.Text = "Buscar órdenes";
             // 
             // lblBuscarOrden
             // 
-            lblBuscarOrden.Location = new Point(11, 22);
+            lblBuscarOrden.Location = new Point(14, 22);
             lblBuscarOrden.Name = "lblBuscarOrden";
-            lblBuscarOrden.Size = new Size(108, 24);
+            lblBuscarOrden.Size = new Size(135, 24);
             lblBuscarOrden.TabIndex = 15;
             lblBuscarOrden.Text = "N.º de orden";
             // 
             // txtBuscarOrden
             // 
-            txtBuscarOrden.Location = new Point(11, 45);
+            txtBuscarOrden.Location = new Point(14, 45);
             txtBuscarOrden.Name = "txtBuscarOrden";
-            txtBuscarOrden.Size = new Size(120, 23);
+            txtBuscarOrden.Size = new Size(150, 23);
             txtBuscarOrden.TabIndex = 16;
             // 
             // lblCliente
             // 
-            lblCliente.Location = new Point(146, 22);
+            lblCliente.Location = new Point(182, 22);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(184, 24);
+            lblCliente.Size = new Size(230, 24);
             lblCliente.TabIndex = 17;
             lblCliente.Text = "Cliente";
             // 
             // cboCliente
             // 
             cboCliente.Items.AddRange(new object[] { "Todos los clientes", "Cliente Demo A", "Cliente Demo B" });
-            cboCliente.Location = new Point(146, 45);
+            cboCliente.Location = new Point(182, 45);
             cboCliente.Name = "cboCliente";
-            cboCliente.Size = new Size(212, 23);
+            cboCliente.Size = new Size(265, 23);
             cboCliente.TabIndex = 18;
             // 
             // lblOrigen
             // 
-            lblOrigen.Location = new Point(371, 22);
+            lblOrigen.Location = new Point(464, 22);
             lblOrigen.Name = "lblOrigen";
-            lblOrigen.Size = new Size(88, 24);
+            lblOrigen.Size = new Size(110, 24);
             lblOrigen.TabIndex = 19;
             lblOrigen.Text = "Origen";
             // 
             // cboOrigen
             // 
             cboOrigen.Items.AddRange(new object[] { "Todos", "Cliente", "Traslado interno" });
-            cboOrigen.Location = new Point(371, 45);
+            cboOrigen.Location = new Point(464, 45);
             cboOrigen.Name = "cboOrigen";
-            cboOrigen.Size = new Size(140, 23);
+            cboOrigen.Size = new Size(175, 23);
             cboOrigen.TabIndex = 20;
             // 
             // lblDesde
             // 
-            lblDesde.Location = new Point(526, 22);
+            lblDesde.Location = new Point(658, 22);
             lblDesde.Name = "lblDesde";
-            lblDesde.Size = new Size(111, 24);
+            lblDesde.Size = new Size(139, 24);
             lblDesde.TabIndex = 21;
             lblDesde.Text = "Fecha de asignación";
             // 
             // dtpDesde
             // 
             dtpDesde.Format = DateTimePickerFormat.Short;
-            dtpDesde.Location = new Point(526, 45);
+            dtpDesde.Location = new Point(658, 45);
             dtpDesde.Name = "dtpDesde";
-            dtpDesde.Size = new Size(116, 23);
+            dtpDesde.Size = new Size(145, 23);
             dtpDesde.TabIndex = 22;
             dtpDesde.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(662, 38);
+            btnBuscar.Location = new Point(828, 38);
             btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new Size(173, 34);
+            btnBuscar.Size = new Size(216, 34);
             btnBuscar.TabIndex = 23;
             btnBuscar.Text = "Buscar";
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(840, 38);
+            btnLimpiar.Location = new Point(1050, 38);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(160, 34);
+            btnLimpiar.Size = new Size(200, 34);
             btnLimpiar.TabIndex = 24;
             btnLimpiar.Text = "Limpiar";
             // 
             // lblListaAsignadas
             // 
-            lblListaAsignadas.Location = new Point(14, 282);
+            lblListaAsignadas.Location = new Point(18, 282);
             lblListaAsignadas.Name = "lblListaAsignadas";
-            lblListaAsignadas.Size = new Size(760, 24);
+            lblListaAsignadas.Size = new Size(950, 24);
             lblListaAsignadas.TabIndex = 25;
             lblListaAsignadas.Text = "Órdenes asignadas al depósito";
             // 
@@ -259,10 +259,10 @@
             lvAsignadas.FullRowSelect = true;
             lvAsignadas.GridLines = true;
             lvAsignadas.Items.AddRange(new ListViewItem[] { listViewItem14, listViewItem15, listViewItem16 });
-            lvAsignadas.Location = new Point(14, 312);
+            lvAsignadas.Location = new Point(18, 312);
             lvAsignadas.MultiSelect = false;
             lvAsignadas.Name = "lvAsignadas";
-            lvAsignadas.Size = new Size(998, 137);
+            lvAsignadas.Size = new Size(1248, 137);
             lvAsignadas.TabIndex = 26;
             lvAsignadas.UseCompatibleStateImageBehavior = false;
             lvAsignadas.View = View.Details;
@@ -270,37 +270,37 @@
             // lvAsignadasCol0
             // 
             lvAsignadasCol0.Text = "N.º de orden";
-            lvAsignadasCol0.Width = 92;
+            lvAsignadasCol0.Width = 115;
             // 
             // lvAsignadasCol1
             // 
             lvAsignadasCol1.Text = "Asignación";
-            lvAsignadasCol1.Width = 92;
+            lvAsignadasCol1.Width = 115;
             // 
             // lvAsignadasCol2
             // 
             lvAsignadasCol2.Text = "Cliente";
-            lvAsignadasCol2.Width = 180;
+            lvAsignadasCol2.Width = 225;
             // 
             // lvAsignadasCol3
             // 
             lvAsignadasCol3.Text = "Origen";
-            lvAsignadasCol3.Width = 132;
+            lvAsignadasCol3.Width = 165;
             // 
             // lvAsignadasCol4
             // 
             lvAsignadasCol4.Text = "Modalidad";
-            lvAsignadasCol4.Width = 120;
+            lvAsignadasCol4.Width = 150;
             // 
             // lvAsignadasCol5
             // 
             lvAsignadasCol5.Text = "Productos";
-            lvAsignadasCol5.Width = 80;
+            lvAsignadasCol5.Width = 100;
             // 
             // lvAsignadasCol6
             // 
             lvAsignadasCol6.Text = "Estado";
-            lvAsignadasCol6.Width = 124;
+            lvAsignadasCol6.Width = 155;
             // 
             // grpDetalle
             // 
@@ -315,78 +315,78 @@
             grpDetalle.Controls.Add(lvDisponibilidad);
             grpDetalle.Controls.Add(lblStockRegla);
             grpDetalle.Controls.Add(lblValidacion);
-            grpDetalle.Location = new Point(13, 462);
+            grpDetalle.Location = new Point(16, 462);
             grpDetalle.Name = "grpDetalle";
-            grpDetalle.Size = new Size(1000, 253);
+            grpDetalle.Size = new Size(1250, 253);
             grpDetalle.TabIndex = 34;
             grpDetalle.TabStop = false;
             grpDetalle.Text = "Detalle de la orden OP-000184";
             // 
             // lblDetalleCliente
             // 
-            lblDetalleCliente.Location = new Point(11, 27);
+            lblDetalleCliente.Location = new Point(14, 27);
             lblDetalleCliente.Name = "lblDetalleCliente";
-            lblDetalleCliente.Size = new Size(64, 24);
+            lblDetalleCliente.Size = new Size(80, 24);
             lblDetalleCliente.TabIndex = 35;
             lblDetalleCliente.Text = "Cliente";
             // 
             // txtDetalleCliente
             // 
-            txtDetalleCliente.Location = new Point(76, 23);
+            txtDetalleCliente.Location = new Point(95, 23);
             txtDetalleCliente.Name = "txtDetalleCliente";
             txtDetalleCliente.Enabled = false;
-            txtDetalleCliente.Size = new Size(176, 23);
+            txtDetalleCliente.Size = new Size(220, 23);
             txtDetalleCliente.TabIndex = 36;
             txtDetalleCliente.Text = "Cliente Demo A";
             // 
             // lblContrato
             // 
-            lblContrato.Location = new Point(268, 27);
+            lblContrato.Location = new Point(335, 27);
             lblContrato.Name = "lblContrato";
-            lblContrato.Size = new Size(62, 24);
+            lblContrato.Size = new Size(78, 24);
             lblContrato.TabIndex = 37;
             lblContrato.Text = "Contrato";
             // 
             // txtContrato
             // 
-            txtContrato.Location = new Point(332, 23);
+            txtContrato.Location = new Point(415, 23);
             txtContrato.Name = "txtContrato";
             txtContrato.Enabled = false;
-            txtContrato.Size = new Size(120, 23);
+            txtContrato.Size = new Size(150, 23);
             txtContrato.TabIndex = 38;
             txtContrato.Text = "CT-000028";
             // 
             // lblModalidad
             // 
-            lblModalidad.Location = new Point(468, 27);
+            lblModalidad.Location = new Point(585, 27);
             lblModalidad.Name = "lblModalidad";
-            lblModalidad.Size = new Size(72, 24);
+            lblModalidad.Size = new Size(90, 24);
             lblModalidad.TabIndex = 39;
             lblModalidad.Text = "Modalidad";
             // 
             // txtModalidad
             // 
-            txtModalidad.Location = new Point(544, 23);
+            txtModalidad.Location = new Point(680, 23);
             txtModalidad.Name = "txtModalidad";
             txtModalidad.Enabled = false;
-            txtModalidad.Size = new Size(120, 23);
+            txtModalidad.Size = new Size(150, 23);
             txtModalidad.TabIndex = 40;
             txtModalidad.Text = "Fulfillment";
             // 
             // lblEstado
             // 
-            lblEstado.Location = new Point(680, 27);
+            lblEstado.Location = new Point(850, 27);
             lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(52, 24);
+            lblEstado.Size = new Size(65, 24);
             lblEstado.TabIndex = 41;
             lblEstado.Text = "Estado";
             // 
             // txtEstado
             // 
-            txtEstado.Location = new Point(736, 23);
+            txtEstado.Location = new Point(920, 23);
             txtEstado.Name = "txtEstado";
             txtEstado.Enabled = false;
-            txtEstado.Size = new Size(251, 23);
+            txtEstado.Size = new Size(314, 23);
             txtEstado.TabIndex = 42;
             txtEstado.Text = "ASIGNADA";
             txtEstado.TextChanged += txtEstado_TextChanged;
@@ -397,10 +397,10 @@
             lvDisponibilidad.FullRowSelect = true;
             lvDisponibilidad.GridLines = true;
             lvDisponibilidad.Items.AddRange(new ListViewItem[] { listViewItem17, listViewItem18 });
-            lvDisponibilidad.Location = new Point(11, 67);
+            lvDisponibilidad.Location = new Point(14, 67);
             lvDisponibilidad.MultiSelect = false;
             lvDisponibilidad.Name = "lvDisponibilidad";
-            lvDisponibilidad.Size = new Size(976, 118);
+            lvDisponibilidad.Size = new Size(1220, 118);
             lvDisponibilidad.TabIndex = 43;
             lvDisponibilidad.UseCompatibleStateImageBehavior = false;
             lvDisponibilidad.View = View.Details;
@@ -408,97 +408,97 @@
             // lvDisponibilidadCol0
             // 
             lvDisponibilidadCol0.Text = "SKU";
-            lvDisponibilidadCol0.Width = 96;
+            lvDisponibilidadCol0.Width = 120;
             // 
             // lvDisponibilidadCol1
             // 
             lvDisponibilidadCol1.Text = "Producto";
-            lvDisponibilidadCol1.Width = 244;
+            lvDisponibilidadCol1.Width = 305;
             // 
             // lvDisponibilidadCol2
             // 
             lvDisponibilidadCol2.Text = "Unidad";
-            lvDisponibilidadCol2.Width = 88;
+            lvDisponibilidadCol2.Width = 110;
             // 
             // lvDisponibilidadCol3
             // 
             lvDisponibilidadCol3.Text = "Solicitado";
-            lvDisponibilidadCol3.Width = 96;
+            lvDisponibilidadCol3.Width = 120;
             // 
             // lvDisponibilidadCol4
             // 
             lvDisponibilidadCol4.Text = "Disponible";
-            lvDisponibilidadCol4.Width = 96;
+            lvDisponibilidadCol4.Width = 120;
             // 
             // lvDisponibilidadCol5
             // 
             lvDisponibilidadCol5.Text = "Validación";
-            lvDisponibilidadCol5.Width = 160;
+            lvDisponibilidadCol5.Width = 200;
             // 
             // lblStockRegla
             // 
-            lblStockRegla.Location = new Point(11, 192);
+            lblStockRegla.Location = new Point(14, 192);
             lblStockRegla.Name = "lblStockRegla";
-            lblStockRegla.Size = new Size(952, 24);
+            lblStockRegla.Size = new Size(1190, 24);
             lblStockRegla.TabIndex = 50;
             lblStockRegla.Text = "Disponible: mercadería aceptada y no comprometida del cliente en este depósito.";
             // 
             // lblValidacion
             // 
-            lblValidacion.Location = new Point(11, 220);
+            lblValidacion.Location = new Point(14, 220);
             lblValidacion.Name = "lblValidacion";
-            lblValidacion.Size = new Size(952, 24);
+            lblValidacion.Size = new Size(1190, 24);
             lblValidacion.TabIndex = 51;
             lblValidacion.Text = "Validación pendiente. Al aceptar se compromete el stock, sin descontar las existencias físicas.";
             // 
             // btnValidar
             // 
-            btnValidar.Location = new Point(16, 721);
+            btnValidar.Location = new Point(20, 721);
             btnValidar.Name = "btnValidar";
-            btnValidar.Size = new Size(334, 34);
+            btnValidar.Size = new Size(418, 34);
             btnValidar.TabIndex = 52;
             btnValidar.Text = "Validar disponibilidad";
             // 
             // btnAceptar
             // 
             btnAceptar.Enabled = false;
-            btnAceptar.Location = new Point(362, 721);
+            btnAceptar.Location = new Point(452, 721);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(356, 34);
+            btnAceptar.Size = new Size(445, 34);
             btnAceptar.TabIndex = 53;
             btnAceptar.Text = "Aceptar y comprometer";
             // 
             // btnRechazar
             // 
             btnRechazar.Enabled = false;
-            btnRechazar.Location = new Point(723, 721);
+            btnRechazar.Location = new Point(904, 721);
             btnRechazar.Name = "btnRechazar";
-            btnRechazar.Size = new Size(290, 34);
+            btnRechazar.Size = new Size(362, 34);
             btnRechazar.TabIndex = 54;
             btnRechazar.Text = "Rechazar por falta de stock";
             // 
             // lblMotivo
             // 
-            lblMotivo.Location = new Point(16, 773);
+            lblMotivo.Location = new Point(20, 773);
             lblMotivo.Name = "lblMotivo";
-            lblMotivo.Size = new Size(120, 24);
+            lblMotivo.Size = new Size(150, 24);
             lblMotivo.TabIndex = 55;
             lblMotivo.Text = "Motivo del rechazo";
             // 
             // txtMotivo
             // 
-            txtMotivo.Location = new Point(142, 770);
+            txtMotivo.Location = new Point(178, 770);
             txtMotivo.Name = "txtMotivo";
             txtMotivo.Enabled = false;
-            txtMotivo.Size = new Size(870, 23);
+            txtMotivo.Size = new Size(1088, 23);
             txtMotivo.TabIndex = 56;
             txtMotivo.Text = "Se completará con los productos y cantidades faltantes.";
             // 
             // btnIrCortes
             // 
-            btnIrCortes.Location = new Point(870, 30);
+            btnIrCortes.Location = new Point(1088, 30);
             btnIrCortes.Name = "btnIrCortes";
-            btnIrCortes.Size = new Size(173, 34);
+            btnIrCortes.Size = new Size(216, 34);
             btnIrCortes.TabIndex = 10;
             btnIrCortes.Text = "Cortes de selección";
             // 
@@ -506,7 +506,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1067, 901);
+            ClientSize = new Size(1334, 901);
             Controls.Add(lblTitulo);
             Controls.Add(lblEmpresa);
             Controls.Add(grpContexto);
@@ -520,9 +520,6 @@
             Controls.Add(lblMotivo);
             Controls.Add(txtMotivo);
             Controls.Add(btnIrCortes);
-            AutoScroll = true;
-            AutoScrollMinSize = new Size(1067, 901);
-            MinimumSize = new Size(640, 480);
             Name = "GestionPedidosSeleccionForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pampazon - Gestión de Pedidos y Selección";
