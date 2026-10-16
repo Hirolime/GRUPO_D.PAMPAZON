@@ -1,6 +1,6 @@
-﻿namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
+﻿namespace GRUPO_D.PAMPAZON.CU3_EmpaquetadoPreparacionEntregas
 {
-    partial class EmpaquetadoPreparacionMercaderiasForm1
+    partial class EmpaquetadoPreparacionEntregasForm
     {
         private System.ComponentModel.IContainer components = null;
         protected override void Dispose(bool disposing)
@@ -11,26 +11,22 @@
         #region Código generado para el diseñador
         private void InitializeComponent()
         {
-            ListViewItem item_lvPedidosEnPreparacion_0 = new ListViewItem(new string[] { "OP-000181", "Cliente Demo A", "Fulfillment", "Destino demo A", "Completas", "EN PREPARACIÓN" }, -1);
-            ListViewItem item_lvPedidosEnPreparacion_1 = new ListViewItem(new string[] { "OP-000183", "Cliente Demo B", "Palé cerrado", "Destino demo B", "Completas", "EN PREPARACIÓN" }, -1);
-            ListViewItem item_lvControl_0 = new ListViewItem(new string[] { "SKU-001", "Remera de algodón", "80", "80", "", "" }, -1);
-            ListViewItem item_lvBultos_0 = new ListViewItem(new string[] { "B-001", "SKU-001", "Remera de algodón", "50" }, -1);
             lblTitulo = new Label();
             lblEmpresa = new Label();
             grpContexto = new GroupBox();
             lblDeposito = new Label();
             cboDeposito = new ComboBox();
             lblRol = new Label();
-            lblFecha = new Label();
+            lblFechaTrabajo = new Label();
             dtpFechaTrabajo = new DateTimePicker();
-            grpPedidos = new GroupBox();
+            grpPedidosEnPreparacion = new GroupBox();
             lvPedidosEnPreparacion = new ListView();
-            lvPedidosEnPreparacionCol0 = new ColumnHeader();
-            lvPedidosEnPreparacionCol1 = new ColumnHeader();
-            lvPedidosEnPreparacionCol2 = new ColumnHeader();
-            lvPedidosEnPreparacionCol3 = new ColumnHeader();
-            lvPedidosEnPreparacionCol4 = new ColumnHeader();
-            lvPedidosEnPreparacionCol5 = new ColumnHeader();
+            colPedidosEnPreparacionNumero = new ColumnHeader();
+            colPedidosEnPreparacionCliente = new ColumnHeader();
+            colPedidosEnPreparacionModalidad = new ColumnHeader();
+            colPedidosEnPreparacionDestino = new ColumnHeader();
+            colPedidosEnPreparacionSelecciones = new ColumnHeader();
+            colPedidosEnPreparacionEstado = new ColumnHeader();
             grpDatosPedido = new GroupBox();
             lblCliente = new Label();
             txtCliente = new TextBox();
@@ -38,45 +34,45 @@
             txtModalidad = new TextBox();
             lblDestino = new Label();
             txtDestino = new TextBox();
-            grpControl = new GroupBox();
-            lvControl = new ListView();
-            lvControlCol0 = new ColumnHeader();
-            lvControlCol1 = new ColumnHeader();
-            lvControlCol2 = new ColumnHeader();
-            lvControlCol3 = new ColumnHeader();
-            lvControlCol4 = new ColumnHeader();
-            lvControlCol5 = new ColumnHeader();
+            grpControlCantidades = new GroupBox();
+            lvControlCantidades = new ListView();
+            colControlCantidadesSku = new ColumnHeader();
+            colControlCantidadesProducto = new ColumnHeader();
+            colControlCantidadesSolicitada = new ColumnHeader();
+            colControlCantidadesEntregada = new ColumnHeader();
+            colControlCantidadesControlada = new ColumnHeader();
+            colControlCantidadesDiferencia = new ColumnHeader();
             lblCantidadControlada = new Label();
             txtCantidadControlada = new TextBox();
             btnRegistrarControl = new Button();
             grpFulfillment = new GroupBox();
-            lblIdBulto = new Label();
-            txtIdBulto = new TextBox();
+            lblIdentificacionBulto = new Label();
+            txtIdentificacionBulto = new TextBox();
             lblSkuBulto = new Label();
             cboSkuBulto = new ComboBox();
-            lblCantBulto = new Label();
-            txtCantBulto = new TextBox();
+            lblCantidadBulto = new Label();
+            txtCantidadBulto = new TextBox();
             btnAgregarBulto = new Button();
             lvBultos = new ListView();
-            lvBultosCol0 = new ColumnHeader();
-            lvBultosCol1 = new ColumnHeader();
-            lvBultosCol2 = new ColumnHeader();
-            lvBultosCol3 = new ColumnHeader();
+            colBultosIdentificacion = new ColumnHeader();
+            colBultosSku = new ColumnHeader();
+            colBultosProducto = new ColumnHeader();
+            colBultosCantidad = new ColumnHeader();
             grpPale = new GroupBox();
-            lblIdPale = new Label();
-            txtIdPale = new TextBox();
+            lblIdentificacionPale = new Label();
+            txtIdentificacionPale = new TextBox();
             chkPaleConforme = new CheckBox();
             grpCierre = new GroupBox();
-            chkListo = new CheckBox();
+            chkListoDespacho = new CheckBox();
             lblOrdenEntrega = new Label();
             txtOrdenEntrega = new TextBox();
             btnConfirmarPreparacion = new Button();
-            btnReimprimir = new Button();
+            btnReimprimirOrdenEntrega = new Button();
             btnReportarIncidente = new Button();
             grpContexto.SuspendLayout();
-            grpPedidos.SuspendLayout();
+            grpPedidosEnPreparacion.SuspendLayout();
             grpDatosPedido.SuspendLayout();
-            grpControl.SuspendLayout();
+            grpControlCantidades.SuspendLayout();
             grpFulfillment.SuspendLayout();
             grpPale.SuspendLayout();
             grpCierre.SuspendLayout();
@@ -85,17 +81,17 @@
             // lblTitulo
             // 
             lblTitulo.Text = "Empaquetado y Preparación de Entregas";
-            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Location = new Point(24, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(1320, 50);
+            lblTitulo.Size = new Size(890, 34);
             lblTitulo.TabIndex = 0;
             // 
             // lblEmpresa
             // 
-            lblEmpresa.Text = "PAMPAZON  |  Operario de Preparación";
-            lblEmpresa.Location = new Point(0, 50);
+            lblEmpresa.Text = "PAMPAZON";
+            lblEmpresa.Location = new Point(26, 48);
             lblEmpresa.Name = "lblEmpresa";
-            lblEmpresa.Size = new Size(1320, 26);
+            lblEmpresa.Size = new Size(1050, 22);
             lblEmpresa.TabIndex = 1;
             // 
             // grpContexto
@@ -103,7 +99,7 @@
             grpContexto.Controls.Add(lblDeposito);
             grpContexto.Controls.Add(cboDeposito);
             grpContexto.Controls.Add(lblRol);
-            grpContexto.Controls.Add(lblFecha);
+            grpContexto.Controls.Add(lblFechaTrabajo);
             grpContexto.Controls.Add(dtpFechaTrabajo);
             grpContexto.TabStop = false;
             grpContexto.Text = "Contexto de trabajo";
@@ -137,13 +133,13 @@
             lblRol.Size = new Size(260, 24);
             lblRol.TabIndex = 5;
             // 
-            // lblFecha
+            // lblFechaTrabajo
             // 
-            lblFecha.Text = "Fecha";
-            lblFecha.Location = new Point(780, 30);
-            lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(72, 24);
-            lblFecha.TabIndex = 6;
+            lblFechaTrabajo.Text = "Fecha";
+            lblFechaTrabajo.Location = new Point(780, 30);
+            lblFechaTrabajo.Name = "lblFechaTrabajo";
+            lblFechaTrabajo.Size = new Size(72, 24);
+            lblFechaTrabajo.TabIndex = 6;
             // 
             // dtpFechaTrabajo
             // 
@@ -155,22 +151,21 @@
             dtpFechaTrabajo.Size = new Size(410, 23);
             dtpFechaTrabajo.TabIndex = 7;
             // 
-            // grpPedidos
+            // grpPedidosEnPreparacion
             // 
-            grpPedidos.Controls.Add(lvPedidosEnPreparacion);
-            grpPedidos.TabStop = false;
-            grpPedidos.Text = "Pedidos en preparación";
-            grpPedidos.Location = new Point(16, 170);
-            grpPedidos.Name = "grpPedidos";
-            grpPedidos.Size = new Size(1288, 170);
-            grpPedidos.TabIndex = 8;
+            grpPedidosEnPreparacion.Controls.Add(lvPedidosEnPreparacion);
+            grpPedidosEnPreparacion.TabStop = false;
+            grpPedidosEnPreparacion.Text = "Pedidos en preparación";
+            grpPedidosEnPreparacion.Location = new Point(16, 170);
+            grpPedidosEnPreparacion.Name = "grpPedidosEnPreparacion";
+            grpPedidosEnPreparacion.Size = new Size(1288, 170);
+            grpPedidosEnPreparacion.TabIndex = 8;
             // 
             // lvPedidosEnPreparacion
             // 
-            lvPedidosEnPreparacion.Columns.AddRange(new ColumnHeader[] { lvPedidosEnPreparacionCol0, lvPedidosEnPreparacionCol1, lvPedidosEnPreparacionCol2, lvPedidosEnPreparacionCol3, lvPedidosEnPreparacionCol4, lvPedidosEnPreparacionCol5 });
+            lvPedidosEnPreparacion.Columns.AddRange(new ColumnHeader[] { colPedidosEnPreparacionNumero, colPedidosEnPreparacionCliente, colPedidosEnPreparacionModalidad, colPedidosEnPreparacionDestino, colPedidosEnPreparacionSelecciones, colPedidosEnPreparacionEstado });
             lvPedidosEnPreparacion.FullRowSelect = true;
             lvPedidosEnPreparacion.GridLines = true;
-            lvPedidosEnPreparacion.Items.AddRange(new ListViewItem[] { item_lvPedidosEnPreparacion_0, item_lvPedidosEnPreparacion_1 });
             lvPedidosEnPreparacion.Location = new Point(12, 26);
             lvPedidosEnPreparacion.Name = "lvPedidosEnPreparacion";
             lvPedidosEnPreparacion.Size = new Size(1262, 132);
@@ -178,35 +173,35 @@
             lvPedidosEnPreparacion.UseCompatibleStateImageBehavior = false;
             lvPedidosEnPreparacion.View = View.Details;
             // 
-            // lvPedidosEnPreparacionCol0
+            // colPedidosEnPreparacionNumero
             // 
-            lvPedidosEnPreparacionCol0.Text = "N.º de pedido";
-            lvPedidosEnPreparacionCol0.Width = 120;
+            colPedidosEnPreparacionNumero.Text = "N.º de pedido";
+            colPedidosEnPreparacionNumero.Width = 120;
             // 
-            // lvPedidosEnPreparacionCol1
+            // colPedidosEnPreparacionCliente
             // 
-            lvPedidosEnPreparacionCol1.Text = "Cliente";
-            lvPedidosEnPreparacionCol1.Width = 220;
+            colPedidosEnPreparacionCliente.Text = "Cliente";
+            colPedidosEnPreparacionCliente.Width = 220;
             // 
-            // lvPedidosEnPreparacionCol2
+            // colPedidosEnPreparacionModalidad
             // 
-            lvPedidosEnPreparacionCol2.Text = "Modalidad";
-            lvPedidosEnPreparacionCol2.Width = 150;
+            colPedidosEnPreparacionModalidad.Text = "Modalidad";
+            colPedidosEnPreparacionModalidad.Width = 150;
             // 
-            // lvPedidosEnPreparacionCol3
+            // colPedidosEnPreparacionDestino
             // 
-            lvPedidosEnPreparacionCol3.Text = "Destino";
-            lvPedidosEnPreparacionCol3.Width = 300;
+            colPedidosEnPreparacionDestino.Text = "Destino";
+            colPedidosEnPreparacionDestino.Width = 300;
             // 
-            // lvPedidosEnPreparacionCol4
+            // colPedidosEnPreparacionSelecciones
             // 
-            lvPedidosEnPreparacionCol4.Text = "Selecciones";
-            lvPedidosEnPreparacionCol4.Width = 120;
+            colPedidosEnPreparacionSelecciones.Text = "Selecciones";
+            colPedidosEnPreparacionSelecciones.Width = 120;
             // 
-            // lvPedidosEnPreparacionCol5
+            // colPedidosEnPreparacionEstado
             // 
-            lvPedidosEnPreparacionCol5.Text = "Estado";
-            lvPedidosEnPreparacionCol5.Width = 170;
+            colPedidosEnPreparacionEstado.Text = "Estado";
+            colPedidosEnPreparacionEstado.Width = 170;
             // 
             // grpDatosPedido
             // 
@@ -271,61 +266,60 @@
             txtDestino.Size = new Size(300, 23);
             txtDestino.TabIndex = 16;
             // 
-            // grpControl
+            // grpControlCantidades
             // 
-            grpControl.Controls.Add(lvControl);
-            grpControl.Controls.Add(lblCantidadControlada);
-            grpControl.Controls.Add(txtCantidadControlada);
-            grpControl.Controls.Add(btnRegistrarControl);
-            grpControl.TabStop = false;
-            grpControl.Text = "Control de productos recibidos de Almacén";
-            grpControl.Location = new Point(16, 426);
-            grpControl.Name = "grpControl";
-            grpControl.Size = new Size(1288, 170);
-            grpControl.TabIndex = 17;
+            grpControlCantidades.Controls.Add(lvControlCantidades);
+            grpControlCantidades.Controls.Add(lblCantidadControlada);
+            grpControlCantidades.Controls.Add(txtCantidadControlada);
+            grpControlCantidades.Controls.Add(btnRegistrarControl);
+            grpControlCantidades.TabStop = false;
+            grpControlCantidades.Text = "Control de productos recibidos de Almacén";
+            grpControlCantidades.Location = new Point(16, 426);
+            grpControlCantidades.Name = "grpControlCantidades";
+            grpControlCantidades.Size = new Size(1288, 170);
+            grpControlCantidades.TabIndex = 17;
             // 
-            // lvControl
+            // lvControlCantidades
             // 
-            lvControl.Columns.AddRange(new ColumnHeader[] { lvControlCol0, lvControlCol1, lvControlCol2, lvControlCol3, lvControlCol4, lvControlCol5 });
-            lvControl.FullRowSelect = true;
-            lvControl.GridLines = true;
-            lvControl.Items.AddRange(new ListViewItem[] { item_lvControl_0 });
-            lvControl.Location = new Point(12, 24);
-            lvControl.Name = "lvControl";
-            lvControl.Size = new Size(1262, 96);
-            lvControl.TabIndex = 18;
-            lvControl.UseCompatibleStateImageBehavior = false;
-            lvControl.View = View.Details;
+            lvControlCantidades.Columns.AddRange(new ColumnHeader[] { colControlCantidadesSku, colControlCantidadesProducto, colControlCantidadesSolicitada, colControlCantidadesEntregada, colControlCantidadesControlada, colControlCantidadesDiferencia });
+            lvControlCantidades.FullRowSelect = true;
+            lvControlCantidades.GridLines = true;
+            lvControlCantidades.Location = new Point(12, 24);
+            lvControlCantidades.Name = "lvControlCantidades";
+            lvControlCantidades.Size = new Size(1262, 96);
+            lvControlCantidades.TabIndex = 18;
+            lvControlCantidades.UseCompatibleStateImageBehavior = false;
+            lvControlCantidades.View = View.Details;
             // 
-            // lvControlCol0
+            // colControlCantidadesSku
             // 
-            lvControlCol0.Text = "SKU";
-            lvControlCol0.Width = 100;
+            colControlCantidadesSku.Text = "SKU";
+            colControlCantidadesSku.Width = 100;
             // 
-            // lvControlCol1
+            // colControlCantidadesProducto
             // 
-            lvControlCol1.Text = "Producto";
-            lvControlCol1.Width = 260;
+            colControlCantidadesProducto.Text = "Producto";
+            colControlCantidadesProducto.Width = 260;
             // 
-            // lvControlCol2
+            // colControlCantidadesSolicitada
             // 
-            lvControlCol2.Text = "Cantidad solicitada";
-            lvControlCol2.Width = 150;
+            colControlCantidadesSolicitada.Text = "Cantidad solicitada";
+            colControlCantidadesSolicitada.Width = 150;
             // 
-            // lvControlCol3
+            // colControlCantidadesEntregada
             // 
-            lvControlCol3.Text = "Entregada por Almacén";
-            lvControlCol3.Width = 170;
+            colControlCantidadesEntregada.Text = "Entregada por Almacén";
+            colControlCantidadesEntregada.Width = 170;
             // 
-            // lvControlCol4
+            // colControlCantidadesControlada
             // 
-            lvControlCol4.Text = "Cantidad controlada";
-            lvControlCol4.Width = 150;
+            colControlCantidadesControlada.Text = "Cantidad controlada";
+            colControlCantidadesControlada.Width = 150;
             // 
-            // lvControlCol5
+            // colControlCantidadesDiferencia
             // 
-            lvControlCol5.Text = "Diferencia";
-            lvControlCol5.Width = 120;
+            colControlCantidadesDiferencia.Text = "Diferencia";
+            colControlCantidadesDiferencia.Width = 120;
             // 
             // lblCantidadControlada
             // 
@@ -352,12 +346,12 @@
             // 
             // grpFulfillment
             // 
-            grpFulfillment.Controls.Add(lblIdBulto);
-            grpFulfillment.Controls.Add(txtIdBulto);
+            grpFulfillment.Controls.Add(lblIdentificacionBulto);
+            grpFulfillment.Controls.Add(txtIdentificacionBulto);
             grpFulfillment.Controls.Add(lblSkuBulto);
             grpFulfillment.Controls.Add(cboSkuBulto);
-            grpFulfillment.Controls.Add(lblCantBulto);
-            grpFulfillment.Controls.Add(txtCantBulto);
+            grpFulfillment.Controls.Add(lblCantidadBulto);
+            grpFulfillment.Controls.Add(txtCantidadBulto);
             grpFulfillment.Controls.Add(btnAgregarBulto);
             grpFulfillment.Controls.Add(lvBultos);
             grpFulfillment.TabStop = false;
@@ -367,20 +361,20 @@
             grpFulfillment.Size = new Size(820, 250);
             grpFulfillment.TabIndex = 22;
             // 
-            // lblIdBulto
+            // lblIdentificacionBulto
             // 
-            lblIdBulto.Text = "Identificación del bulto";
-            lblIdBulto.Location = new Point(14, 26);
-            lblIdBulto.Name = "lblIdBulto";
-            lblIdBulto.Size = new Size(200, 20);
-            lblIdBulto.TabIndex = 23;
+            lblIdentificacionBulto.Text = "Identificación del bulto";
+            lblIdentificacionBulto.Location = new Point(14, 26);
+            lblIdentificacionBulto.Name = "lblIdentificacionBulto";
+            lblIdentificacionBulto.Size = new Size(200, 20);
+            lblIdentificacionBulto.TabIndex = 23;
             // 
-            // txtIdBulto
+            // txtIdentificacionBulto
             // 
-            txtIdBulto.Location = new Point(14, 48);
-            txtIdBulto.Name = "txtIdBulto";
-            txtIdBulto.Size = new Size(200, 23);
-            txtIdBulto.TabIndex = 24;
+            txtIdentificacionBulto.Location = new Point(14, 48);
+            txtIdentificacionBulto.Name = "txtIdentificacionBulto";
+            txtIdentificacionBulto.Size = new Size(200, 23);
+            txtIdentificacionBulto.TabIndex = 24;
             // 
             // lblSkuBulto
             // 
@@ -392,26 +386,25 @@
             // 
             // cboSkuBulto
             // 
-            cboSkuBulto.Items.AddRange(new object[] { "SKU-001", "SKU-002" });
             cboSkuBulto.Location = new Point(14, 102);
             cboSkuBulto.Name = "cboSkuBulto";
             cboSkuBulto.Size = new Size(200, 23);
             cboSkuBulto.TabIndex = 26;
             // 
-            // lblCantBulto
+            // lblCantidadBulto
             // 
-            lblCantBulto.Text = "Cantidad empacada";
-            lblCantBulto.Location = new Point(14, 134);
-            lblCantBulto.Name = "lblCantBulto";
-            lblCantBulto.Size = new Size(200, 20);
-            lblCantBulto.TabIndex = 27;
+            lblCantidadBulto.Text = "Cantidad empacada";
+            lblCantidadBulto.Location = new Point(14, 134);
+            lblCantidadBulto.Name = "lblCantidadBulto";
+            lblCantidadBulto.Size = new Size(200, 20);
+            lblCantidadBulto.TabIndex = 27;
             // 
-            // txtCantBulto
+            // txtCantidadBulto
             // 
-            txtCantBulto.Location = new Point(14, 156);
-            txtCantBulto.Name = "txtCantBulto";
-            txtCantBulto.Size = new Size(100, 23);
-            txtCantBulto.TabIndex = 28;
+            txtCantidadBulto.Location = new Point(14, 156);
+            txtCantidadBulto.Name = "txtCantidadBulto";
+            txtCantidadBulto.Size = new Size(100, 23);
+            txtCantidadBulto.TabIndex = 28;
             // 
             // btnAgregarBulto
             // 
@@ -423,10 +416,9 @@
             // 
             // lvBultos
             // 
-            lvBultos.Columns.AddRange(new ColumnHeader[] { lvBultosCol0, lvBultosCol1, lvBultosCol2, lvBultosCol3 });
+            lvBultos.Columns.AddRange(new ColumnHeader[] { colBultosIdentificacion, colBultosSku, colBultosProducto, colBultosCantidad });
             lvBultos.FullRowSelect = true;
             lvBultos.GridLines = true;
-            lvBultos.Items.AddRange(new ListViewItem[] { item_lvBultos_0 });
             lvBultos.Location = new Point(230, 26);
             lvBultos.Name = "lvBultos";
             lvBultos.Size = new Size(576, 204);
@@ -434,30 +426,30 @@
             lvBultos.UseCompatibleStateImageBehavior = false;
             lvBultos.View = View.Details;
             // 
-            // lvBultosCol0
+            // colBultosIdentificacion
             // 
-            lvBultosCol0.Text = "Bulto";
-            lvBultosCol0.Width = 140;
+            colBultosIdentificacion.Text = "Bulto";
+            colBultosIdentificacion.Width = 140;
             // 
-            // lvBultosCol1
+            // colBultosSku
             // 
-            lvBultosCol1.Text = "SKU";
-            lvBultosCol1.Width = 120;
+            colBultosSku.Text = "SKU";
+            colBultosSku.Width = 120;
             // 
-            // lvBultosCol2
+            // colBultosProducto
             // 
-            lvBultosCol2.Text = "Producto";
-            lvBultosCol2.Width = 200;
+            colBultosProducto.Text = "Producto";
+            colBultosProducto.Width = 200;
             // 
-            // lvBultosCol3
+            // colBultosCantidad
             // 
-            lvBultosCol3.Text = "Cantidad";
-            lvBultosCol3.Width = 100;
+            colBultosCantidad.Text = "Cantidad";
+            colBultosCantidad.Width = 100;
             // 
             // grpPale
             // 
-            grpPale.Controls.Add(lblIdPale);
-            grpPale.Controls.Add(txtIdPale);
+            grpPale.Controls.Add(lblIdentificacionPale);
+            grpPale.Controls.Add(txtIdentificacionPale);
             grpPale.Controls.Add(chkPaleConforme);
             grpPale.TabStop = false;
             grpPale.Text = "Revisión de palé (modalidad palé cerrado)";
@@ -466,20 +458,20 @@
             grpPale.Size = new Size(458, 100);
             grpPale.TabIndex = 31;
             // 
-            // lblIdPale
+            // lblIdentificacionPale
             // 
-            lblIdPale.Text = "Identificación del palé";
-            lblIdPale.Location = new Point(14, 24);
-            lblIdPale.Name = "lblIdPale";
-            lblIdPale.Size = new Size(200, 20);
-            lblIdPale.TabIndex = 32;
+            lblIdentificacionPale.Text = "Identificación del palé";
+            lblIdentificacionPale.Location = new Point(14, 24);
+            lblIdentificacionPale.Name = "lblIdentificacionPale";
+            lblIdentificacionPale.Size = new Size(200, 20);
+            lblIdentificacionPale.TabIndex = 32;
             // 
-            // txtIdPale
+            // txtIdentificacionPale
             // 
-            txtIdPale.Location = new Point(14, 44);
-            txtIdPale.Name = "txtIdPale";
-            txtIdPale.Size = new Size(260, 23);
-            txtIdPale.TabIndex = 33;
+            txtIdentificacionPale.Location = new Point(14, 44);
+            txtIdentificacionPale.Name = "txtIdentificacionPale";
+            txtIdentificacionPale.Size = new Size(260, 23);
+            txtIdentificacionPale.TabIndex = 33;
             // 
             // chkPaleConforme
             // 
@@ -491,11 +483,11 @@
             // 
             // grpCierre
             // 
-            grpCierre.Controls.Add(chkListo);
+            grpCierre.Controls.Add(chkListoDespacho);
             grpCierre.Controls.Add(lblOrdenEntrega);
             grpCierre.Controls.Add(txtOrdenEntrega);
             grpCierre.Controls.Add(btnConfirmarPreparacion);
-            grpCierre.Controls.Add(btnReimprimir);
+            grpCierre.Controls.Add(btnReimprimirOrdenEntrega);
             grpCierre.Controls.Add(btnReportarIncidente);
             grpCierre.TabStop = false;
             grpCierre.Text = "Cierre de la preparación";
@@ -504,13 +496,13 @@
             grpCierre.Size = new Size(458, 140);
             grpCierre.TabIndex = 35;
             // 
-            // chkListo
+            // chkListoDespacho
             // 
-            chkListo.Text = "Pedido completo y listo para Despacho";
-            chkListo.Location = new Point(14, 22);
-            chkListo.Name = "chkListo";
-            chkListo.Size = new Size(420, 24);
-            chkListo.TabIndex = 36;
+            chkListoDespacho.Text = "Pedido completo y listo para Despacho";
+            chkListoDespacho.Location = new Point(14, 22);
+            chkListoDespacho.Name = "chkListoDespacho";
+            chkListoDespacho.Size = new Size(420, 24);
+            chkListoDespacho.TabIndex = 36;
             // 
             // lblOrdenEntrega
             // 
@@ -536,13 +528,13 @@
             btnConfirmarPreparacion.Size = new Size(200, 34);
             btnConfirmarPreparacion.TabIndex = 39;
             // 
-            // btnReimprimir
+            // btnReimprimirOrdenEntrega
             // 
-            btnReimprimir.Text = "Reimprimir";
-            btnReimprimir.Location = new Point(222, 96);
-            btnReimprimir.Name = "btnReimprimir";
-            btnReimprimir.Size = new Size(110, 34);
-            btnReimprimir.TabIndex = 40;
+            btnReimprimirOrdenEntrega.Text = "Reimprimir";
+            btnReimprimirOrdenEntrega.Location = new Point(222, 96);
+            btnReimprimirOrdenEntrega.Name = "btnReimprimirOrdenEntrega";
+            btnReimprimirOrdenEntrega.Size = new Size(110, 34);
+            btnReimprimirOrdenEntrega.TabIndex = 40;
             // 
             // btnReportarIncidente
             // 
@@ -552,7 +544,7 @@
             btnReportarIncidente.Size = new Size(104, 34);
             btnReportarIncidente.TabIndex = 41;
             // 
-            // EmpaquetadoPreparacionMercaderiasForm1
+            // EmpaquetadoPreparacionEntregasForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -560,21 +552,21 @@
             Controls.Add(lblTitulo);
             Controls.Add(lblEmpresa);
             Controls.Add(grpContexto);
-            Controls.Add(grpPedidos);
+            Controls.Add(grpPedidosEnPreparacion);
             Controls.Add(grpDatosPedido);
-            Controls.Add(grpControl);
+            Controls.Add(grpControlCantidades);
             Controls.Add(grpFulfillment);
             Controls.Add(grpPale);
             Controls.Add(grpCierre);
-            Name = "EmpaquetadoPreparacionMercaderiasForm1";
+            Name = "EmpaquetadoPreparacionEntregasForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pampazon - Empaquetado y Preparación de Entregas";
             grpCierre.ResumeLayout(false);
             grpPale.ResumeLayout(false);
             grpFulfillment.ResumeLayout(false);
-            grpControl.ResumeLayout(false);
+            grpControlCantidades.ResumeLayout(false);
             grpDatosPedido.ResumeLayout(false);
-            grpPedidos.ResumeLayout(false);
+            grpPedidosEnPreparacion.ResumeLayout(false);
             grpContexto.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -585,16 +577,16 @@
         private System.Windows.Forms.Label lblDeposito;
         private System.Windows.Forms.ComboBox cboDeposito;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblFechaTrabajo;
         private System.Windows.Forms.DateTimePicker dtpFechaTrabajo;
-        private System.Windows.Forms.GroupBox grpPedidos;
+        private System.Windows.Forms.GroupBox grpPedidosEnPreparacion;
         private System.Windows.Forms.ListView lvPedidosEnPreparacion;
-        private System.Windows.Forms.ColumnHeader lvPedidosEnPreparacionCol0;
-        private System.Windows.Forms.ColumnHeader lvPedidosEnPreparacionCol1;
-        private System.Windows.Forms.ColumnHeader lvPedidosEnPreparacionCol2;
-        private System.Windows.Forms.ColumnHeader lvPedidosEnPreparacionCol3;
-        private System.Windows.Forms.ColumnHeader lvPedidosEnPreparacionCol4;
-        private System.Windows.Forms.ColumnHeader lvPedidosEnPreparacionCol5;
+        private System.Windows.Forms.ColumnHeader colPedidosEnPreparacionNumero;
+        private System.Windows.Forms.ColumnHeader colPedidosEnPreparacionCliente;
+        private System.Windows.Forms.ColumnHeader colPedidosEnPreparacionModalidad;
+        private System.Windows.Forms.ColumnHeader colPedidosEnPreparacionDestino;
+        private System.Windows.Forms.ColumnHeader colPedidosEnPreparacionSelecciones;
+        private System.Windows.Forms.ColumnHeader colPedidosEnPreparacionEstado;
         private System.Windows.Forms.GroupBox grpDatosPedido;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtCliente;
@@ -602,40 +594,40 @@
         private System.Windows.Forms.TextBox txtModalidad;
         private System.Windows.Forms.Label lblDestino;
         private System.Windows.Forms.TextBox txtDestino;
-        private System.Windows.Forms.GroupBox grpControl;
-        private System.Windows.Forms.ListView lvControl;
-        private System.Windows.Forms.ColumnHeader lvControlCol0;
-        private System.Windows.Forms.ColumnHeader lvControlCol1;
-        private System.Windows.Forms.ColumnHeader lvControlCol2;
-        private System.Windows.Forms.ColumnHeader lvControlCol3;
-        private System.Windows.Forms.ColumnHeader lvControlCol4;
-        private System.Windows.Forms.ColumnHeader lvControlCol5;
+        private System.Windows.Forms.GroupBox grpControlCantidades;
+        private System.Windows.Forms.ListView lvControlCantidades;
+        private System.Windows.Forms.ColumnHeader colControlCantidadesSku;
+        private System.Windows.Forms.ColumnHeader colControlCantidadesProducto;
+        private System.Windows.Forms.ColumnHeader colControlCantidadesSolicitada;
+        private System.Windows.Forms.ColumnHeader colControlCantidadesEntregada;
+        private System.Windows.Forms.ColumnHeader colControlCantidadesControlada;
+        private System.Windows.Forms.ColumnHeader colControlCantidadesDiferencia;
         private System.Windows.Forms.Label lblCantidadControlada;
         private System.Windows.Forms.TextBox txtCantidadControlada;
         private System.Windows.Forms.Button btnRegistrarControl;
         private System.Windows.Forms.GroupBox grpFulfillment;
-        private System.Windows.Forms.Label lblIdBulto;
-        private System.Windows.Forms.TextBox txtIdBulto;
+        private System.Windows.Forms.Label lblIdentificacionBulto;
+        private System.Windows.Forms.TextBox txtIdentificacionBulto;
         private System.Windows.Forms.Label lblSkuBulto;
         private System.Windows.Forms.ComboBox cboSkuBulto;
-        private System.Windows.Forms.Label lblCantBulto;
-        private System.Windows.Forms.TextBox txtCantBulto;
+        private System.Windows.Forms.Label lblCantidadBulto;
+        private System.Windows.Forms.TextBox txtCantidadBulto;
         private System.Windows.Forms.Button btnAgregarBulto;
         private System.Windows.Forms.ListView lvBultos;
-        private System.Windows.Forms.ColumnHeader lvBultosCol0;
-        private System.Windows.Forms.ColumnHeader lvBultosCol1;
-        private System.Windows.Forms.ColumnHeader lvBultosCol2;
-        private System.Windows.Forms.ColumnHeader lvBultosCol3;
+        private System.Windows.Forms.ColumnHeader colBultosIdentificacion;
+        private System.Windows.Forms.ColumnHeader colBultosSku;
+        private System.Windows.Forms.ColumnHeader colBultosProducto;
+        private System.Windows.Forms.ColumnHeader colBultosCantidad;
         private System.Windows.Forms.GroupBox grpPale;
-        private System.Windows.Forms.Label lblIdPale;
-        private System.Windows.Forms.TextBox txtIdPale;
+        private System.Windows.Forms.Label lblIdentificacionPale;
+        private System.Windows.Forms.TextBox txtIdentificacionPale;
         private System.Windows.Forms.CheckBox chkPaleConforme;
         private System.Windows.Forms.GroupBox grpCierre;
-        private System.Windows.Forms.CheckBox chkListo;
+        private System.Windows.Forms.CheckBox chkListoDespacho;
         private System.Windows.Forms.Label lblOrdenEntrega;
         private System.Windows.Forms.TextBox txtOrdenEntrega;
         private System.Windows.Forms.Button btnConfirmarPreparacion;
-        private System.Windows.Forms.Button btnReimprimir;
+        private System.Windows.Forms.Button btnReimprimirOrdenEntrega;
         private System.Windows.Forms.Button btnReportarIncidente;
     }
 }
