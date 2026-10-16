@@ -85,12 +85,6 @@
             // lblTitulo
             // 
             lblTitulo.Text = "Empaquetado y Preparación de Entregas";
-            lblTitulo.BackColor = Color.FromArgb(35, 80, 124);
-            lblTitulo.TextAlign = ContentAlignment.MiddleLeft;
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblTitulo.Padding = new Padding(24, 0, 0, 0);
-            lblTitulo.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
-            lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(0, 0);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(1056, 50);
@@ -99,11 +93,6 @@
             // lblEmpresa
             // 
             lblEmpresa.Text = "PAMPAZON  |  Operario de Preparación";
-            lblEmpresa.BackColor = Color.FromArgb(35, 80, 124);
-            lblEmpresa.TextAlign = ContentAlignment.MiddleLeft;
-            lblEmpresa.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblEmpresa.Padding = new Padding(26, 0, 0, 0);
-            lblEmpresa.ForeColor = Color.White;
             lblEmpresa.Location = new Point(0, 50);
             lblEmpresa.Name = "lblEmpresa";
             lblEmpresa.Size = new Size(1056, 26);
@@ -133,10 +122,8 @@
             // 
             // cboDeposito
             // 
-            cboDeposito.DropDownStyle = ComboBoxStyle.DropDownList;
             cboDeposito.Enabled = false;
             cboDeposito.Items.AddRange(new object[] { "GBA" });
-            cboDeposito.SelectedIndex = 0;
             cboDeposito.Location = new Point(72, 26);
             cboDeposito.Name = "cboDeposito";
             cboDeposito.Size = new Size(298, 23);
@@ -246,7 +233,7 @@
             // 
             // txtCliente
             // 
-            txtCliente.ReadOnly = true;
+            txtCliente.Enabled = false;
             txtCliente.Location = new Point(61, 24);
             txtCliente.Name = "txtCliente";
             txtCliente.Size = new Size(200, 23);
@@ -262,7 +249,7 @@
             // 
             // txtModalidad
             // 
-            txtModalidad.ReadOnly = true;
+            txtModalidad.Enabled = false;
             txtModalidad.Location = new Point(347, 24);
             txtModalidad.Name = "txtModalidad";
             txtModalidad.Size = new Size(136, 23);
@@ -278,7 +265,7 @@
             // 
             // txtDestino
             // 
-            txtDestino.ReadOnly = true;
+            txtDestino.Enabled = false;
             txtDestino.Location = new Point(555, 24);
             txtDestino.Name = "txtDestino";
             txtDestino.Size = new Size(240, 23);
@@ -357,11 +344,7 @@
             // 
             // btnRegistrarControl
             // 
-            btnRegistrarControl.BackColor = Color.FromArgb(35, 80, 124);
-            btnRegistrarControl.FlatStyle = FlatStyle.Flat;
-            btnRegistrarControl.ForeColor = Color.White;
             btnRegistrarControl.Text = "Registrar control";
-            btnRegistrarControl.UseVisualStyleBackColor = false;
             btnRegistrarControl.Location = new Point(232, 126);
             btnRegistrarControl.Name = "btnRegistrarControl";
             btnRegistrarControl.Size = new Size(208, 30);
@@ -394,7 +377,6 @@
             // 
             // txtIdBulto
             // 
-            txtIdBulto.MaxLength = 20;
             txtIdBulto.Location = new Point(11, 48);
             txtIdBulto.Name = "txtIdBulto";
             txtIdBulto.Size = new Size(160, 23);
@@ -410,9 +392,7 @@
             // 
             // cboSkuBulto
             // 
-            cboSkuBulto.DropDownStyle = ComboBoxStyle.DropDownList;
             cboSkuBulto.Items.AddRange(new object[] { "SKU-001", "SKU-002" });
-            cboSkuBulto.SelectedIndex = 0;
             cboSkuBulto.Location = new Point(11, 102);
             cboSkuBulto.Name = "cboSkuBulto";
             cboSkuBulto.Size = new Size(160, 23);
@@ -435,11 +415,7 @@
             // 
             // btnAgregarBulto
             // 
-            btnAgregarBulto.BackColor = Color.FromArgb(35, 80, 124);
-            btnAgregarBulto.FlatStyle = FlatStyle.Flat;
-            btnAgregarBulto.ForeColor = Color.White;
             btnAgregarBulto.Text = "Agregar al bulto";
-            btnAgregarBulto.UseVisualStyleBackColor = false;
             btnAgregarBulto.Location = new Point(11, 196);
             btnAgregarBulto.Name = "btnAgregarBulto";
             btnAgregarBulto.Size = new Size(160, 34);
@@ -500,7 +476,6 @@
             // 
             // txtIdPale
             // 
-            txtIdPale.MaxLength = 20;
             txtIdPale.Location = new Point(11, 44);
             txtIdPale.Name = "txtIdPale";
             txtIdPale.Size = new Size(208, 23);
@@ -509,7 +484,6 @@
             // chkPaleConforme
             // 
             chkPaleConforme.Text = "Revisión conforme (embalaje del palé)";
-            chkPaleConforme.UseVisualStyleBackColor = true;
             chkPaleConforme.Location = new Point(11, 72);
             chkPaleConforme.Name = "chkPaleConforme";
             chkPaleConforme.Size = new Size(336, 22);
@@ -533,7 +507,6 @@
             // chkListo
             // 
             chkListo.Text = "Pedido completo y listo para Despacho";
-            chkListo.UseVisualStyleBackColor = true;
             chkListo.Location = new Point(11, 22);
             chkListo.Name = "chkListo";
             chkListo.Size = new Size(336, 24);
@@ -549,7 +522,7 @@
             // 
             // txtOrdenEntrega
             // 
-            txtOrdenEntrega.ReadOnly = true;
+            txtOrdenEntrega.Enabled = false;
             txtOrdenEntrega.Location = new Point(112, 56);
             txtOrdenEntrega.Name = "txtOrdenEntrega";
             txtOrdenEntrega.Size = new Size(160, 23);
@@ -557,11 +530,7 @@
             // 
             // btnConfirmarPreparacion
             // 
-            btnConfirmarPreparacion.BackColor = Color.FromArgb(35, 80, 124);
-            btnConfirmarPreparacion.FlatStyle = FlatStyle.Flat;
-            btnConfirmarPreparacion.ForeColor = Color.White;
             btnConfirmarPreparacion.Text = "Confirmar preparación";
-            btnConfirmarPreparacion.UseVisualStyleBackColor = false;
             btnConfirmarPreparacion.Location = new Point(11, 96);
             btnConfirmarPreparacion.Name = "btnConfirmarPreparacion";
             btnConfirmarPreparacion.Size = new Size(160, 34);
@@ -570,7 +539,6 @@
             // btnReimprimir
             // 
             btnReimprimir.Text = "Reimprimir";
-            btnReimprimir.UseVisualStyleBackColor = true;
             btnReimprimir.Location = new Point(178, 96);
             btnReimprimir.Name = "btnReimprimir";
             btnReimprimir.Size = new Size(88, 34);
@@ -579,7 +547,6 @@
             // btnReportarIncidente
             // 
             btnReportarIncidente.Text = "Incidente";
-            btnReportarIncidente.UseVisualStyleBackColor = true;
             btnReportarIncidente.Location = new Point(272, 96);
             btnReportarIncidente.Name = "btnReportarIncidente";
             btnReportarIncidente.Size = new Size(83, 34);
@@ -589,7 +556,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1067, 901);
             Controls.Add(lblTitulo);
             Controls.Add(lblEmpresa);
@@ -600,7 +566,6 @@
             Controls.Add(grpFulfillment);
             Controls.Add(grpPale);
             Controls.Add(grpCierre);
-            Font = new Font("Segoe UI", 9F);
             AutoScroll = true;
             AutoScrollMinSize = new Size(1067, 901);
             MinimumSize = new Size(640, 480);

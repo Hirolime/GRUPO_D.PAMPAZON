@@ -10,6 +10,8 @@ namespace GRUPO_D.PAMPAZON.Seleccion_y_entrega_de_Mercaderias
         {
             InitializeComponent();
             AjustePantalla.Aplicar(this);
+
+            cboDeposito.SelectedItem = "GBA";
         }
     }
 }

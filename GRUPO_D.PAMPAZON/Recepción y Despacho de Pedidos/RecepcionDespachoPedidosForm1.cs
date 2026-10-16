@@ -10,6 +10,8 @@ namespace GRUPO_D.PAMPAZON.Recepción_y_Despacho_de_Pedidos
         {
             InitializeComponent();
             AjustePantalla.Aplicar(this);
+
+            cboDeposito.SelectedItem = "GBA";
         }
     }
 }

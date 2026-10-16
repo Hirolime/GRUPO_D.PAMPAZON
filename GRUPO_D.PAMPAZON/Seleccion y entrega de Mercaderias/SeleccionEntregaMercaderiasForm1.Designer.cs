@@ -70,12 +70,6 @@
             // lblTitulo
             // 
             lblTitulo.Text = "Selección y Entrega de Mercadería";
-            lblTitulo.BackColor = Color.FromArgb(35, 80, 124);
-            lblTitulo.TextAlign = ContentAlignment.MiddleLeft;
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblTitulo.Padding = new Padding(24, 0, 0, 0);
-            lblTitulo.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
-            lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(0, 0);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(1056, 50);
@@ -84,11 +78,6 @@
             // lblEmpresa
             // 
             lblEmpresa.Text = "PAMPAZON  |  Operario de Almacén";
-            lblEmpresa.BackColor = Color.FromArgb(35, 80, 124);
-            lblEmpresa.TextAlign = ContentAlignment.MiddleLeft;
-            lblEmpresa.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lblEmpresa.Padding = new Padding(26, 0, 0, 0);
-            lblEmpresa.ForeColor = Color.White;
             lblEmpresa.Location = new Point(0, 50);
             lblEmpresa.Name = "lblEmpresa";
             lblEmpresa.Size = new Size(1056, 26);
@@ -118,10 +107,8 @@
             // 
             // cboDeposito
             // 
-            cboDeposito.DropDownStyle = ComboBoxStyle.DropDownList;
             cboDeposito.Enabled = false;
             cboDeposito.Items.AddRange(new object[] { "GBA" });
-            cboDeposito.SelectedIndex = 0;
             cboDeposito.Location = new Point(72, 26);
             cboDeposito.Name = "cboDeposito";
             cboDeposito.Size = new Size(298, 23);
@@ -243,7 +230,7 @@
             // 
             // txtOrdenSeleccion
             // 
-            txtOrdenSeleccion.ReadOnly = true;
+            txtOrdenSeleccion.Enabled = false;
             txtOrdenSeleccion.Location = new Point(11, 48);
             txtOrdenSeleccion.Name = "txtOrdenSeleccion";
             txtOrdenSeleccion.Size = new Size(120, 23);
@@ -259,7 +246,7 @@
             // 
             // txtModalidadSel
             // 
-            txtModalidadSel.ReadOnly = true;
+            txtModalidadSel.Enabled = false;
             txtModalidadSel.Location = new Point(147, 48);
             txtModalidadSel.Name = "txtModalidadSel";
             txtModalidadSel.Size = new Size(128, 23);
@@ -275,7 +262,7 @@
             // 
             // txtCorteSel
             // 
-            txtCorteSel.ReadOnly = true;
+            txtCorteSel.Enabled = false;
             txtCorteSel.Location = new Point(291, 48);
             txtCorteSel.Name = "txtCorteSel";
             txtCorteSel.Size = new Size(96, 23);
@@ -291,7 +278,7 @@
             // 
             // txtEmitidaPor
             // 
-            txtEmitidaPor.ReadOnly = true;
+            txtEmitidaPor.Enabled = false;
             txtEmitidaPor.Location = new Point(403, 48);
             txtEmitidaPor.Name = "txtEmitidaPor";
             txtEmitidaPor.Size = new Size(208, 23);
@@ -362,11 +349,7 @@
             // 
             // btnRegistrarRetiro
             // 
-            btnRegistrarRetiro.BackColor = Color.FromArgb(35, 80, 124);
-            btnRegistrarRetiro.FlatStyle = FlatStyle.Flat;
-            btnRegistrarRetiro.ForeColor = Color.White;
             btnRegistrarRetiro.Text = "Registrar cantidad retirada";
-            btnRegistrarRetiro.UseVisualStyleBackColor = false;
             btnRegistrarRetiro.Location = new Point(160, 282);
             btnRegistrarRetiro.Name = "btnRegistrarRetiro";
             btnRegistrarRetiro.Size = new Size(208, 34);
@@ -406,8 +389,6 @@
             // 
             // txtObservacion
             // 
-            txtObservacion.Multiline = true;
-            txtObservacion.MaxLength = 200;
             txtObservacion.Location = new Point(11, 44);
             txtObservacion.Name = "txtObservacion";
             txtObservacion.Size = new Size(448, 76);
@@ -416,7 +397,6 @@
             // chkEntregaPreparacion
             // 
             chkEntregaPreparacion.Text = "La mercadería fue entregada a la sección Preparación";
-            chkEntregaPreparacion.UseVisualStyleBackColor = true;
             chkEntregaPreparacion.Location = new Point(480, 26);
             chkEntregaPreparacion.Name = "chkEntregaPreparacion";
             chkEntregaPreparacion.Size = new Size(316, 24);
@@ -432,7 +412,7 @@
             // 
             // txtServicio
             // 
-            txtServicio.ReadOnly = true;
+            txtServicio.Enabled = false;
             txtServicio.Location = new Point(605, 66);
             txtServicio.Name = "txtServicio";
             txtServicio.Size = new Size(160, 23);
@@ -440,11 +420,7 @@
             // 
             // btnConfirmarEntrega
             // 
-            btnConfirmarEntrega.BackColor = Color.FromArgb(35, 80, 124);
-            btnConfirmarEntrega.FlatStyle = FlatStyle.Flat;
-            btnConfirmarEntrega.ForeColor = Color.White;
             btnConfirmarEntrega.Text = "Confirmar entrega";
-            btnConfirmarEntrega.UseVisualStyleBackColor = false;
             btnConfirmarEntrega.Location = new Point(808, 26);
             btnConfirmarEntrega.Name = "btnConfirmarEntrega";
             btnConfirmarEntrega.Size = new Size(208, 34);
@@ -453,7 +429,6 @@
             // btnReportarIncidente
             // 
             btnReportarIncidente.Text = "Reportar incidente";
-            btnReportarIncidente.UseVisualStyleBackColor = true;
             btnReportarIncidente.Location = new Point(808, 70);
             btnReportarIncidente.Name = "btnReportarIncidente";
             btnReportarIncidente.Size = new Size(208, 34);
@@ -463,7 +438,6 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1067, 901);
             Controls.Add(lblTitulo);
             Controls.Add(lblEmpresa);
@@ -471,7 +445,6 @@
             Controls.Add(grpSelecciones);
             Controls.Add(grpDetalleSeleccion);
             Controls.Add(grpConfirmacion);
-            Font = new Font("Segoe UI", 9F);
             AutoScroll = true;
             AutoScrollMinSize = new Size(1067, 901);
             MinimumSize = new Size(640, 480);

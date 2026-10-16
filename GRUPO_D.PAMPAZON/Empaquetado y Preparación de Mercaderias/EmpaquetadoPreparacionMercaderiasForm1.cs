@@ -35,8 +35,8 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
             InitializeComponent();
             AjustePantalla.Aplicar(this);
 
-            txtCantidadControlada.MaxLength = 6;
-            txtCantBulto.MaxLength = 6;
+            cboDeposito.SelectedItem = "GBA";
+            cboSkuBulto.SelectedItem = "SKU-001";
 
             lvPedidosEnPreparacion.SelectedIndexChanged += lvPedidosEnPreparacion_SelectedIndexChanged;
             btnRegistrarControl.Click += btnRegistrarControl_Click;
@@ -125,7 +125,7 @@ namespace GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias
         {
             valor = 0;
             string t = (texto ?? "").Trim();
-            if (t.Length == 0 || !Regex.IsMatch(t, "^[0-9]+$")) return false;
+            if (t.Length == 0 || t.Length > 6 || !Regex.IsMatch(t, "^[0-9]+$")) return false;
             return int.TryParse(t, out valor) && valor >= minimo;
         }
 

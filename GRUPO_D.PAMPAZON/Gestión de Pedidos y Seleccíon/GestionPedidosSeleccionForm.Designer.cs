@@ -16,12 +16,6 @@
             ListViewItem listViewItem16 = new ListViewItem(new string[] { "TR-000026", "12/10/2026", "Cliente Demo A", "Traslado interno", "Palé cerrado", "1", "ASIGNADA" }, -1);
             ListViewItem listViewItem17 = new ListViewItem(new string[] { "SKU-001", "Remera de algodón", "Unidad", "80", "148", "Pendiente de validar" }, -1);
             ListViewItem listViewItem18 = new ListViewItem(new string[] { "SKU-002", "Pantalón deportivo", "Unidad", "30", "65", "Pendiente de validar" }, -1);
-            ListViewItem listViewItem11 = new ListViewItem(new string[] { "OP-000181", "Cliente Demo A", "Cliente", "Fulfillment", "2", "PENDIENTE" }, -1);
-            ListViewItem listViewItem12 = new ListViewItem(new string[] { "OP-000182", "Cliente Demo A", "Cliente", "Fulfillment", "1", "PENDIENTE" }, -1);
-            ListViewItem listViewItem13 = new ListViewItem(new string[] { "OP-000183", "Cliente Demo B", "Cliente", "Palé cerrado", "1", "PENDIENTE" }, -1);
-            ListViewItem listViewItem19 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-001", "Remera de algodón", "A-01-02", "120", "Unidad", "OP-000181 (80); OP-000182 (40)" }, -1);
-            ListViewItem listViewItem20 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-002", "Pantalón deportivo", "A-02-01", "30", "Unidad", "OP-000181 (30)" }, -1);
-            pnlEncabezado = new Panel();
             lblTitulo = new Label();
             lblEmpresa = new Label();
             grpContexto = new GroupBox();
@@ -30,8 +24,6 @@
             lblRol = new Label();
             lblFecha = new Label();
             dtpFechaTrabajo = new DateTimePicker();
-            tabGestion = new TabControl();
-            tabAsignadas = new TabPage();
             grpFiltros = new GroupBox();
             lblBuscarOrden = new Label();
             txtBuscarOrden = new TextBox();
@@ -75,63 +67,14 @@
             btnRechazar = new Button();
             lblMotivo = new Label();
             txtMotivo = new TextBox();
-            tabCortes = new TabPage();
-            grpCorte = new GroupBox();
-            lblFechaCorte = new Label();
-            dtpFechaCorte = new DateTimePicker();
-            chkSoloPendientes = new CheckBox();
-            btnConsultarPendientes = new Button();
-            lblPendientes = new Label();
-            lvPendientes = new ListView();
-            lvPendientesCol0 = new ColumnHeader();
-            lvPendientesCol1 = new ColumnHeader();
-            lvPendientesCol2 = new ColumnHeader();
-            lvPendientesCol3 = new ColumnHeader();
-            lvPendientesCol4 = new ColumnHeader();
-            lvPendientesCol5 = new ColumnHeader();
-            btnPrepararCorte = new Button();
-            grpPropuesta = new GroupBox();
-            lvPropuesta = new ListView();
-            lvPropuestaCol0 = new ColumnHeader();
-            lvPropuestaCol1 = new ColumnHeader();
-            lvPropuestaCol2 = new ColumnHeader();
-            lvPropuestaCol3 = new ColumnHeader();
-            lvPropuestaCol4 = new ColumnHeader();
-            lvPropuestaCol5 = new ColumnHeader();
-            lvPropuestaCol6 = new ColumnHeader();
-            btnConfirmarCorte = new Button();
-            btnVerOrdenes = new Button();
-            btnDescartar = new Button();
-            groupBox1 = new GroupBox();
-            rdoPrimerCorte = new RadioButton();
-            rdoSegundoCorte = new RadioButton();
-            pnlEncabezado.SuspendLayout();
+            btnIrCortes = new Button();
             grpContexto.SuspendLayout();
-            tabGestion.SuspendLayout();
-            tabAsignadas.SuspendLayout();
             grpFiltros.SuspendLayout();
             grpDetalle.SuspendLayout();
-            tabCortes.SuspendLayout();
-            grpCorte.SuspendLayout();
-            grpPropuesta.SuspendLayout();
-            groupBox1.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlEncabezado
-            // 
-            pnlEncabezado.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pnlEncabezado.BackColor = Color.FromArgb(35, 80, 124);
-            pnlEncabezado.Controls.Add(lblTitulo);
-            pnlEncabezado.Controls.Add(lblEmpresa);
-            pnlEncabezado.Location = new Point(0, 0);
-            pnlEncabezado.Name = "pnlEncabezado";
-            pnlEncabezado.Size = new Size(1056, 76);
-            pnlEncabezado.TabIndex = 1;
             // 
             // lblTitulo
             // 
-            lblTitulo.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
-            lblTitulo.ForeColor = Color.White;
             lblTitulo.Location = new Point(19, 13);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(712, 34);
@@ -140,7 +83,6 @@
             // 
             // lblEmpresa
             // 
-            lblEmpresa.ForeColor = Color.White;
             lblEmpresa.Location = new Point(21, 48);
             lblEmpresa.Name = "lblEmpresa";
             lblEmpresa.Size = new Size(840, 22);
@@ -171,7 +113,6 @@
             // 
             // cboDeposito
             // 
-            cboDeposito.DropDownStyle = ComboBoxStyle.DropDownList;
             cboDeposito.Enabled = false;
             cboDeposito.Items.AddRange(new object[] { "GBA" });
             cboDeposito.Location = new Point(72, 26);
@@ -205,35 +146,6 @@
             dtpFechaTrabajo.TabIndex = 9;
             dtpFechaTrabajo.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
             // 
-            // tabGestion
-            // 
-            tabGestion.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tabGestion.Controls.Add(tabAsignadas);
-            tabGestion.Controls.Add(tabCortes);
-            tabGestion.Location = new Point(13, 170);
-            tabGestion.Name = "tabGestion";
-            tabGestion.SelectedIndex = 0;
-            tabGestion.Size = new Size(1030, 684);
-            tabGestion.TabIndex = 11;
-            // 
-            // tabAsignadas
-            // 
-            tabAsignadas.Controls.Add(grpFiltros);
-            tabAsignadas.Controls.Add(lblListaAsignadas);
-            tabAsignadas.Controls.Add(lvAsignadas);
-            tabAsignadas.Controls.Add(grpDetalle);
-            tabAsignadas.Controls.Add(btnValidar);
-            tabAsignadas.Controls.Add(btnAceptar);
-            tabAsignadas.Controls.Add(btnRechazar);
-            tabAsignadas.Controls.Add(lblMotivo);
-            tabAsignadas.Controls.Add(txtMotivo);
-            tabAsignadas.Location = new Point(3, 24);
-            tabAsignadas.Name = "tabAsignadas";
-            tabAsignadas.Size = new Size(1024, 656);
-            tabAsignadas.TabIndex = 12;
-            tabAsignadas.Text = "Órdenes asignadas";
-            tabAsignadas.UseVisualStyleBackColor = true;
-            // 
             // grpFiltros
             // 
             grpFiltros.Controls.Add(lblBuscarOrden);
@@ -246,7 +158,7 @@
             grpFiltros.Controls.Add(dtpDesde);
             grpFiltros.Controls.Add(btnBuscar);
             grpFiltros.Controls.Add(btnLimpiar);
-            grpFiltros.Location = new Point(10, 10);
+            grpFiltros.Location = new Point(13, 190);
             grpFiltros.Name = "grpFiltros";
             grpFiltros.Size = new Size(1000, 80);
             grpFiltros.TabIndex = 14;
@@ -278,7 +190,6 @@
             // 
             // cboCliente
             // 
-            cboCliente.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCliente.Items.AddRange(new object[] { "Todos los clientes", "Cliente Demo A", "Cliente Demo B" });
             cboCliente.Location = new Point(146, 45);
             cboCliente.Name = "cboCliente";
@@ -295,7 +206,6 @@
             // 
             // cboOrigen
             // 
-            cboOrigen.DropDownStyle = ComboBoxStyle.DropDownList;
             cboOrigen.Items.AddRange(new object[] { "Todos", "Cliente", "Traslado interno" });
             cboOrigen.Location = new Point(371, 45);
             cboOrigen.Name = "cboOrigen";
@@ -312,26 +222,20 @@
             // 
             // dtpDesde
             // 
-            dtpDesde.Checked = false;
             dtpDesde.Format = DateTimePickerFormat.Short;
             dtpDesde.Location = new Point(526, 45);
             dtpDesde.Name = "dtpDesde";
-            dtpDesde.ShowCheckBox = true;
             dtpDesde.Size = new Size(116, 23);
             dtpDesde.TabIndex = 22;
             dtpDesde.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
             // 
             // btnBuscar
             // 
-            btnBuscar.BackColor = Color.FromArgb(35, 80, 124);
-            btnBuscar.FlatStyle = FlatStyle.Flat;
-            btnBuscar.ForeColor = Color.White;
             btnBuscar.Location = new Point(662, 38);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(173, 34);
             btnBuscar.TabIndex = 23;
             btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = false;
             // 
             // btnLimpiar
             // 
@@ -340,12 +244,10 @@
             btnLimpiar.Size = new Size(160, 34);
             btnLimpiar.TabIndex = 24;
             btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // lblListaAsignadas
             // 
-            lblListaAsignadas.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblListaAsignadas.Location = new Point(11, 102);
+            lblListaAsignadas.Location = new Point(14, 282);
             lblListaAsignadas.Name = "lblListaAsignadas";
             lblListaAsignadas.Size = new Size(760, 24);
             lblListaAsignadas.TabIndex = 25;
@@ -357,7 +259,7 @@
             lvAsignadas.FullRowSelect = true;
             lvAsignadas.GridLines = true;
             lvAsignadas.Items.AddRange(new ListViewItem[] { listViewItem14, listViewItem15, listViewItem16 });
-            lvAsignadas.Location = new Point(11, 132);
+            lvAsignadas.Location = new Point(14, 312);
             lvAsignadas.MultiSelect = false;
             lvAsignadas.Name = "lvAsignadas";
             lvAsignadas.Size = new Size(998, 137);
@@ -413,7 +315,7 @@
             grpDetalle.Controls.Add(lvDisponibilidad);
             grpDetalle.Controls.Add(lblStockRegla);
             grpDetalle.Controls.Add(lblValidacion);
-            grpDetalle.Location = new Point(10, 282);
+            grpDetalle.Location = new Point(13, 462);
             grpDetalle.Name = "grpDetalle";
             grpDetalle.Size = new Size(1000, 253);
             grpDetalle.TabIndex = 34;
@@ -432,7 +334,7 @@
             // 
             txtDetalleCliente.Location = new Point(76, 23);
             txtDetalleCliente.Name = "txtDetalleCliente";
-            txtDetalleCliente.ReadOnly = true;
+            txtDetalleCliente.Enabled = false;
             txtDetalleCliente.Size = new Size(176, 23);
             txtDetalleCliente.TabIndex = 36;
             txtDetalleCliente.Text = "Cliente Demo A";
@@ -449,7 +351,7 @@
             // 
             txtContrato.Location = new Point(332, 23);
             txtContrato.Name = "txtContrato";
-            txtContrato.ReadOnly = true;
+            txtContrato.Enabled = false;
             txtContrato.Size = new Size(120, 23);
             txtContrato.TabIndex = 38;
             txtContrato.Text = "CT-000028";
@@ -466,7 +368,7 @@
             // 
             txtModalidad.Location = new Point(544, 23);
             txtModalidad.Name = "txtModalidad";
-            txtModalidad.ReadOnly = true;
+            txtModalidad.Enabled = false;
             txtModalidad.Size = new Size(120, 23);
             txtModalidad.TabIndex = 40;
             txtModalidad.Text = "Fulfillment";
@@ -483,7 +385,7 @@
             // 
             txtEstado.Location = new Point(736, 23);
             txtEstado.Name = "txtEstado";
-            txtEstado.ReadOnly = true;
+            txtEstado.Enabled = false;
             txtEstado.Size = new Size(251, 23);
             txtEstado.TabIndex = 42;
             txtEstado.Text = "ASIGNADA";
@@ -543,7 +445,6 @@
             // 
             // lblValidacion
             // 
-            lblValidacion.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             lblValidacion.Location = new Point(11, 220);
             lblValidacion.Name = "lblValidacion";
             lblValidacion.Size = new Size(952, 24);
@@ -552,39 +453,33 @@
             // 
             // btnValidar
             // 
-            btnValidar.BackColor = Color.FromArgb(35, 80, 124);
-            btnValidar.FlatStyle = FlatStyle.Flat;
-            btnValidar.ForeColor = Color.White;
-            btnValidar.Location = new Point(13, 541);
+            btnValidar.Location = new Point(16, 721);
             btnValidar.Name = "btnValidar";
             btnValidar.Size = new Size(334, 34);
             btnValidar.TabIndex = 52;
             btnValidar.Text = "Validar disponibilidad";
-            btnValidar.UseVisualStyleBackColor = false;
             // 
             // btnAceptar
             // 
             btnAceptar.Enabled = false;
-            btnAceptar.Location = new Point(359, 541);
+            btnAceptar.Location = new Point(362, 721);
             btnAceptar.Name = "btnAceptar";
             btnAceptar.Size = new Size(356, 34);
             btnAceptar.TabIndex = 53;
             btnAceptar.Text = "Aceptar y comprometer";
-            btnAceptar.UseVisualStyleBackColor = true;
             // 
             // btnRechazar
             // 
             btnRechazar.Enabled = false;
-            btnRechazar.Location = new Point(720, 541);
+            btnRechazar.Location = new Point(723, 721);
             btnRechazar.Name = "btnRechazar";
             btnRechazar.Size = new Size(290, 34);
             btnRechazar.TabIndex = 54;
             btnRechazar.Text = "Rechazar por falta de stock";
-            btnRechazar.UseVisualStyleBackColor = true;
             // 
             // lblMotivo
             // 
-            lblMotivo.Location = new Point(13, 593);
+            lblMotivo.Location = new Point(16, 773);
             lblMotivo.Name = "lblMotivo";
             lblMotivo.Size = new Size(120, 24);
             lblMotivo.TabIndex = 55;
@@ -592,305 +487,53 @@
             // 
             // txtMotivo
             // 
-            txtMotivo.Location = new Point(139, 590);
+            txtMotivo.Location = new Point(142, 770);
             txtMotivo.Name = "txtMotivo";
-            txtMotivo.ReadOnly = true;
+            txtMotivo.Enabled = false;
             txtMotivo.Size = new Size(870, 23);
             txtMotivo.TabIndex = 56;
             txtMotivo.Text = "Se completará con los productos y cantidades faltantes.";
             // 
-            // tabCortes
+            // btnIrCortes
             // 
-            tabCortes.Controls.Add(grpCorte);
-            tabCortes.Controls.Add(lblPendientes);
-            tabCortes.Controls.Add(lvPendientes);
-            tabCortes.Controls.Add(btnPrepararCorte);
-            tabCortes.Controls.Add(grpPropuesta);
-            tabCortes.Controls.Add(btnConfirmarCorte);
-            tabCortes.Controls.Add(btnVerOrdenes);
-            tabCortes.Controls.Add(btnDescartar);
-            tabCortes.Location = new Point(3, 24);
-            tabCortes.Name = "tabCortes";
-            tabCortes.Size = new Size(1024, 656);
-            tabCortes.TabIndex = 13;
-            tabCortes.Text = "Cortes de selección";
-            tabCortes.UseVisualStyleBackColor = true;
-            // 
-            // grpCorte
-            // 
-            grpCorte.Controls.Add(groupBox1);
-            grpCorte.Controls.Add(lblFechaCorte);
-            grpCorte.Controls.Add(dtpFechaCorte);
-            grpCorte.Controls.Add(chkSoloPendientes);
-            grpCorte.Controls.Add(btnConsultarPendientes);
-            grpCorte.Location = new Point(10, 10);
-            grpCorte.Name = "grpCorte";
-            grpCorte.Size = new Size(1000, 85);
-            grpCorte.TabIndex = 57;
-            grpCorte.TabStop = false;
-            grpCorte.Text = "Datos del corte";
-            // 
-            // lblFechaCorte
-            // 
-            lblFechaCorte.Location = new Point(11, 23);
-            lblFechaCorte.Name = "lblFechaCorte";
-            lblFechaCorte.Size = new Size(112, 24);
-            lblFechaCorte.TabIndex = 58;
-            lblFechaCorte.Text = "Fecha del corte";
-            // 
-            // dtpFechaCorte
-            // 
-            dtpFechaCorte.Format = DateTimePickerFormat.Short;
-            dtpFechaCorte.Location = new Point(11, 46);
-            dtpFechaCorte.Name = "dtpFechaCorte";
-            dtpFechaCorte.Size = new Size(259, 23);
-            dtpFechaCorte.TabIndex = 59;
-            dtpFechaCorte.Value = new DateTime(2026, 10, 12, 0, 0, 0, 0);
-            // 
-            // chkSoloPendientes
-            // 
-            chkSoloPendientes.Checked = true;
-            chkSoloPendientes.CheckState = CheckState.Checked;
-            chkSoloPendientes.Enabled = false;
-            chkSoloPendientes.Location = new Point(634, 46);
-            chkSoloPendientes.Name = "chkSoloPendientes";
-            chkSoloPendientes.Size = new Size(150, 25);
-            chkSoloPendientes.TabIndex = 63;
-            chkSoloPendientes.Text = "Solo órdenes PENDIENTES";
-            // 
-            // btnConsultarPendientes
-            // 
-            btnConsultarPendientes.BackColor = Color.FromArgb(35, 80, 124);
-            btnConsultarPendientes.FlatStyle = FlatStyle.Flat;
-            btnConsultarPendientes.ForeColor = Color.White;
-            btnConsultarPendientes.Location = new Point(812, 36);
-            btnConsultarPendientes.Name = "btnConsultarPendientes";
-            btnConsultarPendientes.Size = new Size(173, 34);
-            btnConsultarPendientes.TabIndex = 64;
-            btnConsultarPendientes.Text = "Consultar pendientes";
-            btnConsultarPendientes.UseVisualStyleBackColor = false;
-            // 
-            // lblPendientes
-            // 
-            lblPendientes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            lblPendientes.Location = new Point(11, 107);
-            lblPendientes.Name = "lblPendientes";
-            lblPendientes.Size = new Size(920, 24);
-            lblPendientes.TabIndex = 65;
-            lblPendientes.Text = "Órdenes pendientes · Marcar las que se incorporarán al corte";
-            // 
-            // lvPendientes
-            // 
-            lvPendientes.CheckBoxes = true;
-            lvPendientes.Columns.AddRange(new ColumnHeader[] { lvPendientesCol0, lvPendientesCol1, lvPendientesCol2, lvPendientesCol3, lvPendientesCol4, lvPendientesCol5 });
-            lvPendientes.FullRowSelect = true;
-            lvPendientes.GridLines = true;
-            listViewItem11.StateImageIndex = 0;
-            listViewItem12.StateImageIndex = 0;
-            listViewItem13.StateImageIndex = 0;
-            lvPendientes.Items.AddRange(new ListViewItem[] { listViewItem11, listViewItem12, listViewItem13 });
-            lvPendientes.Location = new Point(11, 136);
-            lvPendientes.MultiSelect = false;
-            lvPendientes.Name = "lvPendientes";
-            lvPendientes.Size = new Size(998, 142);
-            lvPendientes.TabIndex = 66;
-            lvPendientes.UseCompatibleStateImageBehavior = false;
-            lvPendientes.View = View.Details;
-            // 
-            // lvPendientesCol0
-            // 
-            lvPendientesCol0.Text = "Incluir / Orden";
-            lvPendientesCol0.Width = 128;
-            // 
-            // lvPendientesCol1
-            // 
-            lvPendientesCol1.Text = "Cliente";
-            lvPendientesCol1.Width = 200;
-            // 
-            // lvPendientesCol2
-            // 
-            lvPendientesCol2.Text = "Origen";
-            lvPendientesCol2.Width = 140;
-            // 
-            // lvPendientesCol3
-            // 
-            lvPendientesCol3.Text = "Modalidad";
-            lvPendientesCol3.Width = 128;
-            // 
-            // lvPendientesCol4
-            // 
-            lvPendientesCol4.Text = "Productos";
-            lvPendientesCol4.Width = 80;
-            // 
-            // lvPendientesCol5
-            // 
-            lvPendientesCol5.Text = "Estado";
-            lvPendientesCol5.Width = 144;
-            // 
-            // btnPrepararCorte
-            // 
-            btnPrepararCorte.BackColor = Color.FromArgb(35, 80, 124);
-            btnPrepararCorte.FlatStyle = FlatStyle.Flat;
-            btnPrepararCorte.ForeColor = Color.White;
-            btnPrepararCorte.Location = new Point(13, 298);
-            btnPrepararCorte.Name = "btnPrepararCorte";
-            btnPrepararCorte.Size = new Size(997, 34);
-            btnPrepararCorte.TabIndex = 73;
-            btnPrepararCorte.Text = "Preparar corte";
-            btnPrepararCorte.UseVisualStyleBackColor = false;
-            // 
-            // grpPropuesta
-            // 
-            grpPropuesta.Controls.Add(lvPropuesta);
-            grpPropuesta.Location = new Point(10, 338);
-            grpPropuesta.Name = "grpPropuesta";
-            grpPropuesta.Size = new Size(1000, 212);
-            grpPropuesta.TabIndex = 75;
-            grpPropuesta.TabStop = false;
-            grpPropuesta.Text = "Vista previa de la selección";
-            // 
-            // lvPropuesta
-            // 
-            lvPropuesta.Columns.AddRange(new ColumnHeader[] { lvPropuestaCol0, lvPropuestaCol1, lvPropuestaCol2, lvPropuestaCol3, lvPropuestaCol4, lvPropuestaCol5, lvPropuestaCol6 });
-            lvPropuesta.FullRowSelect = true;
-            lvPropuesta.GridLines = true;
-            lvPropuesta.Items.AddRange(new ListViewItem[] { listViewItem19, listViewItem20 });
-            lvPropuesta.Location = new Point(11, 26);
-            lvPropuesta.MultiSelect = false;
-            lvPropuesta.Name = "lvPropuesta";
-            lvPropuesta.Size = new Size(976, 180);
-            lvPropuesta.TabIndex = 76;
-            lvPropuesta.UseCompatibleStateImageBehavior = false;
-            lvPropuesta.View = View.Details;
-            // 
-            // lvPropuestaCol0
-            // 
-            lvPropuestaCol0.Text = "Cliente";
-            lvPropuestaCol0.Width = 144;
-            // 
-            // lvPropuestaCol1
-            // 
-            lvPropuestaCol1.Text = "SKU";
-            lvPropuestaCol1.Width = 80;
-            // 
-            // lvPropuestaCol2
-            // 
-            lvPropuestaCol2.Text = "Producto";
-            lvPropuestaCol2.Width = 176;
-            // 
-            // lvPropuestaCol3
-            // 
-            lvPropuestaCol3.Text = "Ubicación";
-            lvPropuestaCol3.Width = 92;
-            // 
-            // lvPropuestaCol4
-            // 
-            lvPropuestaCol4.Text = "Cantidad";
-            lvPropuestaCol4.Width = 80;
-            // 
-            // lvPropuestaCol5
-            // 
-            lvPropuestaCol5.Text = "Unidad";
-            lvPropuestaCol5.Width = 80;
-            // 
-            // lvPropuestaCol6
-            // 
-            lvPropuestaCol6.Text = "Pedidos de origen";
-            lvPropuestaCol6.Width = 200;
-            // 
-            // btnConfirmarCorte
-            // 
-            btnConfirmarCorte.BackColor = Color.FromArgb(35, 80, 124);
-            btnConfirmarCorte.FlatStyle = FlatStyle.Flat;
-            btnConfirmarCorte.ForeColor = Color.White;
-            btnConfirmarCorte.Location = new Point(13, 573);
-            btnConfirmarCorte.Name = "btnConfirmarCorte";
-            btnConfirmarCorte.Size = new Size(334, 34);
-            btnConfirmarCorte.TabIndex = 86;
-            btnConfirmarCorte.Text = "Confirmar y generar selección";
-            btnConfirmarCorte.UseVisualStyleBackColor = false;
-            // 
-            // btnVerOrdenes
-            // 
-            btnVerOrdenes.Enabled = false;
-            btnVerOrdenes.Location = new Point(351, 573);
-            btnVerOrdenes.Name = "btnVerOrdenes";
-            btnVerOrdenes.Size = new Size(322, 34);
-            btnVerOrdenes.TabIndex = 87;
-            btnVerOrdenes.Text = "Ver órdenes generadas";
-            btnVerOrdenes.UseVisualStyleBackColor = true;
-            // 
-            // btnDescartar
-            // 
-            btnDescartar.Location = new Point(678, 573);
-            btnDescartar.Name = "btnDescartar";
-            btnDescartar.Size = new Size(331, 34);
-            btnDescartar.TabIndex = 88;
-            btnDescartar.Text = "Descartar propuesta";
-            btnDescartar.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(rdoPrimerCorte);
-            groupBox1.Controls.Add(rdoSegundoCorte);
-            groupBox1.Location = new Point(300, 23);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(317, 56);
-            groupBox1.TabIndex = 89;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Corte Operativo";
-            // 
-            // rdoPrimerCorte
-            // 
-            rdoPrimerCorte.Checked = true;
-            rdoPrimerCorte.Location = new Point(27, 22);
-            rdoPrimerCorte.Name = "rdoPrimerCorte";
-            rdoPrimerCorte.Size = new Size(110, 25);
-            rdoPrimerCorte.TabIndex = 63;
-            rdoPrimerCorte.TabStop = true;
-            rdoPrimerCorte.Text = "Primer corte";
-            // 
-            // rdoSegundoCorte
-            // 
-            rdoSegundoCorte.Location = new Point(173, 22);
-            rdoSegundoCorte.Name = "rdoSegundoCorte";
-            rdoSegundoCorte.Size = new Size(125, 25);
-            rdoSegundoCorte.TabIndex = 64;
-            rdoSegundoCorte.Text = "Segundo corte";
+            btnIrCortes.Location = new Point(870, 30);
+            btnIrCortes.Name = "btnIrCortes";
+            btnIrCortes.Size = new Size(173, 34);
+            btnIrCortes.TabIndex = 10;
+            btnIrCortes.Text = "Cortes de selección";
             // 
             // GestionPedidosSeleccionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1067, 901);
-            Controls.Add(pnlEncabezado);
+            Controls.Add(lblTitulo);
+            Controls.Add(lblEmpresa);
             Controls.Add(grpContexto);
-            Controls.Add(tabGestion);
-            Font = new Font("Segoe UI", 9F);
+            Controls.Add(grpFiltros);
+            Controls.Add(lblListaAsignadas);
+            Controls.Add(lvAsignadas);
+            Controls.Add(grpDetalle);
+            Controls.Add(btnValidar);
+            Controls.Add(btnAceptar);
+            Controls.Add(btnRechazar);
+            Controls.Add(lblMotivo);
+            Controls.Add(txtMotivo);
+            Controls.Add(btnIrCortes);
             AutoScroll = true;
             AutoScrollMinSize = new Size(1067, 901);
             MinimumSize = new Size(640, 480);
             Name = "GestionPedidosSeleccionForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pampazon - Gestión de Pedidos y Selección";
-            pnlEncabezado.ResumeLayout(false);
             grpContexto.ResumeLayout(false);
-            tabGestion.ResumeLayout(false);
-            tabAsignadas.ResumeLayout(false);
-            tabAsignadas.PerformLayout();
             grpFiltros.ResumeLayout(false);
             grpFiltros.PerformLayout();
             grpDetalle.ResumeLayout(false);
             grpDetalle.PerformLayout();
-            tabCortes.ResumeLayout(false);
-            grpCorte.ResumeLayout(false);
-            grpPropuesta.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
             ResumeLayout(false);
         }
         #endregion
-        private System.Windows.Forms.Panel pnlEncabezado;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.GroupBox grpContexto;
@@ -899,9 +542,6 @@
         private System.Windows.Forms.Label lblRol;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.DateTimePicker dtpFechaTrabajo;
-        private System.Windows.Forms.TabControl tabGestion;
-        private System.Windows.Forms.TabPage tabAsignadas;
-        private System.Windows.Forms.TabPage tabCortes;
         private System.Windows.Forms.GroupBox grpFiltros;
         private System.Windows.Forms.Label lblBuscarOrden;
         private System.Windows.Forms.TextBox txtBuscarOrden;
@@ -945,34 +585,6 @@
         private System.Windows.Forms.Button btnRechazar;
         private System.Windows.Forms.Label lblMotivo;
         private System.Windows.Forms.TextBox txtMotivo;
-        private System.Windows.Forms.GroupBox grpCorte;
-        private System.Windows.Forms.Label lblFechaCorte;
-        private System.Windows.Forms.DateTimePicker dtpFechaCorte;
-        private System.Windows.Forms.CheckBox chkSoloPendientes;
-        private System.Windows.Forms.Button btnConsultarPendientes;
-        private System.Windows.Forms.Label lblPendientes;
-        private System.Windows.Forms.ListView lvPendientes;
-        private System.Windows.Forms.ColumnHeader lvPendientesCol0;
-        private System.Windows.Forms.ColumnHeader lvPendientesCol1;
-        private System.Windows.Forms.ColumnHeader lvPendientesCol2;
-        private System.Windows.Forms.ColumnHeader lvPendientesCol3;
-        private System.Windows.Forms.ColumnHeader lvPendientesCol4;
-        private System.Windows.Forms.ColumnHeader lvPendientesCol5;
-        private System.Windows.Forms.Button btnPrepararCorte;
-        private System.Windows.Forms.GroupBox grpPropuesta;
-        private System.Windows.Forms.ListView lvPropuesta;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol0;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol1;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol2;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol3;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol4;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol5;
-        private System.Windows.Forms.ColumnHeader lvPropuestaCol6;
-        private System.Windows.Forms.Button btnConfirmarCorte;
-        private System.Windows.Forms.Button btnVerOrdenes;
-        private System.Windows.Forms.Button btnDescartar;
-        private GroupBox groupBox1;
-        private RadioButton rdoPrimerCorte;
-        private RadioButton rdoSegundoCorte;
+        private System.Windows.Forms.Button btnIrCortes;
     }
 }
