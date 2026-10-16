@@ -1,6 +1,6 @@
-﻿namespace GRUPO_D.PAMPAZON.Seleccion_y_entrega_de_Mercaderias
+﻿namespace GRUPO_D.PAMPAZON.CU2_SeleccionEntregaMercaderia
 {
-    partial class SeleccionEntregaMercaderiasForm1
+    partial class SeleccionEntregaMercaderiaForm
     {
         private System.ComponentModel.IContainer components = null;
         protected override void Dispose(bool disposing)
@@ -11,44 +11,40 @@
         #region Código generado para el diseñador
         private void InitializeComponent()
         {
-            ListViewItem item_lvSelecciones_0 = new ListViewItem(new string[] { "OS-000071", "14/10/2026", "Segundo", "Fulfillment", "2", "2", "EMITIDA" }, -1);
-            ListViewItem item_lvSelecciones_1 = new ListViewItem(new string[] { "OS-000072", "14/10/2026", "Segundo", "Palé cerrado", "1", "1", "EMITIDA" }, -1);
-            ListViewItem item_lvRenglones_0 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-001", "Remera de algodón", "12-43-2", "120", "", "OP-000181 (80); OP-000182 (40)" }, -1);
-            ListViewItem item_lvRenglones_1 = new ListViewItem(new string[] { "Cliente Demo A", "SKU-002", "Pantalón deportivo", "12-44-1", "30", "", "OP-000181 (30)" }, -1);
             lblTitulo = new Label();
             lblEmpresa = new Label();
             grpContexto = new GroupBox();
             lblDeposito = new Label();
             cboDeposito = new ComboBox();
             lblRol = new Label();
-            lblFecha = new Label();
+            lblFechaTrabajo = new Label();
             dtpFechaTrabajo = new DateTimePicker();
-            grpSelecciones = new GroupBox();
-            lvSelecciones = new ListView();
-            lvSeleccionesCol0 = new ColumnHeader();
-            lvSeleccionesCol1 = new ColumnHeader();
-            lvSeleccionesCol2 = new ColumnHeader();
-            lvSeleccionesCol3 = new ColumnHeader();
-            lvSeleccionesCol4 = new ColumnHeader();
-            lvSeleccionesCol5 = new ColumnHeader();
-            lvSeleccionesCol6 = new ColumnHeader();
+            grpOrdenesSeleccion = new GroupBox();
+            lvOrdenesSeleccion = new ListView();
+            colOrdenesSeleccionNumero = new ColumnHeader();
+            colOrdenesSeleccionFechaCorte = new ColumnHeader();
+            colOrdenesSeleccionCorte = new ColumnHeader();
+            colOrdenesSeleccionModalidad = new ColumnHeader();
+            colOrdenesSeleccionPedidos = new ColumnHeader();
+            colOrdenesSeleccionRenglones = new ColumnHeader();
+            colOrdenesSeleccionEstado = new ColumnHeader();
             grpDetalleSeleccion = new GroupBox();
             lblOrdenSeleccion = new Label();
             txtOrdenSeleccion = new TextBox();
-            lblModalidadSel = new Label();
-            txtModalidadSel = new TextBox();
-            lblCorteSel = new Label();
-            txtCorteSel = new TextBox();
+            lblModalidad = new Label();
+            txtModalidad = new TextBox();
+            lblCorte = new Label();
+            txtCorte = new TextBox();
             lblEmitidaPor = new Label();
             txtEmitidaPor = new TextBox();
             lvRenglones = new ListView();
-            lvRenglonesCol0 = new ColumnHeader();
-            lvRenglonesCol1 = new ColumnHeader();
-            lvRenglonesCol2 = new ColumnHeader();
-            lvRenglonesCol3 = new ColumnHeader();
-            lvRenglonesCol4 = new ColumnHeader();
-            lvRenglonesCol5 = new ColumnHeader();
-            lvRenglonesCol6 = new ColumnHeader();
+            colRenglonesCliente = new ColumnHeader();
+            colRenglonesSku = new ColumnHeader();
+            colRenglonesProducto = new ColumnHeader();
+            colRenglonesUbicacion = new ColumnHeader();
+            colRenglonesRequerida = new ColumnHeader();
+            colRenglonesRetirada = new ColumnHeader();
+            colRenglonesReparto = new ColumnHeader();
             lblCantidadRetirada = new Label();
             txtCantidadRetirada = new TextBox();
             btnRegistrarRetiro = new Button();
@@ -62,7 +58,7 @@
             btnConfirmarEntrega = new Button();
             btnReportarIncidente = new Button();
             grpContexto.SuspendLayout();
-            grpSelecciones.SuspendLayout();
+            grpOrdenesSeleccion.SuspendLayout();
             grpDetalleSeleccion.SuspendLayout();
             grpConfirmacion.SuspendLayout();
             SuspendLayout();
@@ -70,17 +66,17 @@
             // lblTitulo
             // 
             lblTitulo.Text = "Selección y Entrega de Mercadería";
-            lblTitulo.Location = new Point(0, 0);
+            lblTitulo.Location = new Point(24, 13);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(1320, 50);
+            lblTitulo.Size = new Size(890, 34);
             lblTitulo.TabIndex = 0;
             // 
             // lblEmpresa
             // 
-            lblEmpresa.Text = "PAMPAZON  |  Operario de Almacén";
-            lblEmpresa.Location = new Point(0, 50);
+            lblEmpresa.Text = "PAMPAZON";
+            lblEmpresa.Location = new Point(26, 48);
             lblEmpresa.Name = "lblEmpresa";
-            lblEmpresa.Size = new Size(1320, 26);
+            lblEmpresa.Size = new Size(1050, 22);
             lblEmpresa.TabIndex = 1;
             // 
             // grpContexto
@@ -88,7 +84,7 @@
             grpContexto.Controls.Add(lblDeposito);
             grpContexto.Controls.Add(cboDeposito);
             grpContexto.Controls.Add(lblRol);
-            grpContexto.Controls.Add(lblFecha);
+            grpContexto.Controls.Add(lblFechaTrabajo);
             grpContexto.Controls.Add(dtpFechaTrabajo);
             grpContexto.TabStop = false;
             grpContexto.Text = "Contexto de trabajo";
@@ -122,13 +118,13 @@
             lblRol.Size = new Size(260, 24);
             lblRol.TabIndex = 5;
             // 
-            // lblFecha
+            // lblFechaTrabajo
             // 
-            lblFecha.Text = "Fecha";
-            lblFecha.Location = new Point(780, 30);
-            lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(72, 24);
-            lblFecha.TabIndex = 6;
+            lblFechaTrabajo.Text = "Fecha";
+            lblFechaTrabajo.Location = new Point(780, 30);
+            lblFechaTrabajo.Name = "lblFechaTrabajo";
+            lblFechaTrabajo.Size = new Size(72, 24);
+            lblFechaTrabajo.TabIndex = 6;
             // 
             // dtpFechaTrabajo
             // 
@@ -140,72 +136,71 @@
             dtpFechaTrabajo.Size = new Size(410, 23);
             dtpFechaTrabajo.TabIndex = 7;
             // 
-            // grpSelecciones
+            // grpOrdenesSeleccion
             // 
-            grpSelecciones.Controls.Add(lvSelecciones);
-            grpSelecciones.TabStop = false;
-            grpSelecciones.Text = "Órdenes de selección pendientes de cumplir";
-            grpSelecciones.Location = new Point(16, 170);
-            grpSelecciones.Name = "grpSelecciones";
-            grpSelecciones.Size = new Size(1288, 200);
-            grpSelecciones.TabIndex = 8;
+            grpOrdenesSeleccion.Controls.Add(lvOrdenesSeleccion);
+            grpOrdenesSeleccion.TabStop = false;
+            grpOrdenesSeleccion.Text = "Órdenes de selección pendientes de cumplir";
+            grpOrdenesSeleccion.Location = new Point(16, 170);
+            grpOrdenesSeleccion.Name = "grpOrdenesSeleccion";
+            grpOrdenesSeleccion.Size = new Size(1288, 200);
+            grpOrdenesSeleccion.TabIndex = 8;
             // 
-            // lvSelecciones
+            // lvOrdenesSeleccion
             // 
-            lvSelecciones.Columns.AddRange(new ColumnHeader[] { lvSeleccionesCol0, lvSeleccionesCol1, lvSeleccionesCol2, lvSeleccionesCol3, lvSeleccionesCol4, lvSeleccionesCol5, lvSeleccionesCol6 });
-            lvSelecciones.FullRowSelect = true;
-            lvSelecciones.GridLines = true;
-            lvSelecciones.Items.AddRange(new ListViewItem[] { item_lvSelecciones_0, item_lvSelecciones_1 });
-            lvSelecciones.Location = new Point(12, 26);
-            lvSelecciones.Name = "lvSelecciones";
-            lvSelecciones.Size = new Size(1262, 162);
-            lvSelecciones.TabIndex = 9;
-            lvSelecciones.UseCompatibleStateImageBehavior = false;
-            lvSelecciones.View = View.Details;
+            lvOrdenesSeleccion.Columns.AddRange(new ColumnHeader[] { colOrdenesSeleccionNumero, colOrdenesSeleccionFechaCorte, colOrdenesSeleccionCorte, colOrdenesSeleccionModalidad, colOrdenesSeleccionPedidos, colOrdenesSeleccionRenglones, colOrdenesSeleccionEstado });
+            lvOrdenesSeleccion.FullRowSelect = true;
+            lvOrdenesSeleccion.GridLines = true;
+            lvOrdenesSeleccion.Location = new Point(12, 26);
+            lvOrdenesSeleccion.Name = "lvOrdenesSeleccion";
+            lvOrdenesSeleccion.Size = new Size(1262, 162);
+            lvOrdenesSeleccion.TabIndex = 9;
+            lvOrdenesSeleccion.UseCompatibleStateImageBehavior = false;
+            lvOrdenesSeleccion.View = View.Details;
             // 
-            // lvSeleccionesCol0
+            // colOrdenesSeleccionNumero
             // 
-            lvSeleccionesCol0.Text = "N.º de selección";
-            lvSeleccionesCol0.Width = 130;
+            colOrdenesSeleccionNumero.Text = "N.º de selección";
+            colOrdenesSeleccionNumero.Width = 130;
             // 
-            // lvSeleccionesCol1
+            // colOrdenesSeleccionFechaCorte
             // 
-            lvSeleccionesCol1.Text = "Fecha de corte";
-            lvSeleccionesCol1.Width = 120;
+            colOrdenesSeleccionFechaCorte.Text = "Fecha de corte";
+            colOrdenesSeleccionFechaCorte.Width = 120;
             // 
-            // lvSeleccionesCol2
+            // colOrdenesSeleccionCorte
             // 
-            lvSeleccionesCol2.Text = "Corte";
-            lvSeleccionesCol2.Width = 90;
+            colOrdenesSeleccionCorte.Text = "Corte";
+            colOrdenesSeleccionCorte.Width = 90;
             // 
-            // lvSeleccionesCol3
+            // colOrdenesSeleccionModalidad
             // 
-            lvSeleccionesCol3.Text = "Modalidad";
-            lvSeleccionesCol3.Width = 140;
+            colOrdenesSeleccionModalidad.Text = "Modalidad";
+            colOrdenesSeleccionModalidad.Width = 140;
             // 
-            // lvSeleccionesCol4
+            // colOrdenesSeleccionPedidos
             // 
-            lvSeleccionesCol4.Text = "Pedidos vinculados";
-            lvSeleccionesCol4.Width = 140;
+            colOrdenesSeleccionPedidos.Text = "Pedidos vinculados";
+            colOrdenesSeleccionPedidos.Width = 140;
             // 
-            // lvSeleccionesCol5
+            // colOrdenesSeleccionRenglones
             // 
-            lvSeleccionesCol5.Text = "Renglones";
-            lvSeleccionesCol5.Width = 100;
+            colOrdenesSeleccionRenglones.Text = "Renglones";
+            colOrdenesSeleccionRenglones.Width = 100;
             // 
-            // lvSeleccionesCol6
+            // colOrdenesSeleccionEstado
             // 
-            lvSeleccionesCol6.Text = "Estado";
-            lvSeleccionesCol6.Width = 150;
+            colOrdenesSeleccionEstado.Text = "Estado";
+            colOrdenesSeleccionEstado.Width = 150;
             // 
             // grpDetalleSeleccion
             // 
             grpDetalleSeleccion.Controls.Add(lblOrdenSeleccion);
             grpDetalleSeleccion.Controls.Add(txtOrdenSeleccion);
-            grpDetalleSeleccion.Controls.Add(lblModalidadSel);
-            grpDetalleSeleccion.Controls.Add(txtModalidadSel);
-            grpDetalleSeleccion.Controls.Add(lblCorteSel);
-            grpDetalleSeleccion.Controls.Add(txtCorteSel);
+            grpDetalleSeleccion.Controls.Add(lblModalidad);
+            grpDetalleSeleccion.Controls.Add(txtModalidad);
+            grpDetalleSeleccion.Controls.Add(lblCorte);
+            grpDetalleSeleccion.Controls.Add(txtCorte);
             grpDetalleSeleccion.Controls.Add(lblEmitidaPor);
             grpDetalleSeleccion.Controls.Add(txtEmitidaPor);
             grpDetalleSeleccion.Controls.Add(lvRenglones);
@@ -236,37 +231,37 @@
             txtOrdenSeleccion.Size = new Size(150, 23);
             txtOrdenSeleccion.TabIndex = 12;
             // 
-            // lblModalidadSel
+            // lblModalidad
             // 
-            lblModalidadSel.Text = "Modalidad";
-            lblModalidadSel.Location = new Point(184, 26);
-            lblModalidadSel.Name = "lblModalidadSel";
-            lblModalidadSel.Size = new Size(140, 20);
-            lblModalidadSel.TabIndex = 13;
+            lblModalidad.Text = "Modalidad";
+            lblModalidad.Location = new Point(184, 26);
+            lblModalidad.Name = "lblModalidad";
+            lblModalidad.Size = new Size(140, 20);
+            lblModalidad.TabIndex = 13;
             // 
-            // txtModalidadSel
+            // txtModalidad
             // 
-            txtModalidadSel.Enabled = false;
-            txtModalidadSel.Location = new Point(184, 48);
-            txtModalidadSel.Name = "txtModalidadSel";
-            txtModalidadSel.Size = new Size(160, 23);
-            txtModalidadSel.TabIndex = 14;
+            txtModalidad.Enabled = false;
+            txtModalidad.Location = new Point(184, 48);
+            txtModalidad.Name = "txtModalidad";
+            txtModalidad.Size = new Size(160, 23);
+            txtModalidad.TabIndex = 14;
             // 
-            // lblCorteSel
+            // lblCorte
             // 
-            lblCorteSel.Text = "Corte";
-            lblCorteSel.Location = new Point(364, 26);
-            lblCorteSel.Name = "lblCorteSel";
-            lblCorteSel.Size = new Size(140, 20);
-            lblCorteSel.TabIndex = 15;
+            lblCorte.Text = "Corte";
+            lblCorte.Location = new Point(364, 26);
+            lblCorte.Name = "lblCorte";
+            lblCorte.Size = new Size(140, 20);
+            lblCorte.TabIndex = 15;
             // 
-            // txtCorteSel
+            // txtCorte
             // 
-            txtCorteSel.Enabled = false;
-            txtCorteSel.Location = new Point(364, 48);
-            txtCorteSel.Name = "txtCorteSel";
-            txtCorteSel.Size = new Size(120, 23);
-            txtCorteSel.TabIndex = 16;
+            txtCorte.Enabled = false;
+            txtCorte.Location = new Point(364, 48);
+            txtCorte.Name = "txtCorte";
+            txtCorte.Size = new Size(120, 23);
+            txtCorte.TabIndex = 16;
             // 
             // lblEmitidaPor
             // 
@@ -286,10 +281,9 @@
             // 
             // lvRenglones
             // 
-            lvRenglones.Columns.AddRange(new ColumnHeader[] { lvRenglonesCol0, lvRenglonesCol1, lvRenglonesCol2, lvRenglonesCol3, lvRenglonesCol4, lvRenglonesCol5, lvRenglonesCol6 });
+            lvRenglones.Columns.AddRange(new ColumnHeader[] { colRenglonesCliente, colRenglonesSku, colRenglonesProducto, colRenglonesUbicacion, colRenglonesRequerida, colRenglonesRetirada, colRenglonesReparto });
             lvRenglones.FullRowSelect = true;
             lvRenglones.GridLines = true;
-            lvRenglones.Items.AddRange(new ListViewItem[] { item_lvRenglones_0, item_lvRenglones_1 });
             lvRenglones.Location = new Point(12, 86);
             lvRenglones.Name = "lvRenglones";
             lvRenglones.Size = new Size(1262, 170);
@@ -297,47 +291,47 @@
             lvRenglones.UseCompatibleStateImageBehavior = false;
             lvRenglones.View = View.Details;
             // 
-            // lvRenglonesCol0
+            // colRenglonesCliente
             // 
-            lvRenglonesCol0.Text = "Cliente";
-            lvRenglonesCol0.Width = 190;
+            colRenglonesCliente.Text = "Cliente";
+            colRenglonesCliente.Width = 190;
             // 
-            // lvRenglonesCol1
+            // colRenglonesSku
             // 
-            lvRenglonesCol1.Text = "SKU";
-            lvRenglonesCol1.Width = 90;
+            colRenglonesSku.Text = "SKU";
+            colRenglonesSku.Width = 90;
             // 
-            // lvRenglonesCol2
+            // colRenglonesProducto
             // 
-            lvRenglonesCol2.Text = "Producto";
-            lvRenglonesCol2.Width = 220;
+            colRenglonesProducto.Text = "Producto";
+            colRenglonesProducto.Width = 220;
             // 
-            // lvRenglonesCol3
+            // colRenglonesUbicacion
             // 
-            lvRenglonesCol3.Text = "Ubicación (X-Y-Z)";
-            lvRenglonesCol3.Width = 130;
+            colRenglonesUbicacion.Text = "Ubicación (X-Y-Z)";
+            colRenglonesUbicacion.Width = 130;
             // 
-            // lvRenglonesCol4
+            // colRenglonesRequerida
             // 
-            lvRenglonesCol4.Text = "Cantidad requerida";
-            lvRenglonesCol4.Width = 130;
+            colRenglonesRequerida.Text = "Cantidad requerida";
+            colRenglonesRequerida.Width = 130;
             // 
-            // lvRenglonesCol5
+            // colRenglonesRetirada
             // 
-            lvRenglonesCol5.Text = "Cantidad retirada";
-            lvRenglonesCol5.Width = 130;
+            colRenglonesRetirada.Text = "Cantidad retirada";
+            colRenglonesRetirada.Width = 130;
             // 
-            // lvRenglonesCol6
+            // colRenglonesReparto
             // 
-            lvRenglonesCol6.Text = "Reparto entre órdenes de preparación";
-            lvRenglonesCol6.Width = 330;
+            colRenglonesReparto.Text = "Reparto entre órdenes de preparación";
+            colRenglonesReparto.Width = 330;
             // 
             // lblCantidadRetirada
             // 
             lblCantidadRetirada.Text = "Cantidad retirada del renglón";
             lblCantidadRetirada.Location = new Point(14, 266);
             lblCantidadRetirada.Name = "lblCantidadRetirada";
-            lblCantidadRetirada.Size = new Size(210, 20);
+            lblCantidadRetirada.Size = new Size(180, 20);
             lblCantidadRetirada.TabIndex = 20;
             // 
             // txtCantidadRetirada
@@ -434,7 +428,7 @@
             btnReportarIncidente.Size = new Size(260, 34);
             btnReportarIncidente.TabIndex = 31;
             // 
-            // SeleccionEntregaMercaderiasForm1
+            // SeleccionEntregaMercaderiaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -442,15 +436,15 @@
             Controls.Add(lblTitulo);
             Controls.Add(lblEmpresa);
             Controls.Add(grpContexto);
-            Controls.Add(grpSelecciones);
+            Controls.Add(grpOrdenesSeleccion);
             Controls.Add(grpDetalleSeleccion);
             Controls.Add(grpConfirmacion);
-            Name = "SeleccionEntregaMercaderiasForm1";
+            Name = "SeleccionEntregaMercaderiaForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pampazon - Selección y Entrega de Mercadería";
             grpConfirmacion.ResumeLayout(false);
             grpDetalleSeleccion.ResumeLayout(false);
-            grpSelecciones.ResumeLayout(false);
+            grpOrdenesSeleccion.ResumeLayout(false);
             grpContexto.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -461,34 +455,34 @@
         private System.Windows.Forms.Label lblDeposito;
         private System.Windows.Forms.ComboBox cboDeposito;
         private System.Windows.Forms.Label lblRol;
-        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblFechaTrabajo;
         private System.Windows.Forms.DateTimePicker dtpFechaTrabajo;
-        private System.Windows.Forms.GroupBox grpSelecciones;
-        private System.Windows.Forms.ListView lvSelecciones;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol0;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol1;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol2;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol3;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol4;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol5;
-        private System.Windows.Forms.ColumnHeader lvSeleccionesCol6;
+        private System.Windows.Forms.GroupBox grpOrdenesSeleccion;
+        private System.Windows.Forms.ListView lvOrdenesSeleccion;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionNumero;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionFechaCorte;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionCorte;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionModalidad;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionPedidos;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionRenglones;
+        private System.Windows.Forms.ColumnHeader colOrdenesSeleccionEstado;
         private System.Windows.Forms.GroupBox grpDetalleSeleccion;
         private System.Windows.Forms.Label lblOrdenSeleccion;
         private System.Windows.Forms.TextBox txtOrdenSeleccion;
-        private System.Windows.Forms.Label lblModalidadSel;
-        private System.Windows.Forms.TextBox txtModalidadSel;
-        private System.Windows.Forms.Label lblCorteSel;
-        private System.Windows.Forms.TextBox txtCorteSel;
+        private System.Windows.Forms.Label lblModalidad;
+        private System.Windows.Forms.TextBox txtModalidad;
+        private System.Windows.Forms.Label lblCorte;
+        private System.Windows.Forms.TextBox txtCorte;
         private System.Windows.Forms.Label lblEmitidaPor;
         private System.Windows.Forms.TextBox txtEmitidaPor;
         private System.Windows.Forms.ListView lvRenglones;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol0;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol1;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol2;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol3;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol4;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol5;
-        private System.Windows.Forms.ColumnHeader lvRenglonesCol6;
+        private System.Windows.Forms.ColumnHeader colRenglonesCliente;
+        private System.Windows.Forms.ColumnHeader colRenglonesSku;
+        private System.Windows.Forms.ColumnHeader colRenglonesProducto;
+        private System.Windows.Forms.ColumnHeader colRenglonesUbicacion;
+        private System.Windows.Forms.ColumnHeader colRenglonesRequerida;
+        private System.Windows.Forms.ColumnHeader colRenglonesRetirada;
+        private System.Windows.Forms.ColumnHeader colRenglonesReparto;
         private System.Windows.Forms.Label lblCantidadRetirada;
         private System.Windows.Forms.TextBox txtCantidadRetirada;
         private System.Windows.Forms.Button btnRegistrarRetiro;

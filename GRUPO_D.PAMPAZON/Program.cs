@@ -1,5 +1,4 @@
-using GRUPO_D.PAMPAZON.Empaquetado_y_Preparación_de_Mercaderias;
-using Pampazon.Prototipos;
+﻿using GRUPO_D.PAMPAZON.CU1_GestionPedidosSeleccion;
 
 namespace GRUPO_D.PAMPAZON
 {
@@ -7,6 +6,10 @@ namespace GRUPO_D.PAMPAZON
     {
         /// <summary>
         ///  The main entry point for the application.
+        ///  Para probar otra pantalla, cambiar el formulario de Application.Run:
+        ///  CU2_SeleccionEntregaMercaderia.SeleccionEntregaMercaderiaForm,
+        ///  CU3_EmpaquetadoPreparacionEntregas.EmpaquetadoPreparacionEntregasForm o
+        ///  CU4_RecepcionDespachoPedidos.RecepcionDespachoPedidosForm.
         /// </summary>
         [STAThread]
         static void Main()
