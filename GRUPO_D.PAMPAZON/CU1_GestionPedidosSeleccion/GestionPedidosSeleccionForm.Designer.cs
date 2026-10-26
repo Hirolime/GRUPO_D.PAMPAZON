@@ -1,4 +1,5 @@
-﻿namespace GRUPO_D.PAMPAZON.CU1_GestionPedidosSeleccion
+﻿
+namespace GRUPO_D.PAMPAZON.CU1_GestionPedidosSeleccion
 {
     partial class GestionPedidosSeleccionForm
     {

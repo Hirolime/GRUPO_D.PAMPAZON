@@ -1,4 +1,6 @@
 ﻿using GRUPO_D.PAMPAZON.CU1_GestionPedidosSeleccion;
+using GRUPO_D.PAMPAZON.CU2_SeleccionEntregaMercaderia;
+using GRUPO_D.PAMPAZON.CU3_EmpaquetadoPreparacionEntregas;
 
 namespace GRUPO_D.PAMPAZON
 {
@@ -17,7 +19,7 @@ namespace GRUPO_D.PAMPAZON
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new GestionPedidosSeleccionForm());
+            Application.Run(new EmpaquetadoPreparacionEntregasForm());
         }
     }
 }
